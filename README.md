@@ -17,15 +17,14 @@
 | **TERMUX** | ***INSTALACIÓN MANUAL*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-opción-2-instalación-manual-por-termux---github) |
 | **TERMUX** | ***INSTALACIÓN POR ARCHIVOS*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-opción-3-instalación-por-termux---archivos) |
 | **TERMUX 24/7** | ***COMANDOS*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-usar-gatabot-247-en-termux) |
-| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR GATABOT*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-actualizar-gatabot) |
+| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR EL SHARK-BOT*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-actualizar-gatabot) |
 | **HEROKU** | ***INSTALACIÓN POR HEROKU*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-activar-en-heroku) |
 | **BOXMINE** | ***INSTALACIÓN POR BOXMINE*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-boxminehost) |
-| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-replit---gatabot) |
+| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-replit---shark-bot) |
 | **KOYEB** | ***INSTALACIÓN POR KOYEB*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-activar-en-koyeb) |
 | **WINDOWS** | ***INSTALACIÓN POR WINDOWS*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-para-usuarios-de-windowsvpsrdp) |
-| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-gatabot-md---preguntas) |
-| **SOBRE GATABOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#sobre-gatabot--gb-global) |
-| **DESARROLLADORES** | ***PARTICIPATES DEL PROYECTO*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-creadora) |
+| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#-shark-bot---preguntas) |
+| **SOBRE SHARK-BOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/ElChema-Nc/Shark-Bot/#sobre-sharkbot--sk-global) |
 -----
 ### 🫠 (OPCIÓN 1) INSTALACIÓN AUTOMÁTICA POR TERMUX
 
