@@ -1,5 +1,5 @@
 const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
-const grupoOficial1 = nn
+const grupoOficial1 = nna
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 let users = m.sender.split`@`[0]
