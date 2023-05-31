@@ -207,8 +207,8 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
   - [x] **Comandos para obtener nuevo código QR:**<br>
   _Diga estos comandos desde la carpeta del Shark-Bot `rm -rf SharkBotSession && npm start`_
   
-  - [x] **¿Cómo actualizar GataBot?**<br>
-  _Desde la carpeta de GataBot usar los commandos para [`♻️ Actualizar el Shark-Bot`](https://github.com/ElChema-Nc/Shark-Bot/#-actualizar-shark-bot)_
+  - [x] **¿Cómo actualizar El Shark-Bot?**<br>
+  _Desde la carpeta del Shark-Bot usar los commandos para [`♻️ Actualizar el Shark-Bot`](https://github.com/ElChema-Nc/Shark-Bot/#actualizar-shark-bot-)_
   
   - [x] **¿Que hago si no responde el Bot después de iniciar o si muestra un mensje diciendo "Mensaje en espera"?**<br>
   _Detenga Termux y elimine la sesión del Shark-Bot para obtener un nuevo código QR._
