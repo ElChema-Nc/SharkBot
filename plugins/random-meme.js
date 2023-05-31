@@ -1,4 +1,3 @@
-/*   Creditos - ig : https://www.instagram.com/fg98._/    */
 import hispamemes from 'hispamemes'
 let handler = async (m, {command, conn}) => {
 const url = await hispamemes.meme()  
