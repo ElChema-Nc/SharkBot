@@ -9,14 +9,14 @@ await m.reply(`
 ┃ ${name}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *${global.db.data.users[who].limit} Diamantes* 💎
-╰━━━━〔 *𓃠 ${vs}* 〕━━━⬣`)
+╰━━━━〔 *🔱 ${vs}* 〕━━━⬣`)
 
 let d = `
 *COMPRAR DIAMANTES CON EXP*
 ${usedPrefix}buy *cantidad*
 ${usedPrefix}buyall *cantidad*
 
-*COMPRAR DIAMANTES CON GATACOINS*
+*COMPRAR DIAMANTES CON SHARKCOINS*
 ${usedPrefix}buy2 *cantidad*
 ${usedPrefix}buyall2 *cantidad*`
 conn.sendButton(m.chat, d, wm, [

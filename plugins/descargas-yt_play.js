@@ -9,7 +9,7 @@ let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, current
 let { title, description, publishedTime, url, thumbnail, videoId, timestamp, views, published } = vid
 try {
 if (command == 'play') {	
-conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🗿 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🗿 𓆪*
+conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🔱 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🔱 𓆪*
 
 ও *TÍTULO | TITLE*
 » ${title} 
@@ -26,7 +26,7 @@ conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🗿 𓆪 ✧═══ 
 ও *URL*
 » ${url}
 
-*𓆩 🗿 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🗿 𓆪*`.trim(), fkontak, m)
+*𓆩 🔱 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🔱 𓆪*`.trim(), fkontak, m)
 q = '128kbps'
 v = url
 yt = await youtubedl(v).catch(async () => await youtubedlv2(v)).catch(async () => await youtubedlv3(v))
@@ -46,7 +46,7 @@ thumbnail: await (await fetch(thumbnail)).buffer()}}}, { quoted: m })
 //await conn.sendFile(m.chat, dl_url, title + '.mp3', null, m, false, { mimetype: 'audio/mp4' })
 }
 if (command == 'play2') {
-conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🗿 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🗿 𓆪*
+conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🔱 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🔱 𓆪*
 
 ও *TÍTULO | TITLE*
 » ${title}
@@ -63,7 +63,7 @@ conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `*𓆩 🗿 𓆪 ✧═══ 
 ও *URL*
 » ${url}
 
-*𓆩 🗿 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🗿 𓆪*`.trim(), fkontak, m)
+*𓆩 🔱 𓆪 ✧═══ ${vs} ═══✧ 𓆩 🔱 𓆪*`.trim(), fkontak, m)
 let qu = args[1] || '360'
 let q = qu + 'p'
 let v = args[0]
@@ -71,7 +71,7 @@ const yt = await youtubedl(v).catch(async _ => await youtubedlv2(v)).catch(async
 const dl_url = await yt.video[q].download()
 const ttl = await yt.title
 const size = await yt.video[q].fileSizeH
-await await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 𝙏𝙄𝙏𝙐𝙇𝙊 | 𝙏𝙄𝙏𝙇𝙀\n┃ ${ttl}\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ 💙 𝙋𝙀𝙎𝙊 | 𝙎𝙄𝙕𝙀\n┃ ${size}\n╰━━━━━❰ *𓃠 ${vs}* ❱━━━━⬣`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
+await await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 𝙏𝙄𝙏𝙐𝙇𝙊 | 𝙏𝙄𝙏𝙇𝙀\n┃ ${ttl}\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ 💙 𝙋𝙀𝙎𝙊 | 𝙎𝙄𝙕𝙀\n┃ ${size}\n╰━━━━━❰ *🔱 ${vs}* ❱━━━━⬣`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
 }
 } catch (e) {
 }}

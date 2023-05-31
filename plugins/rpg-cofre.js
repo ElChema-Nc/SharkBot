@@ -5,24 +5,24 @@ if (new Date - global.db.data.users[m.sender].lastcofre < 86400000) throw `𝙔�
 let img = 'https://img.freepik.com/vector-gratis/cofre-monedas-oro-piedras-preciosas-cristales-trofeo_107791-7769.jpg?w=2000'
 let dia = Math.floor(Math.random() * 30)
 let tok = Math.floor(Math.random() * 10)
-let gata = Math.floor(Math.random() * 4000)
+let shark = Math.floor(Math.random() * 4000)
 let expp = Math.floor(Math.random() * 5000)
 
   global.db.data.users[m.sender].limit += dia
-  global.db.data.users[m.sender].money += gata
+  global.db.data.users[m.sender].money += shark
   global.db.data.users[m.sender].joincount += tok
   global.db.data.users[m.sender].exp += expp
   
 let texto = `
-╭━━🎉━🎉━🎉━━⬣
-┃✨ 𝙊𝘽𝙏𝙄𝙀𝙉𝙀𝙎 𝙐𝙉 𝘾𝙊𝙁𝙍𝙀!!
-┃✨ 𝙔𝙊𝙐 𝙂𝙀𝙏 𝘼 𝘾𝙊𝙁𝙁𝙀𝙍!!
-┃ ┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃⚗️ *${dia} Diamantes* 💎
-┃⚗️ *${tok} Tokens* 🪙
-┃⚗️ *${gata} GataCoins* 🐈
-┃⚗️ *${expp} Exp* ⚡
-╰━━〔 𓃠 *${vs}* 〕━━⬣`
+
+   !!
+    !!
+ 
+ *${dia} Diamantes* 
+ *${tok} Tokens* 
+ *${shark} SharkCoins* 
+ *${expp} Exp* 
+  *${vs}* `
 
 const fkontak = {
 	"key": {
