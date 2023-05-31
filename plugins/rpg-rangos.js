@@ -61,7 +61,7 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
   
   
 //let name = await conn.getName(m.sender)
-let pp = './media/menus/Menuvid3.mp4'
+let pp = './media/menus/Menu1.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
@@ -118,11 +118,11 @@ ${role}
 *SUPER PRO IV* 🎩
 *SUPER PRO V* 🎩
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-*PRO EN GATABOT I* 😼
-*PRO EN GATABOT II* 😼
-*PRO EN GATABOT III* 😼
-*PRO EN GATABOT IV* 😼
-*PRO EN GATABOT V* 😼
+*PRO EN SHARKBOT I* 🦈
+*PRO EN SHARKBOT II* 🦈
+*PRO EN SHARKBOT III* 🦈
+*PRO EN SHARKBOT IV* 🦈
+*PRO EN SHARKBOT V* 🦈
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 *DIAMANTE I* 💎
 *DIAMANTE II* 💎
@@ -172,7 +172,7 @@ ${role}
 *NOVATO(A) IV* 🪤
 *NOVATO(A) V* 🪤
 ╰━━━━━━━━━━━━━━━━━━━⬣`.trim()
-conn.sendHydrated(m.chat, menu, `𝙍𝘼𝙉𝙂𝙊𝙎 | ${wm}`, pp, 'https://github.com/GataNina-Li/GataBot-MD', '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [
+conn.sendHydrated(m.chat, menu, `𝙍𝘼𝙉𝙂𝙊𝙎 | ${wm}`, pp, 'https://github.com/ElChema-Nc/Shark-Bot', '𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩ㅤ🦈', null, null, [
 ['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu'],
 ['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', `${usedPrefix}top`],
 ['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡', '#menu']
