@@ -1,12 +1,10 @@
-/*Créditos a https://github.com/Azami19*/
-
 import uploadFile from '../lib/uploadFile.js'
 import uploadImage from '../lib/uploadImage.js'
 import fetch from 'node-fetch'
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = await conn.profilePictureUrl(who).catch(_ => gataImg.getRandom())
+let pp = await conn.profilePictureUrl(who).catch(_ => sharkImg.getRandom())
 let name = await conn.getName(who)
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''

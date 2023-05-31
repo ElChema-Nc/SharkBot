@@ -1,5 +1,3 @@
-//CÓDIGO ELABORADO POR: https://github.com/GataNina-Li & https://github.com/DIEGO-OFC
-
 import fetch from 'node-fetch'
 import { sticker } from '../lib/sticker.js'
 const temaX = [

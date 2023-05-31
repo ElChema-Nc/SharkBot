@@ -33,7 +33,7 @@ let AnimeInfo = `
 𝙀𝙉𝙇𝘼𝘾𝙀 | 𝙐𝙍𝙇
 ❣ ${url}`
 conn.sendFile(m.chat, result.images.jpg.image_url, 'error.jpg', AnimeInfo, m)
-let info = `💖 *Infórmate sobre las Novedades y recuerda tener la última versión.*\n\n💝 *Find out about what's new and remember to have the latest version.*
+let info = `*Infórmate sobre las Novedades y recuerda tener la última versión.*\n\n*Find out about what's new and remember to have the latest version.*
   `
 conn.sendButton(m.chat, info, [
 ['🔄 𝙎𝙞𝙜𝙪𝙞𝙚𝙣𝙩𝙚 | 𝙉𝙚𝙭𝙩', `${usedPrefix + command} ${text}`],
