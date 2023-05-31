@@ -1188,12 +1188,12 @@ if (m.text && user.banned && !isROwner) {
   
   if (user.bannedMessageCount < 3) {
     const messageNumber = user.bannedMessageCount + 1;
-    const messageText = `   * *   \nAviso (${messageNumber}/3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
-* Puedes contactar a la propietaria del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de t� desbaneo*
+    const messageText = `❰ ⚠️ ❱ *𝙀𝙎𝙏𝘼𝙎 𝘽𝘼𝙉𝙀𝘼𝘿𝙊* ❰ ⚠️ ❱\nAviso (${messageNumber}/3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
+*👉 Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de tú desbaneo*
 
- ${global.asistencia}
- wa.me/34671660629
- ${global.ig}
+👉 ${global.asistencia}
+👉 wa.me/34671660629
+👉 ${global.ig}
 `.trim();
     
     //m.reply(messageText);
@@ -1211,7 +1211,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
   if (user.commandCount === 5) {
     const remainingTime = Math.ceil((user.lastCommandTime + 5000 - Date.now()) / 1000)
     if (remainingTime > 0) {
-      const messageText = `* ${remainingTime}      *`
+      const messageText = `*𝙀𝙎𝙋𝙀𝙍𝘼 ${remainingTime} 𝙎𝙀𝙂𝙐𝙉𝘿𝙊 𝘼𝙉𝙏𝙀𝙎 𝘿𝙀 𝙐𝙎𝘼𝙍 𝙊𝙏𝙍𝙊 𝘾𝙊𝙈𝘼𝙉𝘿𝙊*`
       m.reply(messageText)
       return
     } else {
@@ -1275,9 +1275,9 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
                 if (xp > 2000)
                     m.reply('Exp limit') // Hehehe
                 else               
-                if (!isPrems && plugin.money && global.db.data.users[m.sender].money < plugin.money * 1) {
-                    this.reply(m.chat, `   `, m)
-                    continue     
+                ifif (!isPrems && plugin.money && global.db.data.users[m.sender].money < plugin.money * 1) {
+                    this.reply(m.chat, `🦈 𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎`, m)
+                    continue    
 		}
 			
                     m.exp += xp
@@ -1346,7 +1346,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
                         m.reply(+m.limit + lenguajeGB.smsCont8())
                 }
                  if (m.money)
-                        m.reply(+m.money + '   ()')
+                        m.reply(+m.money + ' 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎 🦈 𝙐𝙎𝘼𝘿𝙊(𝙎)')
               
                 break
             }
