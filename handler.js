@@ -1189,7 +1189,7 @@ if (m.text && user.banned && !isROwner) {
   if (user.bannedMessageCount < 3) {
     const messageNumber = user.bannedMessageCount + 1;
     const messageText = `   * *   \nAviso (${messageNumber}/3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
-* Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de t� desbaneo*
+* Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de tú desbaneo*
 
  ${global.asistencia}
  wa.me/34671660629
@@ -1409,7 +1409,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
 	    
         if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
         if (!m.fromMem && m.text.match(/(ata|des|able|izo|ido|.-.|._.|:)|:(|:v|v:|o.o|;v|v;|v':|:'v)/gi)) {
-        let emot = pickRandom(["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""])
+        let emot = pickRandom(["🤩", "😏", "😳", "🥵", "🤯", "😱", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "🤝", "💪", "👑", "😚", "⚡️", "☃️", "⛄️", "🌝", "🌛", "🌜", "🍓", "🍎", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "💘", "💝", "💟", "🌝", "😎", "🔥", "🐦"])
         this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
         function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
 		
@@ -1524,9 +1524,9 @@ export async function deleteUpdate(message) {
      
 * Nombre:* @${participant.split`@`[0]}
 * Enviando el mensaje..*
-* Para desactivar esta funci�n escriba el comando:*
-*� #disable antidelete*
-*� #enable delete*
+* Para desactivar esta función escriba el comando:*
+* #disable antidelete*
+* #enable delete*
      
 `.trim(), msg, {
             mentions: [participant]
