@@ -275,7 +275,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ### 💠 [`IDIOMAS DISPONIBLES PARA SHARK-BOT`](https://github.com/ElChema-Nc/Shark-Bot/blob/master/config.js) 
 #### 🌐 Español  
 #### 🌐 Inglés (English) 
-- [x] Ejemplo <details><summary>Idioma</summary><img src="https://i.imgur.com/RMWFgZo.jpeg"></details>
+
 ----
 
 ### 🌟 CREADOR
