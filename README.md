@@ -68,7 +68,7 @@ npm start
 * #### APLICACIÓN RECOMENDADA PARA EDITAR [`NÚMERO DE OWNER`](https://play.google.com/store/apps/details?id=com.rhmsoft.code)
 > **Note** Guardar los archivos en la ubicación: storage/downloads/Shark-Bot-master/Shark-Bot-master   
 ----
-### 🚀 USAR GATABOT 24/7 EN TERMUX 
+### 🚀 USAR SHARK-BOT 24/7 EN TERMUX 
 > Ejecutar estos comandos dentro de la carpeta Shark-Bot
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
@@ -129,11 +129,6 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ### ⚡ REPLIT - SHARK-BOT
 <a target="_blank" href="https://replit.com/github/ElChema-Nc/Shark-Bot"><img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg"></a>
 <a href="https://replit.com/github/ElChema-Nc/Shark-Bot"> <img src="https://media0.giphy.com/media/lMwu8EJAnv9kmn51KQ/giphy.gif" height="29px"></a>
-
--------------------
-### 🌱 ACTIVAR EN KOYEB 
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/ElChema-Nc/Shark-Bot&branch=master&name=shark-bot)
 
 ------------------
 ### ☁️ ACTIVAR EN RENDER 
