@@ -180,7 +180,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
   _Ir a la carpeta [`idiomas ✨`](https://github.com/ElChema-Nc/Shark-Bot/tree/master/lib/idiomas) y selecciona el archivo del idioma que quiera modificar su contenido._
   
   - [x] **¿Dónde puedo cambiar el idioma del Shark-Bot?**<br>
-  _Puede cambiar el idioma ingresando [`Aquí`](https://github.com/ElChema-Nc/Shark-Bot/blob/362ee2d694a033923efd9bf9ca16a2b0694e3073/config.js#L41)_
+  _Puede cambiar el idioma ingresando [`Aquí`](https://github.com/ElChema-Nc/Shark-Bot/blob/master/config.js)_
 </details>
 
 <details>
@@ -275,7 +275,6 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ### 💠 [`IDIOMAS DISPONIBLES PARA SHARK-BOT`](https://github.com/ElChema-Nc/Shark-Bot/blob/master/config.js) 
 #### 🌐 Español  
 #### 🌐 Inglés (English) 
-
 ----
 
 ### 🌟 CREADOR
