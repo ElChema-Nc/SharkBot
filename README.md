@@ -187,7 +187,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 <summary><b>Preguntas sobre Termux</b></summary>
 
   - [x] **¿Cómo puedo instalar el Shark-Bot en Termux?**<br>
-  _Puede usar la [`Instalación Automática 🗿`](https://github.com/ElChema-Nc/Shark-Bot/#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux-) si es la primera vez que va instalar._<br>
+  _Puede usar la [`Instalación Automática 🗿`](https://github.com/ElChema-Nc/Shark-Bot/#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux) si es la primera vez que va instalar._<br>
   
   - [x] **¿Cómo puedo descargar Termux?**<br>
   _Puede descargar la versión de Termux e instalar [`Aquí 👻`](https://f-droid.org/es/packages/com.termux/)._
