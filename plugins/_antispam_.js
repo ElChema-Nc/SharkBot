@@ -1,5 +1,3 @@
-//CRÉDITOS: https://github.com/Abiguelreyes75
-
 export async function all(m, conn) { 
 let texto
 let user = global.db.data.users[m.sender]  

@@ -1,7 +1,3 @@
-//CRÉDITOS: https://github.com/Abiguelreyes75
-
-//let handler = m => m
-//handler.all = async function (m) {
 let handler = m => m
 handler.before = async function (m, {conn, isAdmin} ) {
 if (m.isGroup && isAdmin) return null
