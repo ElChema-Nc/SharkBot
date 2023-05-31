@@ -501,7 +501,7 @@ let chatgptUser = global.chatgpt.data.users[m.sender];
               if (!user.premium) user.premium = false
               if (!user.premium) user.premiumTime = 0
               if (!user.rtrofi) user.rtrofi = 'Bronce'
-                                                   		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+              
             } else
                 global.db.data.users[m.sender] = {
 		    
@@ -1444,7 +1444,7 @@ pp = await this.profilePictureUrl(user, 'image')
 let apii = await this.getFile(pp)                                      
 const botTt2 = groupMetadata.participants.find(u => this.decodeJid(u.id) == this.user.jid) || {} 
 const isBotAdminNn = botTt2?.admin === "admin" || false
-text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || ' -') :
+text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁 🦈') :
 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 			    
 if (chat.antifake && isBotAdminNn && action === 'add') {
@@ -1521,13 +1521,13 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-     
-* Nombre:* @${participant.split`@`[0]}
-* Enviando el mensaje..*
-* Para desactivar esta función escriba el comando:*
-* #disable antidelete*
-* #enable delete*
-     
+━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
+*■ Nombre:* @${participant.split`@`[0]}
+*■ Enviando el mensaje..*
+*■ Para desactivar esta función escriba el comando:*
+*—◉ #disable antidelete*
+*—◉ #enable delete*
+━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -1552,7 +1552,7 @@ let msg = {
 }[type]
 //if (msg) return m.reply(msg)
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, ' ' + sk + ' ', ' ja82783643@gmail.com'].getRandom(), thumbnail: sharkImg.getRandom(), sourceUrl: [md, nna, yt, ig, paypal, fb].getRandom() }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja8218848@gmail.com'].getRandom(), thumbnail: gataImg.getRandom(), sourceUrl: [md, nna, yt, ig].getRandom() }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
