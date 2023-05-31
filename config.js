@@ -112,7 +112,6 @@ global.yt = 'https://youtube.com/@thechema4896'
 global.yt2 = 'https://youtube.com/@thechema4896'
 global.ig = 'https://www.instagram.com/1alvarez_jose8'
 global.md = 'https://github.com/ElChema-Nc/Shark-Bot'
-global.fb = 'https://www.facebook.com/groups/872989990425789/'
 
 global.nna = 'https://chat.whatsapp.com/JO5LstGfk6RBccr0gjzNwI' //UPDATE SHARK
 global.asistencia = 'Wa.me/34671660629' //Dudas? escríbeme...
@@ -208,8 +207,8 @@ global.img18 = 'https://i.ibb.co/LdbB9fz/img18.jpg'
 
 global.logogit = 'https://tinyurl.com/ElChemaNc'
 
-global.welshark = [ig, yt2, yt2, ig, md, ig, yt, yt2, yt2, ig, fb]
-global.redesMenu = [nna, md, ig, yt, asistencia, fb]
+global.welshark = [ig, yt2, yt2, ig, md, ig, yt, yt2, yt2, ig]
+global.redesMenu = [nna, md, ig, yt, asistencia]
 global.sharkMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18]
 global.sharkVidMenu = ['./media/menus/Menu1.jpg', './media/menus/Menu2.jpg', './media/menus/Menu3.jpg']
 global.sharkImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
