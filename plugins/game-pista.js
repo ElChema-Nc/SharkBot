@@ -1,5 +1,3 @@
-/* Created by https://github.com/unptoadrih15 */
-
 let handler = async (m, { conn }) => {
 conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
 let id = m.chat
