@@ -33,49 +33,48 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 const sections = [{
 title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista2'](), rowId: `${usedPrefix}creadora`},
-{title: lenguajeGB['smsLista3'](), rowId: `${usedPrefix}donar`},
-{title: lenguajeGB['smsLista4'](), rowId: `${usedPrefix}ping`},
-{title: lenguajeGB['smsLista5'](), rowId: `${usedPrefix}infomenu`},
-{title: lenguajeGB['smsLista6'](), rowId: `${usedPrefix}allmenu`},
-{title: lenguajeGB['smsLista7'](), rowId: `${usedPrefix}instalarbot`},
-{title: lenguajeGB['smsLista8'](), rowId: `${usedPrefix}serbot`},
-{title: lenguajeGB['smsLista9'](), rowId: `${usedPrefix}términos`, description: '\n'}
+{title: lenguajeGB['smsLista2'](), rowId: `${usedPrefix}creador`},
+{title: lenguajeGB['smsLista3'](), rowId: `${usedPrefix}ping`},
+{title: lenguajeGB['smsLista4'](), rowId: `${usedPrefix}infomenu`},
+{title: lenguajeGB['smsLista5'](), rowId: `${usedPrefix}allmenu`},
+{title: lenguajeGB['smsLista6'](), rowId: `${usedPrefix}instalarbot`},
+{title: lenguajeGB['smsLista7'](), rowId: `${usedPrefix}serbot`},
+{title: lenguajeGB['smsLista8'](), rowId: `${usedPrefix}términos`, description: '\n'}
 ]},{
-title: comienzo + ' ' + lenguajeGB['smsLista10']() + ' ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista9']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}top`},
-{title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}listprem`},
-{title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}pase premium`},
-{title: lenguajeGB['smsLista14'](), rowId: `${usedPrefix}inventario 3`},
-{title: lenguajeGB['smsLista15'](), rowId: `${usedPrefix}rpgmenu`},
-{title: lenguajeGB['smsLista16'](), rowId: `${usedPrefix}buy`},
-{title: lenguajeGB['smsLista17'](), rowId: `${usedPrefix}inventory`, description: '\n'}
+{title: lenguajeGB['smsLista10'](), rowId: `${usedPrefix}top`},
+{title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}listprem`},
+{title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}pase premium`},
+{title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}inventario 3`},
+{title: lenguajeGB['smsLista14'](), rowId: `${usedPrefix}rpgmenu`},
+{title: lenguajeGB['smsLista15'](), rowId: `${usedPrefix}buy`},
+{title: lenguajeGB['smsLista16'](), rowId: `${usedPrefix}inventory`, description: '\n'}
 ]},{	
-title: comienzo + ' ' + lenguajeGB['smsLista18']() + ' ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista17']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista19'](), rowId: `${usedPrefix}descargasmenu`},
-{title: lenguajeGB['smsLista20'](), rowId: `${usedPrefix}buscarmenu`},
-{title: lenguajeGB['smsLista21'](), rowId: `${usedPrefix}convertidormenu`},
-{title: lenguajeGB['smsLista22'](), rowId: `${usedPrefix}audioefectomenu`},
-{title: lenguajeGB['smsLista22_1'](), rowId: `${usedPrefix}herramientasmenu`, description: '\n'}
+{title: lenguajeGB['smsLista18'](), rowId: `${usedPrefix}descargasmenu`},
+{title: lenguajeGB['smsLista19'](), rowId: `${usedPrefix}buscarmenu`},
+{title: lenguajeGB['smsLista20'](), rowId: `${usedPrefix}convertidormenu`},
+{title: lenguajeGB['smsLista21'](), rowId: `${usedPrefix}audioefectomenu`},
+{title: lenguajeGB['smsLista22'](), rowId: `${usedPrefix}herramientasmenu`, description: '\n'}
 ]},{
 title: comienzo + ' ' + lenguajeGB['smsLista23']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista24'](), rowId: `${usedPrefix}juegosmenu`},
-{title: lenguajeGB['smsLista25'](), rowId: `${usedPrefix}audios`},
-{title: lenguajeGB['smsLista26'](), rowId: `${usedPrefix}stickermenu`},
-{title: lenguajeGB['smsLista27'](), rowId: `${usedPrefix}makermenu`},
-{title: lenguajeGB['smsLista28'](), rowId: `${usedPrefix}menulogos2`},
-{title: lenguajeGB['smsLista29'](), rowId: `${usedPrefix}randommenu`},
-{title: lenguajeGB['smsLista30'](), rowId: `${usedPrefix}hornymenu`, description: '\n'}
+{title: lenguajeGB['smsLista23'](), rowId: `${usedPrefix}juegosmenu`},
+{title: lenguajeGB['smsLista24'](), rowId: `${usedPrefix}audios`},
+{title: lenguajeGB['smsLista25'](), rowId: `${usedPrefix}stickermenu`},
+{title: lenguajeGB['smsLista26'](), rowId: `${usedPrefix}makermenu`},
+{title: lenguajeGB['smsLista27'](), rowId: `${usedPrefix}menulogos2`},
+{title: lenguajeGB['smsLista28'](), rowId: `${usedPrefix}randommenu`},
+{title: lenguajeGB['smsLista29'](), rowId: `${usedPrefix}hornymenu`, description: '\n'}
 ]},{	
-title: comienzo + ' ' + lenguajeGB['smsLista31']() + ' ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista30']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista32'](), rowId: `${usedPrefix}grupomenu`},
-{title: lenguajeGB['smsLista33'](), rowId: `${usedPrefix}listas`},
-{title: lenguajeGB['smsLista34'](), rowId: `${usedPrefix}on`},
-{title: lenguajeGB['smsLista35'](), rowId: `${usedPrefix}ownermenu`}
+{title: lenguajeGB['smsLista31'](), rowId: `${usedPrefix}grupomenu`},
+{title: lenguajeGB['smsLista32'](), rowId: `${usedPrefix}listas`},
+{title: lenguajeGB['smsLista33'](), rowId: `${usedPrefix}on`},
+{title: lenguajeGB['smsLista34'](), rowId: `${usedPrefix}ownermenu`}
 ]}]
 
 const listMessage = {

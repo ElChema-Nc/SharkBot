@@ -63,10 +63,10 @@ let username = conn.getName(who)
 let user = global.db.data.users[m.sender]
 //user.registered = false
 
-let pp = gataVidMenu.getRandom()
+let pp = sharkVidMenu.getRandom()
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let fsizedoc = '1'.repeat(10)
-let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
+let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(sharkMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 const temaX = [['pornololi', 'nsfwloli'], ['pornopies', 'nsfwfoot'], ['pornoass', 'nsfwass'], ['pornobdsm', 'nsfwbdsm'], ['pornocum', 'nsfwcum'],
 ['pornoero', 'nsfwero'], ['pornodominar', 'nsfwfemdom'], ['pornoglass', 'nsfwglass'], ['pornohentai', 'nsfwhentai'], ['pornorgia', 'nsfworgy'], ['pornotetas', 'nsfwboobs'],
@@ -95,7 +95,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 
 ⠇ ${lenguajeGB['smsTex2']()} 🧰
 ∘ _${usedPrefix}bass_
@@ -123,7 +123,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex1']()} 🔍
 ∘ _${usedPrefix}animeinfo *texto*_
 ∘ _${usedPrefix}mangainfo *texto*_
@@ -147,7 +147,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex3']()} 🔞
 ∘ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? temaX[0][0] : temaX[0][1]}_
 ∘ _${usedPrefix}${lenguajeGB.lenguaje() == 'es' ? temaX[1][0] : temaX[1][1]}_
@@ -279,7 +279,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex8']()} 🛰️
 ∘ _${usedPrefix}toimg | img | jpg *sticker*_
 ∘ _${usedPrefix}tomp3 | mp3 *video o nota de voz*_
@@ -301,7 +301,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex9']()} 🚀
 ∘ _${usedPrefix}imagen | image *texto*_
 ∘ _${usedPrefix}pinterest | dlpinterest *texto*_
@@ -343,7 +343,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex10']()} 🎡
 ∘ _${usedPrefix}mates | matemáticas | math_
 ∘ _${usedPrefix}ppt *piedra : papel : tijera*_
@@ -394,7 +394,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex11']()} 🌐
 ∘ _${usedPrefix}add *numero*_
 ∘ _${usedPrefix}sacar | ban | kick  *@tag*_
@@ -441,7 +441,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex12']()} 🛠️
 ∘ _${usedPrefix}afk *motivo*_
 ∘ _${usedPrefix}acortar *url*_
@@ -469,14 +469,13 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex13']()} 💫
-∘ _${usedPrefix}cuentasgatabot | cuentasgb_
-∘ _${usedPrefix}gruposgb | grupos | groupgb_
-∘ _${usedPrefix}donar | donate_
+∘ _${usedPrefix}cuentassharkbot | cuentassk_
+∘ _${usedPrefix}grupossk | grupos | groupsk_
 ∘ _${usedPrefix}listagrupos | grouplist_
-∘ _${usedPrefix}estado | heygata | status_
-∘ _${usedPrefix}infogata | infobot_
+∘ _${usedPrefix}estado | heyshark | status_
+∘ _${usedPrefix}infoshark | infobot_
 ∘ _${usedPrefix}instalarbot | installbot_
 ∘ _${usedPrefix}creadora | owner_
 ∘ _${usedPrefix}velocidad | ping_
@@ -499,7 +498,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex14']()} ⛺
 ∘ _${usedPrefix}logos *efecto texto*_
 ∘ _${usedPrefix}simpcard *@tag*_
@@ -522,7 +521,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex15']()} 🌅
 ∘ ${usedPrefix}logocorazon *Texto*
 ∘ ${usedPrefix}3dtext *Texto*
@@ -564,13 +563,13 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex20']()} 💎
 ∘ _${usedPrefix}join *enlace*_
 ∘ _${usedPrefix}unete *enlace*_
 ∘ _${usedPrefix}dardiamantes *cantidad*_
 ∘ _${usedPrefix}darxp *cantidad*_
-∘ _${usedPrefix}dargatacoins *cantidad*_
+∘ _${usedPrefix}darsharkcoins *cantidad*_
 ∘ _${usedPrefix}addprem | userpremium *@tag* *cantidad*_
 ∘ _${usedPrefix}addprem2 | userpremium2 *@tag* *cantidad*_
 ∘ _${usedPrefix}addprem3 | userpremium3 *@tag* *cantidad*_
@@ -584,7 +583,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}comunicargrupos *texto*_
 ∘ _${usedPrefix}borrartmp | cleartmp_
 ∘ _${usedPrefix}delexp *@tag*_
-∘ _${usedPrefix}delgatacoins *@tag*_
+∘ _${usedPrefix}delsharkcoins *@tag*_
 ∘ _${usedPrefix}deldiamantes *@tag*_
 ∘ _${usedPrefix}reiniciar | restart_
 ∘ _${usedPrefix}ctualizar | update_
@@ -593,7 +592,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}listapremium | listprem_
 ∘ _${usedPrefix}añadirdiamantes *@tag cantidad*_
 ∘ _${usedPrefix}añadirxp *@tag cantidad*_
-∘ _${usedPrefix}añadirgatacoins *@tag cantidad*_
+∘ _${usedPrefix}añadirsharkcoins *@tag cantidad*_
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 
@@ -607,7 +606,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex23']()} 🧩
 ∘ _${usedPrefix}chica_
 ∘ _${usedPrefix}chico_
@@ -672,7 +671,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex21']()} ⚗️
 ∘ _${usedPrefix}botemporal *enlace* *cantidad*_
 ∘ _${usedPrefix}addbot *enlace* *cantidad*_
@@ -708,7 +707,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}myns_
 ∘ _${usedPrefix}unreg *numero de serie*_
 ∘ _${usedPrefix}minardiamantes | minargemas_
-∘ _${usedPrefix}minargatacoins | minarcoins_
+∘ _${usedPrefix}minarsharkcoins | minarcoins_
 ∘ _${usedPrefix}minarexperiencia | minarexp_
 ∘ _${usedPrefix}minar *:* minar2 *:* minar3_
 ∘ _${usedPrefix}reclamar | regalo | claim_
@@ -730,7 +729,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🗿 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex22']()} 🎐
 ∘ _${usedPrefix}sticker | s *imagen o video*_
 ∘ _${usedPrefix}sticker | s *url de tipo jpg*_
