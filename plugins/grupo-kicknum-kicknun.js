@@ -1,10 +1,6 @@
-/*              Codigo Creado Por Bruno Sobrino 
-      (https://github.com/BrunoSobrino/TheMystic-Bot-MD) 
-*/
-
 let handler = async (m, { conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin }) => {
-if (!args[0]) return m.reply(`*⚠️ Ingrese el prefijo de un país para buscar números en el grupo de ese pais, ejemplo: ${usedPrefix + command} 593*`) 
-if (isNaN(args[0])) return m.reply(`*⚠️ Ingrese el prefijo de un país para buscar números en el grupo de ese pais, ejemplo: ${usedPrefix + command} 593*`) 
+if (!args[0]) return m.reply(`*⚠️ Ingrese el prefijo de un país para buscar números en el grupo de ese pais, ejemplo: ${usedPrefix + command} 505*`) 
+if (isNaN(args[0])) return m.reply(`*⚠️ Ingrese el prefijo de un país para buscar números en el grupo de ese pais, ejemplo: ${usedPrefix + command} 505*`) 
 let lol = args[0].replace(/[+]/g, '')
 let ps = participants.map(u => u.id).filter(v => v !== conn.user.jid && v.startsWith(lol || lol)) 
 let bot = global.db.data.settings[conn.user.jid] || {}

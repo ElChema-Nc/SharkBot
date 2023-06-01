@@ -24,7 +24,7 @@ let text =
 ⇢ ${lenguajeGB['smsGI9']()}
 ${listAdmin}
 
-* - - - - - - -  ${vs} - - - - - - - *
+*《 - - - - - - - 🔱 ${vs} - - - - - - - 》*
 `.trim()
   
 await conn.sendButton(m.chat, wm, text, pp, [[lenguajeGB.smsGI10(), '.on'], [lenguajeGB.smsConMenu(), '/menu']], m, { mentions: [...groupAdmins.map(v => v.id), owner] })
