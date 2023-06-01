@@ -1188,12 +1188,12 @@ if (m.text && user.banned && !isROwner) {
   
   if (user.bannedMessageCount < 3) {
     const messageNumber = user.bannedMessageCount + 1;
-    const messageText = `   * *   \nAviso (${messageNumber}/3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
-* Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de t� desbaneo*
+    const messageText = `❰ ⚠️ ❱ *𝙀𝙎𝙏𝘼𝙎 𝘽𝘼𝙉𝙀𝘼𝘿𝙊* ❰ ⚠️ ❱\nAviso (${messageNumber}/3)${user.bannedReason ? `\n*Motivo:* *${user.bannedReason}*` : ''}
+*👉 Puedes contactar al propietario del Bot si crees que se trata de un error (TENER PRUEBAS) para tratar el motivo de tú desbaneo*
 
- ${global.asistencia}
- wa.me/34671660629
- ${global.ig}
+👉 ${global.asistencia}
+👉 wa.me/34671660629
+👉 ${global.ig}
 `.trim();
     
     //m.reply(messageText);
@@ -1211,7 +1211,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
   if (user.commandCount === 5) {
     const remainingTime = Math.ceil((user.lastCommandTime + 5000 - Date.now()) / 1000)
     if (remainingTime > 0) {
-      const messageText = `* ${remainingTime}      *`
+      const messageText = `*𝙀𝙎𝙋𝙀𝙍𝘼 ${remainingTime} 𝙎𝙀𝙂𝙐𝙉𝘿𝙊 𝘼𝙉𝙏𝙀𝙎 𝘿𝙀 𝙐𝙎𝘼𝙍 𝙊𝙏𝙍𝙊 𝘾𝙊𝙈𝘼𝙉𝘿𝙊*`
       m.reply(messageText)
       return
     } else {
@@ -1276,8 +1276,8 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
                     m.reply('Exp limit') // Hehehe
                 else               
                 if (!isPrems && plugin.money && global.db.data.users[m.sender].money < plugin.money * 1) {
-                    this.reply(m.chat, `   `, m)
-                    continue     
+                    this.reply(m.chat, `🦈 𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎`, m)
+                    continue 
 		}
 			
                     m.exp += xp
@@ -1346,7 +1346,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
                         m.reply(+m.limit + lenguajeGB.smsCont8())
                 }
                  if (m.money)
-                        m.reply(+m.money + '   ()')
+                        mm.reply(+m.money + ' 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎 🦈 𝙐𝙎𝘼𝘿𝙊(𝙎)')
               
                 break
             }
@@ -1409,7 +1409,7 @@ if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - 
 	    
         if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
         if (!m.fromMem && m.text.match(/(ata|des|able|izo|ido|.-.|._.|:)|:(|:v|v:|o.o|;v|v;|v':|:'v)/gi)) {
-        let emot = pickRandom(["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""])
+        let emot = pickRandom(["🤩", "😏", "😳", "🥵", "🤯", "😱", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "🤝", "💪", "👑", "😚", "⚡️", "☃️", "⛄️", "🌝", "🌛", "🌜", "🍓", "🍎", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "💘", "💝", "💟", "🌝", "😎", "🔥"])
         this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
         function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
 		
@@ -1444,7 +1444,7 @@ pp = await this.profilePictureUrl(user, 'image')
 let apii = await this.getFile(pp)                                      
 const botTt2 = groupMetadata.participants.find(u => this.decodeJid(u.id) == this.user.jid) || {} 
 const isBotAdminNn = botTt2?.admin === "admin" || false
-text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || ' -') :
+text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁 🦈') :
 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 			    
 if (chat.antifake && isBotAdminNn && action === 'add') {
@@ -1521,13 +1521,13 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-     
-* Nombre:* @${participant.split`@`[0]}
-* Enviando el mensaje..*
-* Para desactivar esta funci�n escriba el comando:*
-*� #disable antidelete*
-*� #enable delete*
-     
+━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
+*■ Nombre:* @${participant.split`@`[0]}
+*■ Enviando el mensaje..*
+*■ Para desactivar esta función escriba el comando:*
+*—◉ #disable antidelete*
+*—◉ #enable delete*
+━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -1552,7 +1552,7 @@ let msg = {
 }[type]
 //if (msg) return m.reply(msg)
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, ' ' + sk + ' ', ' ja82783643@gmail.com'].getRandom(), thumbnail: sharkImg.getRandom(), sourceUrl: [md, nna, yt, ig, paypal, fb].getRandom() }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja82783643@gmail.com'].getRandom(), thumbnail: sharkImg.getRandom(), sourceUrl: [md, nna, yt, ig].getRandom() }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
