@@ -32,10 +32,10 @@ global.lenguajeGB = es  //Idioma del Shark-Bot, Ejemplo: es | en...
 
 //━━━━━━━━━━━━━━━━━━━━
 
-global.openai_key = 'sk-...OzYy'
+global.openai_key = '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'
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-global.openai_org_id = 'HITjoN7H8pCwoncEB9e3fSyW'
+global.openai_org_id = 'org-JqrNoVe9nJkcCxShWO77Y3CN'
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 
@@ -259,7 +259,7 @@ global.fgif = {
                               }
                              }
 
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 global.multiplier = 60 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
@@ -444,7 +444,7 @@ global.rpgshopp = { //Tienda
     let emotttt = {
       exp: '⚡', limit: '💎', diamond: '💎+', joincount: '🪙',
       emerald: '💚', berlian: '♦️', kyubi: '🌀', gold: '👑',
-      money: '🐱', tiketcoin: '🎫', stamina: '✨',
+      money: '🦈', tiketcoin: '🎫', stamina: '✨',
             
       potion: '🥤', aqua: '💧', trash: '🗑', wood: '🪵',
       rock: '🪨', batu: '🥌', string: '🕸️', iron: '⛓️',
