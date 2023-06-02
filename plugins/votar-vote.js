@@ -40,7 +40,7 @@ let [reason, upvote, devote] = conn.vote[id]
 let caption = `*${htjava} 𝙇𝙄𝙎𝙏𝘼 𝘿𝙀 𝙑𝙊𝙏𝙊𝙎 : 𝙑𝙊𝙏𝙀 𝙇𝙄𝙎𝙏 ${htjava}*
 
 *USUARIO(A)*
-🐈 @${conn.getName(m.sender)}
+🦈 @${conn.getName(m.sender)}
 
 *MOTIVO ➫* ${reason}
 

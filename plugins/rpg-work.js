@@ -1,4 +1,3 @@
-// creditos a https://github.com/FG98F
 let handler = async (m, { conn, isPrems}) => {
 //let hasil = Math.floor(Math.random() * 5000)
 const fkontak = {
@@ -16,15 +15,12 @@ const fkontak = {
         "participant": "0@s.whatsapp.net"
     }
 let pp = 'https://c4.wallpaperflare.com/wallpaper/991/456/22/sketch-artist-anime-anime-girls-arknights-swire-arknights-hd-wallpaper-preview.jpg'
-let gata = Math.floor(Math.random() * 3000)
-global.db.data.users[m.sender].exp += gata * 1  
+let shark = Math.floor(Math.random() * 3000)
+global.db.data.users[m.sender].exp += shark * 1  
 let time = global.db.data.users[m.sender].lastwork + 600000
 if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*Ya trabajaste, espere unos ${msToTime(time - new Date())} para volver a trabajar!!*`
 
-await conn.reply(m.chat, `*${pickRandom(global.work)}* ${gata} XP`, fkontak, pp, m)
-/*conn.sendHydrated(m.chat, wm, `${pickRandom(global.work)} ${gata} XP`, pp, md, '饾檪饾櫈饾櫓饾檭饾櫔饾櫁', null, null, [
-['饾棤 饾棙 饾棥 饾棬 鈽橈笍', `#menu`]
-], m,) */
+await conn.reply(m.chat, `*${pickRandom(global.work)}* ${shark} XP`, fkontak, pp, m)
 global.db.data.users[m.sender].lastwork = new Date * 1
 }
 handler.help = ['work']
@@ -52,7 +48,7 @@ return list[Math.floor(list.length * Math.random())]
 }
 
 global.work = ["Trabajas como cortador de galletas y ganas", "Trabaja para una empresa militar privada, ganando", "Organiza un evento de cata de vinos y obtiene",
- "Moderaste el grupo cuando *GATADIOS* no estaba, el pago fue",
+ "Moderaste el grupo cuando *ElChema* no estaba, el pago fue",
  "iba caminando por la calle y que encuentra con",
  "ayudarte con el grupo mientras los admin no estaba el pago fue",
  "Te secuestran y te llevan a un coliseo subterr脙隆neo donde luchaste contra monstruos con personas que nunca antes hab脙颅as conocido. Ganas", "Limpias la chimenea y encuentras", 
@@ -66,10 +62,10 @@ global.work = ["Trabajas como cortador de galletas y ganas", "Trabaja para una e
 "Desarrollas juegos para ganarte la vida y ganas", 
 "Ganas un concurso de comer chili picante. 脗隆El premio es", 
 "Trabajas todo el dia en la empresa por", 
-"Ayudas a moderar el grupo de DyLux por", "Dise帽aste un logo para *FG* por", 
-"Moderaste el grupo cuando *FG* no estaba, el pago fue", 
+"Ayudas a moderar el grupo del Chema por", "Dise帽aste un logo para *ElChema* por", 
+"Moderaste el grupo cuando *Chema* no estaba, el pago fue", 
 "Trabajaste lo mejor que pudo en una imprenta que estaba contratando y gana su bien merecido!", 
-"Trabajas como podador de arbustos para *FG98* y ganas", "La demanda de juegos para dispositivos moviles ha aumentado, por lo que creas un nuevo juego lleno de micro-transacciones. Con tu nuevo juego ganas un total de", 
+"Trabajas como podador de arbustos para *ElChema* y ganas", "La demanda de juegos para dispositivos moviles ha aumentado, por lo que creas un nuevo juego lleno de micro-transacciones. Con tu nuevo juego ganas un total de", 
 "Trabajas como actor de voz para Bob Esponja y te las arreglaste para ganar", 
 "Estabas cultivando y Ganaste", "Trabajas como constructor de castillos de arena y ganas", "Trabajaste y Ganaste", 
 "Trabajas como artista callejera y ganas","脗隆Hiciste trabajo social por una buena causa! por tu buena causa Recibiste"

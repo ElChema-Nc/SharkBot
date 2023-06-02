@@ -1,5 +1,3 @@
-// Gracias a https://github.com/BrunoSobrino
-
 import uploadImage from '../lib/uploadImage.js'
 import { sticker } from '../lib/sticker.js'
 let handler = async (m, { conn, text, usedPrefix, command }) => {

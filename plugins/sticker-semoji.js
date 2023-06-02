@@ -1,5 +1,3 @@
-// Gracias a https://github.com/BrunoSobrino
-
 import { sticker } from '../lib/sticker.js'
 import MessageType from '@adiwajshing/baileys'
 import { EmojiAPI } from 'emoji-api' 
@@ -11,7 +9,7 @@ ${mg}𝘿𝙀𝘽𝙀 𝘿𝙀 𝙐𝙎𝘼𝙍 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉�
 *${usedPrefix + command} _tipo emoji_*
 
 ⊱⊱ 𝙀𝙅𝙀𝙈𝙋𝙇𝙊 | 𝙀𝙓𝘼𝙈𝙋𝙇𝙀
-*${usedPrefix + command}* sa 😹
+*${usedPrefix + command}* sa 🫠
 
 ⊱⊱ 𝙏𝙄𝙋𝙊𝙎 𝘿𝙀 𝙀𝙈𝙊𝙅𝙄𝙎 | 𝙏𝙔𝙋𝙀𝙎 𝙊𝙁 𝙀𝙈𝙊𝙅𝙄𝙎
 
