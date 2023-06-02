@@ -1,15 +1,3 @@
-/*-------------------------------------------------------*/
-/* [❗]                      [❗]                      [❗] */  
-/*                                                       */ 
-/*       |- [ ⚠ ] - CREDITOS DEL CODIGO - [ ⚠ ] -|      */
-/*     —◉ DESAROLLADO POR OTOSAKA:                       */
-/*     ◉ Otosaka (https://github.com/6otosaka9)          */                    
-/*                                                       */
-/*     —◉ FT:                                            */
-/*     ◉ BrunoSobrino (https://github.com/BrunoSobrino)  */
-/*                                                       */
-/* [❗]                      [❗]                      [❗] */
-/*-------------------------------------------------------*/
 import fetch from 'node-fetch'
 import axios from 'axios'
 import { Configuration, OpenAIApi } from 'openai'
@@ -21,7 +9,7 @@ try {
 await conn.sendPresenceUpdate('composing', m.chat)
 let chgptdb = global.chatgpt.data.users[m.sender];
 chgptdb.push({ role: 'user', content: text });
-const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: 'Bot de WhatsApp el cual fue creado por Gatadios, tu seras GataBot-MD' }, ...chgptdb ]})}
+const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: 'Bot de WhatsApp el cual fue creado por el Chema, tu seras Shark-Bot' }, ...chgptdb ]})}
 let response = await axios(config);
 chgptdb.push({ role: 'assistant', content: response.data.choices[0].message.content }) 
 m.reply(response.data.choices[0].message.content)
@@ -52,5 +40,5 @@ m.reply(`${hasill22.result}`.trim())
 console.log(efe4)
 throw `${lenguajeGB['smsAvisoFG']()}𝙀𝙍𝙍𝙊𝙍, 𝙑𝙐𝙀𝙇𝙑𝘼 𝘼 𝙄𝙉𝙏𝙀𝙉𝙏𝘼𝙍𝙇𝙊`   
 }}}}}}
-handler.command = ['openai2', 'chatgpt2', 'ia2', 'robot2', 'Gata', 'GataBot']
+handler.command = ['openai2', 'chatgpt2', 'ia2', 'robot2', 'Shark', 'SharkBot']
 export default handler
