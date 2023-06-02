@@ -33,7 +33,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 //let imgpre = 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg' 
 
@@ -72,7 +72,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -109,7 +109,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -146,7 +146,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -183,7 +183,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -220,7 +220,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -257,7 +257,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -294,7 +294,7 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/SJhrb5x/img3.jpg',
 'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
