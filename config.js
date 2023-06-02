@@ -32,10 +32,10 @@ global.lenguajeGB = es  //Idioma del Shark-Bot, Ejemplo: es | en...
 
 //━━━━━━━━━━━━━━━━━━━━
 
-global.openai_key = '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'
+global.openai_key = 'sk-...OzYy'
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-global.openai_org_id = 'org-JqrNoVe9nJkcCxShWO77Y3CN'
+global.openai_org_id = 'HITjoN7H8pCwoncEB9e3fSyW'
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 
