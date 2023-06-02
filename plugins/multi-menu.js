@@ -477,7 +477,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}estado | heyshark | status_
 ∘ _${usedPrefix}infoshark | infobot_
 ∘ _${usedPrefix}instalarbot | installbot_
-∘ _${usedPrefix}creadora | owner_
+∘ _${usedPrefix}creador | owner_
 ∘ _${usedPrefix}velocidad | ping_
 ∘ _${usedPrefix}serbot | jadibot_
 ∘ _${usedPrefix}bots | listjadibots_
@@ -733,7 +733,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ⠇ ${lenguajeGB['smsTex22']()} 🎐
 ∘ _${usedPrefix}sticker | s *imagen o video*_
 ∘ _${usedPrefix}sticker | s *url de tipo jpg*_
-∘ _${usedPrefix}emojimix *😺+😆*_
+∘ _${usedPrefix}emojimix *🫡+😆*_
 ∘ _${usedPrefix}scircle | círculo *imagen*_
 ∘ _${usedPrefix}semoji | emoji *tipo emoji*_
 ∘ _${usedPrefix}attp *texto*_
