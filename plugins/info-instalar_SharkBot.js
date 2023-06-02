@@ -58,7 +58,7 @@ _https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git_
 _https://github.com/clhuang/heroku-buildpack-webp-binaries.git_
 *━━━━━━━━━━━━━⬣*`
 await conn.sendFile(m.chat, picture, 'shark.mp4', shark, fkontak)}
-/*conn.sendButton(m.chat, shark, `Comunícate con Mí Creadora si necesitas ayuda con la Instalación.\n\nContact My Creator if you need help with the Installation.\n\n${ig}\n${wm}`, picture, [
+/*conn.sendButton(m.chat, shark, `Comunícate con Mí Creador si necesitas ayuda con la Instalación.\n\nContact My Creator if you need help with the Installation.\n\n${ig}\n${wm}`, picture, [
 ['𝘾𝙪𝙚𝙣𝙩𝙖 𝙊𝙛𝙞𝙘𝙞𝙖𝙡 | 𝘼𝙘𝙘𝙤𝙪𝙣𝙩𝙨 ✅', '.cuentassk']], fkontak, m)}*/
 handler.command = /^(instalarbot|instalarsharkbot|instalarshark|procesobot|botproceso|procesodelbot|botinstall|installbot)/i
 export default handler
