@@ -18,13 +18,13 @@ let template = (args[0] || '').toLowerCase()
 if (/comprar|prem1/i.test(command)) {
 var tiempoPremium = 5 * text //tiempo total 
 var tiempoDecretado = 5 * 1 //tiempo decretado 
-const gata = 15
+const shark = 15
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${gata} ${rpgshop.emoticon('limit')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${shark} ${rpgshop.emoticon('limit')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.limit < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('limit')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('limit')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.limit -= gata * text
+if (user.limit < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('limit')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('limit')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.limit -= shark * text
 
 var tiempo = 300000 * text //180000 3min | 300000 5 min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -33,8 +33,8 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 //let imgpre = 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg' 
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
@@ -42,28 +42,28 @@ await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈�
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍*
 *┃» ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('limit')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('limit')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('limit')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('limit')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('limit')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} min*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 
 if (/prem2/i.test(command)) {
 var tiempoPremium = 15 * text //tiempo total 
 var tiempoDecretado = 15 * 1 //tiempo decretado 
-const gata = 35
+const shark = 35
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${gata} ${rpgshop.emoticon('kyubi')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${shark} ${rpgshop.emoticon('kyubi')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.kyubi < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('kyubi')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('kyubi')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.kyubi -= gata * text
+if (user.kyubi < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('kyubi')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('kyubi')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.kyubi -= shark * text
     
 var tiempo = 900000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -72,35 +72,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('kyubi')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('kyubi')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('kyubi')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('kyubi')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('kyubi')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} min*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem3/i.test(command)) {
 var tiempoPremium = 30 * text //tiempo total 
 var tiempoDecretado = 30 * 1 //tiempo decretado 
-const gata = 25
+const shark = 25
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${gata} ${rpgshop.emoticon('emerald')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} MIMUTOS*\n*✤ ${shark} ${rpgshop.emoticon('emerald')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.emerald < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('emerald')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('emerald')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.emerald -= gata * text
+if (user.emerald < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('emerald')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('emerald')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.emerald -= shark * text
     
 var tiempo = 1800000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -109,35 +109,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('emerald')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('emerald')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('emerald')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('emerald')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('emerald')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} min*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem4/i.test(command)) {
 var tiempoPremium = 1 * text //tiempo total 
 var tiempoDecretado = 1 * 1 //tiempo decretado 
-const gata = 50
+const shark = 50
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${gata} ${rpgshop.emoticon('trash')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${shark} ${rpgshop.emoticon('trash')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.trash < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('trash')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('trash')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.trash -= gata * text
+if (user.trash < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('trash')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('trash')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.trash -= shark * text
     
 var tiempo = 3600000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -146,35 +146,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('trash')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('trash')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('trash')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('trash')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('trash')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} hora(s)*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem5/i.test(command)) {
 var tiempoPremium = 3 * text //tiempo total 
 var tiempoDecretado = 3 * 1 //tiempo decretado 
-const gata = 40
+const shark = 40
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${gata} ${rpgshop.emoticon('berlian')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${shark} ${rpgshop.emoticon('berlian')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.berlian < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('berlian')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('berlian')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.berlian -= gata * text
+if (user.berlian < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('berlian')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('berlian')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.berlian -= shark * text
     
 var tiempo = 10800000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -183,35 +183,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('berlian')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('berlian')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('berlian')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('berlian')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('berlian')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} hora(s)*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem6/i.test(command)) {
 var tiempoPremium = 7 * text //tiempo total 
 var tiempoDecretado = 7 * 1 //tiempo decretado 
-const gata = 70
+const shark = 70
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${gata} ${rpgshop.emoticon('joincount')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${shark} ${rpgshop.emoticon('joincount')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.joincount < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('joincount')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('joincount')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.joincount -= gata * text
+if (user.joincount < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('joincount')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('joincount')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.joincount -= shark * text
     
 var tiempo = 25200000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -220,35 +220,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('joincount')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('joincount')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('joincount')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('joincount')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('joincount')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} hora(s)*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem7/i.test(command)) {
 var tiempoPremium = 24 * text //tiempo total 
 var tiempoDecretado = 24 * 1 //tiempo decretado 
-const gata = 65
+const shark = 65
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${gata} ${rpgshop.emoticon('diamond')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} HORA(S)*\n*✤ ${shark} ${rpgshop.emoticon('diamond')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.diamond < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('diamond')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 *${rpgshopp.emoticon('diamond')}* 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.diamond -= gata * text
+if (user.diamond < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('diamond')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 *${rpgshopp.emoticon('diamond')}* 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.diamond -= shark * text
     
 var tiempo = 86400000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -257,35 +257,35 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('diamond')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('diamond')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('diamond')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('diamond')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('diamond')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} hora(s)*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
 if (/prem8/i.test(command)) {
 var tiempoPremium = 3 * text //tiempo total 
 var tiempoDecretado = 3 * 1 //tiempo decretado 
-const gata = 80
+const shark = 80
 let user = global.db.data.users[m.sender]
     
-if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} DÍA(S)*\n*✤ ${gata} ${rpgshop.emoticon('gold')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
+if (!text) return conn.reply(m.chat, `${mg}*𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈*\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙏𝙄𝙈𝙀 𝙉𝙐𝙈𝘽𝙀𝙍\n\n*✤ 🎟️ 1 = ${tiempoDecretado} DÍA(S)*\n*✤ ${shark} ${rpgshop.emoticon('gold')}*\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
 if (isNaN(text)) return conn.reply(m.chat, `${mg}𝙎𝙊𝙇𝙊 𝙎𝙀 𝘼𝘾𝙀𝙋𝙏𝘼 𝙉𝙐𝙈𝙀𝙍𝙊𝙎\n𝙊𝙉𝙇𝙔 𝙉𝙐𝙈𝘽𝙀𝙍𝙎 𝘼𝘾𝘾𝙀𝙋𝙏𝙀𝘿\n\n*EJEMPLO: ${usedPrefix + command} 1*`, fkontak, m)
-if (user.gold < gata) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('gold')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('gold')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
-user.gold -= gata * text
+if (user.gold < shark) return conn.reply(m.chat, `${ag}𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝙎𝙐𝙁𝙄𝘾𝙄𝙀𝙉𝙏𝙀𝙎 *${rpgshop.emoticon('gold')}* 𝙋𝘼𝙍𝘼 𝘼𝘿𝙌𝙐𝙄𝙍𝙄𝙍 🎟️ 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝘾𝙊𝙈𝙋𝙍𝙀 ${rpgshopp.emoticon('gold')} 𝙀𝙉 𝙇𝘼 𝙏𝙄𝙀𝙉𝘿𝘼 𝙐𝙎𝘼𝙉𝘿𝙊 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy* 𝙊 𝙋𝙐𝙀𝘿𝙀𝙎 𝙑𝙀𝙉𝘿𝙀𝙍 𝙋𝘼𝙍𝘼 𝙊𝘽𝙏𝙀𝙉𝙀𝙍 𝙂𝘼𝙉𝘼𝙉𝘾𝙄𝘼𝙎 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}sell*`, fkontak, m)
+user.gold -= shark * text
     
 var tiempo = 259200000 * text //180000 3min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
@@ -294,22 +294,22 @@ else user.premiumTime = now + tiempo
 user.premium = true
 const imgpre = [ 
 'https://logowiki.net/wp-content/uploads/imgp/Premium-Logo-1-5365.jpg', 
-'https://i.imgur.com/oUAGYc2.jpg',
-'https://i.imgur.com/i0pccuo.jpg'];
+'https://i.ibb.co/SJhrb5x/img3.jpg'',
+'https://i.ibb.co/s9vDyph/img4.jpg'];
 
 await conn.sendButton(m.chat,`${eg}*╭┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╮*
 *┃🎟️ 𝙐𝙎𝙏𝙀𝘿 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝙋𝙍𝙀𝙈𝙄𝙐𝙈!!!*
 *┃*
 *┃✨ 𝙉𝙊𝙈𝘽𝙍𝙀 : 𝙐𝙎𝙀𝙍 » ${user.name}*
-*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${gata * text} ${rpgshopp.emoticon('gold')}*
-*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + gata} ${rpgshopp.emoticon('gold')}*
+*┃💰 𝙋𝘼𝙂𝙊 : 𝙋𝘼𝙔𝙈𝙀𝙉𝙏 »  -${shark * text} ${rpgshopp.emoticon('gold')}*
+*┃👝 𝙏𝙀𝙉𝙄𝘼 » ${user.limit + shark} ${rpgshopp.emoticon('gold')}*
 *┃🛄 𝙇𝙀 𝙌𝙐𝙀𝘿𝘼𝙉 » ${user.limit} ${rpgshopp.emoticon('gold')}*
 *┃🕐 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 » ${tiempoPremium} día(s)*
 *┃📉 𝙏𝙄𝙈𝙀𝙍 » ${user.premiumTime - now} seg*
-*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `😻 *Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
+*╰┈┈┈┈┈◈ 🌟 ◈┈┈┈┈┈╯*`, `*Ahora tiene Premium por lo tanto no va tener límites.*\n\n*Now you have Premium so there will be no limits.*\n\n${wm}`, imgpre[Math.floor(Math.random() * imgpre.length)], [
 [`🌟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, `${usedPrefix}listprem`],
 [`🎟️ 𝙈𝘼𝙎 𝙏𝙄𝙀𝙈𝙋𝙊 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 🎟️`, `${usedPrefix + command} 1`],
-[`😽 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 😽`, `${usedPrefix}allmenu`]], fkontak, m)}
+[`🫠 𝗗𝗜𝗦𝗙𝗥𝗨𝗧𝗔𝗥 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🫠`, `${usedPrefix}allmenu`]], fkontak, m)}
 	
 //┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	
