@@ -230,7 +230,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 
   - [x] _SharkBot utiliza la utilidad de Javascript y Shell para crear un código altamente funcional que permite gestionar la compatibilidad con WhatsApp._
   - [x] _Con el uso de la biblioteca de código abierto Baileys, Shark-Bot establece una conexión directa con la aplicación de WhatsApp, lo que permite una experiencia de usuario fluida._
-  - [x] _Se utiliza fuentes externas, APIs, imágenes, videos y documentos en línea para proporcionar una herramienta auténtica y completa que solventa una amplia gama de necesidades dentro de WhatsApp. Con estas características, los usuarios pueden disfrutar de una experiencia de usuario mejorada y eficiente al utilizar GataBot._
+  - [x] _Se utiliza fuentes externas, APIs, imágenes, videos y documentos en línea para proporcionar una herramienta auténtica y completa que solventa una amplia gama de necesidades dentro de WhatsApp. Con estas características, los usuarios pueden disfrutar de una experiencia de usuario mejorada y eficiente al utilizar el Shark-Bot._
 
 </details>
 
@@ -267,7 +267,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 <details>
 <summary><b>Actualizaciones y cambios</b></summary><br>
 
-  - [x] _El Shark-Bot está en constante evolución y mejora, cada actualización busca solucionar errores, mejorar la eficiencia de las funciones existentes, agregar nuevas funciones y optimizar los recursos para una experiencia más fluida. Le recomendamos que se mantenga actualizado con las últimas versiones para disfrutar de todas las mejoras y nuevas características que se implementen en el futuro. ¡Gracias por usar GataBot!_
+  - [x] _El Shark-Bot está en constante evolución y mejora, cada actualización busca solucionar errores, mejorar la eficiencia de las funciones existentes, agregar nuevas funciones y optimizar los recursos para una experiencia más fluida. Le recomendamos que se mantenga actualizado con las últimas versiones para disfrutar de todas las mejoras y nuevas características que se implementen en el futuro. ¡Gracias por usar El Shark-Bot!_
 
 </details>
 
