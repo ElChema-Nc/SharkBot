@@ -62,7 +62,7 @@ let top = `*🌸 TOP 10 OTAKUS DEL GRUPO 🌸*
 *_10.- 🌷 ${user(j)}_* 🌷`
 m.reply(top, null, { mentions: conn.parseMention(top) })
 //m.reply(top, null, {
-//conn.sendHydrated(m.chat, top, wm, null, md, '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [
+//conn.sendHydrated(m.chat, top, wm, null, md, '𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', null, null, [
 //['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 | 𝘼𝙜𝙖𝙞𝙣 🔮', `${usedPrefix + command}`],
 //['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']
 //], m, null, {
