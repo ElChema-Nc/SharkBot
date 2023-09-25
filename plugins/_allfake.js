@@ -1,7 +1,8 @@
-import { generateWAMessageFromContent } from "@adiwajshing/baileys"
+//import { generateWAMessageFromContent } from "@adiwajshing/baileys"
+let generateWAMessageFromContent = (await import(global.baileys)).default
 import fs from 'fs'
 import fetch from 'node-fetch'
-import moment from 'moment-timezone'
+import moment from 'moment-timezone' 
 
 let handler = async (m, { conn, args }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
@@ -12,9 +13,9 @@ let b = a[Math.floor(Math.random() * a.length)]
 //let ucapan = ucapan()
 let sap = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann']
 let sgh = md
-let sgc = nnn
-let shark = 'https://i.ibb.co/s9vDyph/img4.jpg''
-//let logo = 'https://i.ibb.co/s9vDyph/img4.jpg''
+let sgc = nna
+let shark = 'https://i.ibb.co/s9vDyph/img4.jpg'
+//let logo = 'https://i.ibb.co/s9vDyph/img4.jpg'
 let pp = await conn.profilePictureUrl(who).catch(_ => shark)
 //pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/grupos.jpg' 
 
@@ -22,7 +23,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => shark)
 //global.enlace = { contextInfo: { externalAdReply: {title: wm, body: 'support group' , sourceUrl: nna, thumbnail: await(await fetch(img)).buffer() }}}
 //PARA ENLACE DE WHATSAPP	
 	
-//global.enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
+//global.enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸𝗕𝗼𝘁', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
 //PARA ENLACE DE YOUTUBE	
 	
 //global.fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
@@ -86,18 +87,18 @@ export default handler
 
 function ucapan() {
   const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
-  let res = "👋 *BIENVENIDO(A) | WELCOME* 👋"
+  let res = "👋 *BIENVENIDO* 👋"
   if (time >= 4) {
-    res = "🌇 *Buenos Días | Good Morning* ⛅"
+    res = "🌇 *Buenos Días* ⛅"
   }
   if (time >= 11) {
-    res = "🏙️ *Buenas Tardes | Good Afternoon* 🌤️"
+    res = "🏙️ *Buenas Tardes* 🌤️"
   }
   if (time >= 15) {
-    res = "🌆 *Buenas tardes | Good Afternoon* 🌥️"
+    res = "🌆 *Buenas tardes* 🌥️"
   }
   if (time >= 17) {
-    res = "🌃 *Buenas noches | Good Evening* 💫"
+    res = "🌃 *Buenas noches* 💫"
   }
   return res
 } 
