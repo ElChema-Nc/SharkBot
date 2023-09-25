@@ -21,17 +21,18 @@
 
 | TEMA | DESCRIPCIÓN | ATAJO |
 |------|-------------|-------|
-| **TERMUX** | ***INSTALACIÓN AUTOMÁTICA*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L38C2-L38C2) |
-| **TERMUX** | ***INSTALACIÓN MANUAL*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L68) |
-| **TERMUX 24/7** | ***COMANDOS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L78) |
-| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR SHARKBOT*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L101) |
-| **HEROKU** | ***INSTALACIÓN POR HEROKU*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L109) |
-| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L124) |
-| **KOYEB** | ***INSTALACIÓN POR KOYEB*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L129) |
-| **WINDOWS** | ***INSTALACIÓN POR WINDOWS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L138) |
-| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L163) |
-| **SOBRE EL SHARKBOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L218) |
-| **DESARROLLADORES** | ***PARTICIPATES DEL PROYECTO*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L292) |
+| **TERMUX** | ***INSTALACIÓN AUTOMÁTICA*** |[ver](https://github.com/ElChema-Nc/SharkBot#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux) |
+| **TERMUX** | ***INSTALACIÓN MANUAL*** |[ver](https://github.com/ElChema-Nc/SharkBot#-opci%C3%B3n-2-instalaci%C3%B3n-manual-por-termux---github) |
+| **TERMUX 24/7** | ***COMANDOS*** |[ver](https://github.com/ElChema-Nc/SharkBot#-usar-el-sharkbot-247-en-termux) |
+| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR SHARKBOT*** |[ver](https://github.com/ElChema-Nc/SharkBot#-actualizar-sharkbot) |
+| **HEROKU** | ***INSTALACIÓN POR HEROKU*** |[ver](https://github.com/ElChema-Nc/SharkBot#-activar-en-heroku) |
+| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/ElChema-Nc/SharkBot#-replit---sharkbot) |
+| **KOYEB** | ***INSTALACIÓN POR KOYEB*** |[ver](https://github.com/ElChema-Nc/SharkBot#-activar-en-koyeb) |
+| **RENDER** | ***INSTALACIÓN POR RENDER*** |[ver](https://github.com/ElChema-Nc/SharkBot#%EF%B8%8F-activar-en-render) |
+| **WINDOWS** | ***INSTALACIÓN POR WINDOWS*** |[ver](https://github.com/ElChema-Nc/SharkBot#-para-usuarios-de-windowsvpsrdp) |
+| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/ElChema-Nc/SharkBot#-sharkbot---preguntas) |
+| **SOBRE EL SHARKBOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/ElChema-Nc/SharkBot#sobre-el-sharkbot) |
+| **DESARROLLADORES** | ***PARTICIPATES DEL PROYECTO*** |[ver](https://github.com/ElChema-Nc/SharkBot#-creador) |
 -----
 ### 🥴 (OPCIÓN 1) INSTALACIÓN AUTOMÁTICA POR TERMUX
 > **Note** Comandos para instalar de forma automática en Termux  
@@ -185,7 +186,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 <summary><b>Preguntas sobre Termux</b></summary>
 
   - [x] **¿Cómo puedo instalar el SharkBot en Termux?**<br>
-  _Puede usar la [`Instalación Automática 😃`](https://github.com/GataNina-Li/GataBot-MD/#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux-) si es la primera vez que va instalar._<br>
+  _Puede usar la [`Instalación Automática 😃`](https://github.com/ElChema-Nc/SharkBot#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux) si es la primera vez que va instalar._<br>
   
   - [x] **¿Cómo puedo descargar Termux?**<br>
   _Puede descargar la versión de Termux e instalar [`Aquí 😉`](https://f-droid.org/repo/com.termux_118.apk)._
@@ -200,13 +201,13 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
   _Use el botón de termux `CTRL` + Tecla `Z` para detener termux._
   
   - [x] **Quiero tener Termux 24/7 ¿Cómo lo hago?**<br>
-  _Desde la carpeta del SharkBot use los comandos [`24/7 Termux 🚀`](https://github.com/GataNina-Li/GataBot-MD/#-usar-gatabot-247-en-termux)_
+  _Desde la carpeta del SharkBot use los comandos [`24/7 Termux 🚀`](https://github.com/ElChema-Nc/SharkBot#-usar-el-sharkbot-247-en-termux)_
     
   - [x] **Comandos para obtener nuevo código QR:**<br>
   _Diga estos comandos desde la carpeta del SharkBot `rm -rf SharkBotSession && npm start`_
   
   - [x] **¿Cómo actualizar el SharkBot?**<br>
-  _Desde la carpeta de SharkBot usar los commandos para [`♻️ Actualizar SharkBot`](https://github.com/GataNina-Li/GataBot-MD/#-actualizar-gatabot)_
+  _Desde la carpeta de SharkBot usar los commandos para [`♻️ Actualizar SharkBot`](https://github.com/ElChema-Nc/SharkBot#-actualizar-sharkbot)_
   
   - [x] **¿Que hago si no responde el Bot después de iniciar o si muestra un mensje diciendo "Mensaje en espera"?**<br>
   _Detenga Termux y elimine la sesión del SharkBot para obtener un nuevo código QR._
