@@ -55,10 +55,10 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 #### MODIFICAR ARCHIVO [`shark.sh`](https://github.com/ElChema-Nc/SharkBot/blob/master/shark.sh)
 ```js
 //LÍNEAS A MODIFICAR
-205 --> "git clone https://github.com/[user]/[repositorio].git"
+188 --> "git clone https://github.com/[user]/[repositorio].git"
 //Ejemplo: git clone https://github.com/ElChema-Nc/SharkBot.git
 
-209 --> "cd [repositorio]"
+192 --> "cd [repositorio]"
 //Ejemplo: cd SharkBot
 
 //Una vez hecho estos cambios ejecute los nuevos comandos en Termux
