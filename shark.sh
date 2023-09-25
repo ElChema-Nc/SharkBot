@@ -50,7 +50,7 @@ echo -e "\033[0;34mNo se pudo instalar Git. Verifique su conexión a Internet e 
 echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install -y yarn\ngit clone https://github.com/ElChema-Nc/SharkBot\ncd SharkBot\nyarn install\nnpm install\nnpm start\033[0m"
 exit 1
 else
-echo -e "\033[01;32m\033[01mGit se ha instalado correctamente.\nGit has been installed successfully.\n\033[0m" 
+echo -e "\033[01;32m\033[01mGit se ha instalado correctamente.\n\033[0m" 
 fi
 fi
  
