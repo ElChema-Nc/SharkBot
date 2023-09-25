@@ -21,19 +21,17 @@
 
 | TEMA | DESCRIPCIÓN | ATAJO |
 |------|-------------|-------|
-| **TERMUX** | ***INSTALACIÓN AUTOMÁTICA*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-opción-1-instalación-automática-por-termux-) |
-| **TERMUX** | ***INSTALACIÓN MANUAL*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-opción-2-instalación-manual-por-termux---github) |
-| **TERMUX** | ***INSTALACIÓN POR ARCHIVOS*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-opción-3-instalación-por-termux---archivos) |
-| **TERMUX 24/7** | ***COMANDOS*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-usar-gatabot-247-en-termux) |
-| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR GATABOT*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-actualizar-gatabot) |
-| **HEROKU** | ***INSTALACIÓN POR HEROKU*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-activar-en-heroku) |
-| **BOXMINE** | ***INSTALACIÓN POR BOXMINE*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-boxminehost) |
-| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-replit---gatabot) |
-| **KOYEB** | ***INSTALACIÓN POR KOYEB*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-activar-en-koyeb) |
-| **WINDOWS** | ***INSTALACIÓN POR WINDOWS*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-para-usuarios-de-windowsvpsrdp) |
-| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-gatabot-md---preguntas) |
-| **SOBRE GATABOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#sobre-gatabot--gb-global) |
-| **DESARROLLADORES** | ***PARTICIPATES DEL PROYECTO*** |[ver](https://github.com/GataNina-Li/GataBot-MD/#-creador) |
+| **TERMUX** | ***INSTALACIÓN AUTOMÁTICA*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L38C2-L38C2) |
+| **TERMUX** | ***INSTALACIÓN MANUAL*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L68) |
+| **TERMUX 24/7** | ***COMANDOS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L78) |
+| **TERMUX UPDATE** | ***COMANDOS PARA ACTUALIZAR SHARKBOT*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L101) |
+| **HEROKU** | ***INSTALACIÓN POR HEROKU*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L109) |
+| **REPLIT** | ***INSTALACIÓN POR REPLIT*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L124) |
+| **KOYEB** | ***INSTALACIÓN POR KOYEB*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L129) |
+| **WINDOWS** | ***INSTALACIÓN POR WINDOWS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L138) |
+| **PREGUNTAS FRECUENTES** | ***DESPEJAR DUDAS*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L163) |
+| **SOBRE EL SHARKBOT** | ***SECCIONES DE INFORMACIÓN*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L218) |
+| **DESARROLLADORES** | ***PARTICIPATES DEL PROYECTO*** |[ver](https://github.com/ElChema-Nc/SharkBot/blob/235c160a7cb87bb47f77b63c9a937d6e5170fac0/README.md?plain=1#L292) |
 -----
 ### 🥴 (OPCIÓN 1) INSTALACIÓN AUTOMÁTICA POR TERMUX
 > **Note** Comandos para instalar de forma automática en Termux  
@@ -53,7 +51,7 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 // PARÁMETROS QUE PUEDE SER MODIFICADOS --> "[...]"
 "wget -O - https://raw.githubusercontent.com/[usuario]/[repositorio]/[rama]/shark.sh | bash"
 ```
-#### MODIFICAR ARCHIVO [`gata.sh`](https://github.com/ElChema-Nc/SharkBot/blob/master/shark.sh)
+#### MODIFICAR ARCHIVO [`shark.sh`](https://github.com/ElChema-Nc/SharkBot/blob/master/shark.sh)
 ```js
 //LÍNEAS A MODIFICAR
 205 --> "git clone https://github.com/[user]/[repositorio].git"
@@ -287,7 +285,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ----
 
 ### 😏 CREADOR
-[![GataNina-Li](https://github.com/ElChema-Nc.png?size=100)](https://github.com/ElChema-Nc) 
+[![ElChema-Nc](https://github.com/ElChema-Nc.png?size=100)](https://github.com/ElChema-Nc) 
 
 ### 😵‍💫 DESARROLLADORES
 <a href="https://github.com/ElChema-Nc/SharkBot/graphs/contributors">
