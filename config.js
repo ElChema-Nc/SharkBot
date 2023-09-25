@@ -17,7 +17,7 @@ global.owner = [
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-global.mods = [];
+global.mods = ["34671660629"];
 global.prems = ["34671660629"];
 //key de violetics
 global.Key360 = ["964f-0c75-7afc"];
