@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import axios from "axios"
 
 let handler = async (m, { conn, usedPrefix, command }) => {
-let frep = { contextInfo: { externalAdReply: {title: wm, body: author, sourceUrl: redesMenu.getRandom(), thumbnail: await(await fetch(gataMenu.getRandom())).buffer() }}}
+let frep = { contextInfo: { externalAdReply: {title: wm, body: author, sourceUrl: redesMenu.getRandom(), thumbnail: await(await fetch(sharkMenu.getRandom())).buffer() }}}
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 try { 
 if (command == 'consejo' || command == 'advice') { 
@@ -49,7 +49,7 @@ global.motivation = [
   "Kunci sukses adalah memusatkan pikiran sadar kita pada hal-hal yang kita inginkan, bukan hal-hal yang kita takuti.",
   "Jangan takut gagal. Ketakutan berada di tempat yang sama tahun depan seperti Anda saat ini.",
   "Jika kita terus melakukan apa yang kita lakukan, kita akan terus mendapatkan apa yang kita dapatkan.",
-  "Jika Anda tidak dapat mengatasi stres, Anda tidak akan mengelola kesuksesan.",
+  "Jika Anda tidak dapat mensharksi stres, Anda tidak akan mengelola kesuksesan.",
   "Bersikap keras kepala tentang tujuan Anda dan fleksibel tentang metode Anda.",
   "Kerja keras mengalahkan bakat ketika bakat tidak bekerja keras.",
   "Ingatlah bahwa pelajaran terbesar dalam hidup biasanya dipelajari dari saat-saat terburuk dan dari kesalahan terburuk.",
@@ -81,9 +81,9 @@ global.motivation = [
   "Saat kita berusaha untuk menjadi lebih baik dari kita, segala sesuatu di sekitar kita juga menjadi lebih baik.",
   "Pertumbuhan dimulai ketika kita mulai menerima kelemahan kita sendiri.",
   "Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
-  "Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mengatasi sikap apatis, keraguan atau ketakutan.",
+  "Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mensharksi sikap apatis, keraguan atau ketakutan.",
   "Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
-  "Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mengatasi sikap apatis, keraguan atau ketakutan.",
+  "Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mensharksi sikap apatis, keraguan atau ketakutan.",
   "Hal pertama yang dilakukan orang sukses adalah memandang kegagalan sebagai sinyal positif untuk sukses.",
   "Ciri khas orang sukses adalah mereka selalu berusaha keras untuk mempelajari hal-hal baru.",
   "Sukses adalah mendapatkan apa yang kamu inginkan, kebahagiaan menginginkan apa yang kamu dapatkan.",
