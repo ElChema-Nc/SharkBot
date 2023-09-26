@@ -5,8 +5,8 @@ import { es, en } from '../lib/idiomas/total-idiomas.js'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-let texto = `*Idioma del Shark-Bot cambiado Correctamente:* `
-let texto2 = `*Seleccione el idioma para el Shark-Bot*`
+let texto = `*Idioma del SharkBot cambiado Correctamente:* `
+let texto2 = `*Seleccione el idioma para SharkBot*`
 let texto3 = `*Los Comandos no cambiaran de Idioma, solo el contenido del Mensaje*`
 let idioma = await translate(`${texto}`, { to: args[0], autoCorrect: true })
 let idioma2 = await translate(`${texto2}`, { to: lenguajeGB.lenguaje(), autoCorrect: true })
@@ -23,17 +23,17 @@ await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 
 }else{
   
 const sections = [{
-title: '✨ IDIOMAS DISPONIBLES ✨',
+title: '🎭 IDIOMAS DISPONIBLES 😛',
 rows: [
-{title: "🌟 Español", rowId: `${usedPrefix + command} es`},
-{title: "🌟 English", rowId: `${usedPrefix + command} en`}]}]
+{title: "😏 Español", rowId: `${usedPrefix + command} es`},
+{title: "☠️ English", rowId: `${usedPrefix + command} en`}]}]
 
 const listMessage = {
 text: idioma2.text + '\n\n' + idioma3.text,
 footer: `✦ Español = ${usedPrefix + command} es
 ✦ English = ${usedPrefix + command} en\n\n` + wm,
-title: `${htki} Idioma : Language 🌎`,
-buttonText: `Seleccionar : Select`,
+title: `${htki} Idioma 🌎`,
+buttonText: `Seleccionar`,
 sections }
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
 }
