@@ -21,7 +21,7 @@ m.reply(`╭━━━[ 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎 🦈 ]━━━�
 ['𝙈𝙚𝙣𝙪 𝘼𝙫𝙚𝙣𝙩𝙪𝙧𝙖 | 𝙍𝙋𝙂 ☠️', '.rpgmenu'],
 ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']], m)
 }*/
-handler.help = ['addgb <@user>']
+handler.help = ['addsk <@user>']
 handler.tags = ['sharkcoins']
 handler.command = ['añadirsharkcoins', 'añadirshark', 'añadircoins', 'darsharkcoins', 'darshark', 'darcoins'] 
 handler.group = true
