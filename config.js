@@ -11,7 +11,7 @@ import { en, es } from "./lib/idiomas/total-idiomas.js";
 //⊱ ━━━━━.⋅ Añada los numeros a ser Propietario ⋅.━━━━ ⊰  
 
 global.owner = [
-  ["50585826826", '𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩ㅤ🦈', true],  
+  ["50585826826", '𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩ㅤ🦈', true],  
   ["34623289459", '𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱', true],
   ["50578213790", '𝙊𝙬𝙣𝙚𝙧 (𝙊𝙨𝙤) 💻']]
 
@@ -96,7 +96,7 @@ global.desc = ''; //agrega una descripción corta
 global.desc2 = ''; //agrega una descripción larga (Solo se aplicará si su whasapp no tiene descripción)
 global.country = '🇳🇮'; //agrega tú país ejemplo: 🇳🇮
 
-global.packname = "𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩ㅤ🦈";
+global.packname = "𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩ㅤ🦈";
 global.author = "𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱";
 
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
