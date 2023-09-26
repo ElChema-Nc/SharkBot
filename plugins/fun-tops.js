@@ -34,9 +34,9 @@ let top = `*🌈TOP 10 GAYS/LESBIANAS DEL GRUPO🌈*
 m.reply(top, null, { mentions: conn.parseMention(top) })
 //m.reply(top, null, {
 
-//m.reply(conn.sendHydrated(m.chat, `*SON MUY GAYS!!* 🌈`, wm, null, md, '𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', null, null, [
+//m.reply(conn.sendHydrated(m.chat, `*SON MUY GAYS!!* 🌈`, wm, null, md, '𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩', null, null, [
 //['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 | 𝘼𝙜𝙖𝙞𝙣 🔮', `${usedPrefix + command}`],
-//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']
+//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']
 //], m))
    
 //contextInfo: { 
@@ -62,9 +62,9 @@ let top = `*🌸 TOP 10 OTAKUS DEL GRUPO 🌸*
 *_10.- 🌷 ${user(j)}_* 🌷`
 m.reply(top, null, { mentions: conn.parseMention(top) })
 //m.reply(top, null, {
-//conn.sendHydrated(m.chat, top, wm, null, md, '𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', null, null, [
+//conn.sendHydrated(m.chat, top, wm, null, md, '𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩', null, null, [
 //['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 | 𝘼𝙜𝙖𝙞𝙣 🔮', `${usedPrefix + command}`],
-//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']
+//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']
 //], m, null, {
 //contextInfo: {
 //mentionedJid: [a, b, c, d, e, f, g, h, i, j]
