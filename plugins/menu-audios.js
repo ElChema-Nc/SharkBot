@@ -78,7 +78,7 @@ let str = `
 ┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
 ┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *🔱 ${vs}* 〕┄┄┄┄⊱
+╰┄┄┄┄〔 *🔝 ${vs}* 〕┄┄┄┄⊱
 
 ⠇ *${lenguajeGB['smsTex16']()}* 🔊
 ⠇ ${lenguajeGB['smsTex17']()}
@@ -215,7 +215,7 @@ let str = `
 ∘ _Gol!_
 
 ╭════• ೋ•✧๑♡๑✧•ೋ •════╮
-                      𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩ㅤ🦈
+                      𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩ㅤ🦈
          0:40 ━❍──────── -8:39
          ↻     ⊲  Ⅱ  ⊳     ↺
          VOLUMEN: ▁▂▃▄▅▆▇ 100%
@@ -380,7 +380,7 @@ sections }
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
 
 } catch (e) {
-await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
+await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)	
 }}

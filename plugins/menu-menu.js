@@ -1,4 +1,5 @@
 import fs from 'fs'
+import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
@@ -64,21 +65,28 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let pp = sharkVidMenu.getRandom()
+let pp = gataVidMenu.getRandom()
 let pareja = global.db.data.users[m.sender].pasangan 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 //let fsizedoc = '1'.repeat(10)
-//let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(sharkMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
+//let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 const numberToEmoji = { "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣", "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣", }
 let lvl = level
 let emoji = Array.from(lvl.toString()).map((digit) => numberToEmoji[digit] || "❓").join("")
 
+const lugarFecha = moment().tz('America/Lima')
+const formatoFecha = {
+weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+}
+lugarFecha.locale('es', formatoFecha)
+const horarioFecha = lugarFecha.format('dddd, DD [de] MMMM [del] YYYY || HH:mm A').replace(/^\w/, (c) => c.toUpperCase())
+
 let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.genero == 'Ocultado 🕶️' ? `🕶️` : user.genero == 'Mujer 🚺' ? `🚺` : user.genero == 'Hombre 🚹' ? `🚹` : '👤'} ${user.registered === true ? user.name : username}*${(conn.user.jid == global.conn.user.jid ? '' : `\n*SOY SUB BOT DE: https://wa.me/${global.conn.user.jid.split`@`[0]}*`) || ''}
 
-\`\`\`${week}, ${date}\`\`\`
+\`\`\`${horarioFecha}\`\`\`
 ⎔ *${lenguajeGB['smsTotalUsers']()}* ➺ _${Object.keys(global.db.data.users).length}_ 
-⎔ *Registrados »* ${rtotalreg}/${totalreg}
-⎔ *${lenguajeGB['smsTime']()}* ➺ _${time}_    
+⎔ *Registrados »* ${rtotalreg}/${totalreg}    
 ⎔ *${lenguajeGB['smsUptime']()}* ➺ _${uptime}_ 
 ⎔ *${lenguajeGB['smsVersion']()}* ➺ _${vs}_
 ⎔ *${lenguajeGB['smsMode']()} ➺* _${global.opts['self'] ? `${lenguajeGB['smsModePrivate']().charAt(0).toUpperCase() + lenguajeGB['smsModePrivate']().slice(1).toLowerCase()}` : `${lenguajeGB['smsModePublic']().charAt(0).toUpperCase() + lenguajeGB['smsModePublic']().slice(1).toLowerCase()}`}_
@@ -98,17 +106,18 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 
 ⊜ *Experiencia ➟* ${exp} ⚡
 ⊜ *Diamantes ➟* ${limit} 💎
-⊜ *SharkCoins ➟* ${money} 🦈
+⊜ *GataCoins ➟* ${money} 🐈
 ⊜ *Tokens ➟* ${joincount} 🪙
 ${readMore}
-*╭━〔 INFORMACIÓN DEL SHARK-BOT 〕⬣*
-┃💫➺ _${usedPrefix}cuentassharkbot | cuentassk_
-┃💫➺ _${usedPrefix}grupossk | grupos | groupsk_
+*╭━〔 INFORMACIÓN DE GATABOT 〕⬣*
+┃💫➺ _${usedPrefix}cuentasgatabot | cuentasgb_
+┃💫➺ _${usedPrefix}gruposgb | grupos | groupgb_
+┃💫➺ _${usedPrefix}donar | donate_
 ┃💫➺ _${usedPrefix}listagrupos | grouplist_
-┃💫➺ _${usedPrefix}estado | heyshark | status_
-┃💫➺ _${usedPrefix}infoshark | infobot_
+┃💫➺ _${usedPrefix}estado | heygata | status_
+┃💫➺ _${usedPrefix}infogata | infobot_
 ┃💫➺ _${usedPrefix}instalarbot | installbot_
-┃💫➺ _${usedPrefix}creador | owner_
+┃💫➺ _${usedPrefix}creadora | owner_
 ┃💫➺ _${usedPrefix}velocidad | ping_
 ┃💫➺ _Bot_ 
 ┃💫➺ _términos y condiciones_
@@ -116,7 +125,7 @@ ${readMore}
 
 *╭━〔 FUNCIÓN SUB BOT 〕━⬣*
 ┃ *Ya puedes convertir tú*
-┃ *Número en Shark-Bot!!*
+┃ *Número en GataBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃💻 _${usedPrefix}serbot | jadibot_
 ┃💻 _${usedPrefix}bots | listjadibots_
@@ -133,15 +142,15 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━〔 ÚNETE AL GRUPO 〕━⬣*
-┃ *Une al Shark-Bot en tus Grupos!!*
+┃ *Une a GataBot en Grupos!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🪅 _${usedPrefix}botemporal *enlace* *cantidad*_
 ┃🪅 _${usedPrefix}addbot *enlace* *cantidad*_
 *╰━━━━━━━━━━━━⬣*
 
 *╭━〔 SER PREMIUM 〕━⬣*
-┃ *Conviertete en un*
-┃ *Usuario Premium!!*
+┃ *Convierte en un(a)*
+┃ *Usuario(a) Premium!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🎟️ _${usedPrefix}listapremium | listprem_
 ┃🎟️ _${usedPrefix}pase premium_
@@ -190,7 +199,7 @@ ${readMore}
 
 *╭━〔 IA 〕━⬣*
 ┃ *Tienes la Ocasión de*
-┃ *Conversar con el Shark-Bot!!*
+┃ *Conversar con GataBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🪄➺ _${usedPrefix}simi | okgoogle *texto*_
 ┃🪄➺ _${usedPrefix}alexa | siri | cortana *texto*_
@@ -256,6 +265,7 @@ ${readMore}
 ┃🚀➺ _${usedPrefix}verig | igstalk *usuario(a)*_
 ┃🚀➺ _${usedPrefix}ighistoria | igstory *usuario(a)*_
 ┃🚀➺ _${usedPrefix}tiktok *link*_
+┃🚀➺ _${usedPrefix}tiktokimagen | ttimagen *link*_
 ┃🚀➺ _${usedPrefix}tiktokfoto | tiktokphoto *usuario(a)*_
 ┃🚀➺ _${usedPrefix}vertiktok | tiktokstalk *usuario(a)*_
 ┃🚀➺ _${usedPrefix}mediafire | dlmediafire *link*_
@@ -280,7 +290,7 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━[ CONFIGURACIÓN - GRUPOS ]━⬣*
-┃ *Mejora tú Grupo con el Shark-Bot!!*
+┃ *Mejora tú Grupo con GataBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🌐➺ _${usedPrefix}add *numero*_
 ┃🌐➺ _${usedPrefix}sacar | ban | kick  *@tag*_
@@ -351,6 +361,7 @@ ${readMore}
 ┃ *Crea enlace de archivos!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🛰️➺ _${usedPrefix}toimg | img | jpg *sticker*_
+┃🛰️➺ _${usedPrefix}toanime | jadianime *foto*_
 ┃🛰️➺ _${usedPrefix}tomp3 | mp3 *video o nota de voz*_
 ┃🛰️➺ _${usedPrefix}tovn | vn *video o audio*_
 ┃🛰️➺ _${usedPrefix}tovideo *audio*_
@@ -449,7 +460,7 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━━[ BÚSQUEDAS 🔍 ]━━⬣*
-┃ *Busca lo que quieres con el Shark-Bot!!*
+┃ *Busca lo que quieres con GataBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🔍➺ _${usedPrefix}animeinfo *texto*_
 ┃🔍➺ _${usedPrefix}mangainfo *texto*_
@@ -514,7 +525,7 @@ ${readMore}
 ┃⚗️➺ _${usedPrefix}myns_
 ┃⚗️➺ _${usedPrefix}unreg *numero de serie*_
 ┃⚗️➺ _${usedPrefix}minardiamantes | minargemas_
-┃⚗️➺ _${usedPrefix}minarsharkcoins | minarcoins_
+┃⚗️➺ _${usedPrefix}minargatacoins | minarcoins_
 ┃⚗️➺ _${usedPrefix}minarexperiencia | minarexp_
 ┃⚗️➺ _${usedPrefix}minar *:* minar2 *:* minar3_
 ┃⚗️➺ _${usedPrefix}reclamar | regalo | claim_
@@ -525,7 +536,7 @@ ${readMore}
 ┃⚗️➺ _${usedPrefix}trabajar | work_
 *╰━━━━━━━━━━━━⬣*
 
-*╭━━━[ TOP EN EL SHARK-BOT ]━━⬣*
+*╭━━━[ TOP EN GATABOT ]━━⬣*
 ┃ *Averigua en que Top te encuentras!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🏆➺ _${usedPrefix}top | lb | leaderboard_
@@ -537,7 +548,7 @@ ${readMore}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🎐 _${usedPrefix}sticker | s *imagen o video*_
 ┃🎐 _${usedPrefix}sticker | s *url de tipo jpg*_
-┃🎐 _${usedPrefix}emojimix *🫠+😆*_
+┃🎐 _${usedPrefix}emojimix *😺+😆*_
 ┃🎐 _${usedPrefix}scircle | círculo *imagen*_
 ┃🎐 _${usedPrefix}semoji | emoji *tipo emoji*_
 ┃🎐 _${usedPrefix}attp *texto*_
@@ -572,14 +583,14 @@ ${readMore}
 ┃⛱️ _${usedPrefix}alimentar | food *@tag*_
 *╰━━━━━━━━━━━━⬣*
 
-*╭━[ MENU PARA PROPIETARIO ]━⬣*
+*╭━[ MENU PARA PROPIETARIO/A ]━⬣*
 ┃ *Comandos solo para Propietario/a!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃💎 _${usedPrefix}join *enlace*_
 ┃💎 _${usedPrefix}unete *enlace*_
 ┃💎➺ _${usedPrefix}dardiamantes *cantidad*_
 ┃💎➺ _${usedPrefix}darxp *cantidad*_
-┃💎➺ _${usedPrefix}darsharkcoins *cantidad*_
+┃💎➺ _${usedPrefix}dargatacoins *cantidad*_
 ┃💎➺ _${usedPrefix}addprem | userpremium *@tag* *cantidad*_
 ┃💎➺ _${usedPrefix}addprem2 | userpremium2 *@tag* *cantidad*_
 ┃💎➺ _${usedPrefix}addprem3 | userpremium3 *@tag* *cantidad*_
@@ -593,7 +604,7 @@ ${readMore}
 ┃💎➺ _${usedPrefix}comunicargrupos *texto*_
 ┃💎➺ _${usedPrefix}borrartmp | cleartmp_
 ┃💎➺ _${usedPrefix}delexp *@tag*_
-┃💎➺ _${usedPrefix}delsharkcoins *@tag*_
+┃💎➺ _${usedPrefix}delgatacoins *@tag*_
 ┃💎➺ _${usedPrefix}deldiamantes *@tag*_
 ┃💎➺ _${usedPrefix}reiniciar | restart_
 ┃💎➺ _${usedPrefix}ctualizar | update_
@@ -602,16 +613,16 @@ ${readMore}
 ┃💎➺ _${usedPrefix}listapremium | listprem_
 ┃💎➺ _${usedPrefix}añadirdiamantes *@tag cantidad*_
 ┃💎➺ _${usedPrefix}añadirxp *@tag cantidad*_
-┃💎➺ _${usedPrefix}añadirsharkcoins *@tag cantidad*_
+┃💎➺ _${usedPrefix}añadirgatacoins *@tag cantidad*_
 *╰━━━━━━━━━━━━⬣*`.trim()
-await conn.sendFile(m.chat, sharkVidMenu.getRandom(), 'shark.mp4', menu, fkontak)
+await conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 	
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)}}
 
-handler.command = /^(menu|menú|memu|memú|help|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 //handler.register = true
 export default handler
 
