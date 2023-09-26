@@ -3,7 +3,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 let grupos = [nna]
 let shark = [img5, img6, img7, img8, img9]
 let enlace = { contextInfo: { externalAdReply: {title: wm + ' 🦈', body: 'support group' , sourceUrl: grupos.getRandom(), thumbnail: await(await fetch(shark.getRandom())).buffer() }}}
-let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
+let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '𝗦𝘂𝗽𝗲𝗿 𝗦𝗵𝗮𝗿𝗸𝗕𝗼𝘁 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
 let dos = [enlace, enlace2]    
 const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/grupos.jpg' 
 const { reaction, antifake, antiTwitter, antiInstagram, antiFacebook, antiTelegram, antiYoutube, antiTiktok, isBanned, autolevelup, antiver, antitoxic, temporal, restrict, stickers, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, antiLink2, modohorny, autosticker, audios, delete: del } = global.db.data.chats[m.chat]
@@ -34,11 +34,11 @@ let text =
 ┃・ 𝘼𝙉𝙏𝙄 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 ${antiInstagram ? '✅' : '❌'}
 ┃・ 𝘼𝙉𝙏𝙄 𝙏𝙒𝙄𝙏𝙏𝙀𝙍 ${antiTwitter ? '✅' : '❌'}
 ┃
-╰━━━❰ *🔱 ${vs}* ❱━━⬣
+╰━━━❰ *🔝 ${vs}* ❱━━⬣
 `.trim()
-await conn.sendButton(m.chat, wm, text, img5, [['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, dos.getRandom())
-//conn.sendHydrated(m.chat, text, wm, img5, md, '𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', null, null, [
-//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']
+await conn.sendButton(m.chat, wm, text, img5, [['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']], m, dos.getRandom())
+//conn.sendHydrated(m.chat, text, wm, img5, md, '𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩', null, null, [
+//['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ ☘️', '/menu']
 //], m,)
 }
 handler.help = ['infogrup']
