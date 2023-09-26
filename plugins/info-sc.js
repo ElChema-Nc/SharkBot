@@ -1,5 +1,5 @@
 
-let { generateWAMessageFromContent } = (await import("@adiwajshing/baileys")).default 
+let { generateWAMessageFromContent } = (await import(global.baileys)).default 
 import { performance } from 'perf_hooks'
 import fs from 'fs'
 let handler  = async (m, { conn, usedPrefix: _p }) => {
@@ -41,7 +41,7 @@ token: '9',
 curreyCode: 'IDR',
 totalCurrencyCode: '>〰<',
 totalAmount1000: '1000000',
-sellerJid: 'https://github.com/ElChema-Nc/Shark-Bot',
+sellerJid: 'https://github.com/ElChema-Nc/SharkBot',
 thumbnail: fs.readFileSync('./src/avatar_contact.png')
 }}, {contextInfo: null, quoted: m})
 conn.relayWAMessage(prep)
