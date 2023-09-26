@@ -1,18 +1,25 @@
 import { performance } from 'perf_hooks'
 let handler = async (m, { conn, text }) => {
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
+let user = global.db.data.users[m.sender]
+let time = user.prue + 90000 //1 min
+if (new Date - user.prue < 90000) return await conn.reply(m.chat, `🙌 HEY ALTO ESPERA UNOS MINUTOS PARA USAR OTRO COMANDO NO HAGA SPAM`, fkontak, m)
 let start = `*😱 ¡¡Empezando Doxxeo!! 😱*`
 let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
 let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
 let boost3 = `*${pickRandom(['41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60'])}%*`
 let boost4 = `*${pickRandom(['61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80'])}%*`
 let boost5 = `*${pickRandom(['81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100'])}%*`
-await m.reply(start)
-await m.reply(boost)
-await m.reply(boost3)
-await m.reply(boost5)
+const { key } = await conn.sendMessage(m.chat, {text: start}, {quoted: m});
+await delay(1000 * 1);
+await conn.sendMessage(m.chat, {text: boost, edit: key});
+await delay(1000 * 1);
+await conn.sendMessage(m.chat, {text: boost3, edit: key});
+await delay(1000 * 1);
+await conn.sendMessage(m.chat, {text: boost5, edit: key});
   
   
-//DATOS FALSOS | FALSE DATA
+//DATOS FALSOS
 let ip = `*${pickRandom(['233.34.229.59','245.168.75.53','59.49.9.213','203.23.8.207','110.189.95.186','17.151.187.183','30.209.37.141','67.52.216.173','161.107.62.117','89.168.137.231','48.247.249.251','135.158.198.206','170.57.189.55','252.0.180.120','254.180.198.115','85.188.238.220','196.88.207.113','57.84.238.99','50.132.72.227','92.28.211.234','33.211.234.00','122.238.1.2434','873.282.11.89','123.009.011.774','333.228.201.236'])}%*`  
 let n = `*${pickRandom(['56 488543','5885 43','7533 443','662 3325','99684 4','968 483 4','8826 467241','859 47843','985 473 23','965 54 333332','67574 383 22','754 38943 3','51 362 33','8585 44','068 6554','685 584 3','588 444 3','583 7374 3','43 74625 66','66 76625','302 72','7 6654623','333.228.201.236'])}%*`  
 let w = `*${pickRandom(['12.4893','54.643','84.95.0099','48.3324','9488.040','848.0409','237.0943','483.304.3','473.94.2','4.94','48.432','37.04932','47.03821','4763.4902','489.003','48.902','4847.940','473.04093','476.09940','49.3094.40','594.9594','585.059.4','584.069.5','5758.48.4','574.39.3','5884.5996.44','5884.59.4','474.593.3'])}%*`  
@@ -64,12 +71,30 @@ Sof02s32inf14.1e100.net
 *Tcp:* 192.168.629-->92.28.211.167:8615
 *EXTERNAL MAC:* 6U:77:89:ER:O4
 *MODEM JUMPS:* 64`
-conn.reply(m.chat, doxeo, m)}
+await conn.sendMessage(m.chat, {text: doxeo, edit: key});
+//conn.reply(m.chat, doxeo, m)
+
+user.prue = new Date * 1  
+}
 handler.help = ['doxear <nombre> | <@tag>']
 handler.tags = ['fun']
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i
 handler.fail = null
 export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
+
+function msToTime(duration) {
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+
+hours = (hours < 10) ? "0" + hours : hours
+minutes = (minutes < 10) ? "0" + minutes : minutes
+seconds = (seconds < 10) ? "0" + seconds : seconds
+
+return minutes + " m y " + seconds + " s " 
+}  

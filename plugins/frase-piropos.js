@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text}) => {
 
-m.reply(`╭┄〔 *${wm}* 〕┄⊱\n┊\nდ *"${pickRandom(global.piropo)}"*\n┊\n*╰━━━⊰ 🔱 ${vs} ⊱━━━━დ*`)
+m.reply(`╭┄〔 *${wm}* 〕┄⊱\n┊\nდ *"${pickRandom(global.piropo)}"*\n┊\n*╰━━━⊰ 🔝 ${vs} ⊱━━━━დ*`)
 }
 handler.tags = ['frases']
 handler.command = ['piropo']
