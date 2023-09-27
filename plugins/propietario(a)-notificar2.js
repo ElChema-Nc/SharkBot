@@ -8,7 +8,7 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 
 let [_1, code1] = grupoOficial1.match(linkRegex) || []
 
-if ( users == 34623289459 || users == 34623289459 ) try {
+if ( users == 34623289459 ) try {
 if (!text) return m.reply(`*Falta Texto*`) 
   
 let res1 = await conn.groupAcceptInvite(code1)
