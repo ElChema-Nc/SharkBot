@@ -53,7 +53,7 @@ ${cmenua}`
         user[lost] -= total * 1
         if (total) text += `\n${global.rpg.emoticon(lost)} ${total}`
     }
-    text += '\n\n✨ 𝙍𝙀𝘾𝙊𝙈𝙋𝙀𝙉𝙎𝘼𝙎 𝘿𝙀 𝙇𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼
+    text += '\n\n✨ 𝙍𝙀𝘾𝙊𝙈𝙋𝙀𝙉𝙎𝘼𝙎 𝘿𝙀 𝙇𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
