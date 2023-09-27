@@ -25,11 +25,11 @@ async function handler(m, { conn, command, text }) {
             conn.sendPresenceUpdate('composing', m.chat);
         }
     }
-    //await conn.reply('34671660629@s.whatsapp.net', txt.trim(), m)
+    //await conn.reply('34623289459@s.whatsapp.net', txt.trim(), m)
     const quote = {
   key: {
     fromMe: false,
-    remoteJid: "34671660629@s.whatsapp.net",
+    remoteJid: "34623289459@s.whatsapp.net",
     id: "mensaje-1234567890" 
   },
   message: {
@@ -37,7 +37,7 @@ async function handler(m, { conn, command, text }) {
   },
   messageTimestamp: new Date() / 1000
 };
-await conn.sendMessage("34671660629@s.whatsapp.net", { 
+await conn.sendMessage("34623289459@s.whatsapp.net", { 
   text: txt.trim(), 
   quote: quote 
 })
