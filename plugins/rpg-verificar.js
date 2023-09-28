@@ -548,7 +548,7 @@ user.premium = true
 fecha = `${week}, ${date} *||* `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre + ͜͡𝘴𝘬'
+user.name = nombre === 0 ? 'No encontrada' : nombre +ˢᴷ'
 user.descripcion = bio
 user.age = edad === 0 ? 'No encontrada' : edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'
 user.genero = genero === 0 ? 'No encontrada 👤' : genero == 'Ocultado' ? `${genero} 🕶️` : genero == 'Mujer' ? `${genero} 🚺` : genero == 'Hombre' ? `${genero} 🚹` : 'No encontrada 👤'
@@ -585,7 +585,7 @@ clearInterval(intervalId)
 ❱❱ ${sn}
 
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ? 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ' : ''}*
+❱❱   *${user.registered === true ? ˢᴷ' : ''}*
 
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
@@ -626,7 +626,7 @@ await conn.reply(m.chat, `🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
 ❱❱ ${sn}
 
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ? ͜͡𝘴𝘬' : ''}*
+❱❱   *${user.registered === true ?ˢᴷ' : ''}*
 
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
