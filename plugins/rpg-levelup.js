@@ -1,5 +1,5 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
-import { levelup } from '../lib/canvas.js'
+import { levelup } from '../lib/canvas.js' 
 
 //import { xpRange } from '../lib/levelling.js'
 import PhoneNumber from 'awesome-phonenumber'
@@ -79,8 +79,8 @@ let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         throw `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
-┃ *NOMBRE | NAME*
+╭━━━[ *𝙉𝙄𝙑𝙀𝙇* ]━━━━⬣
+┃ *NOMBRE*
 ┃ ${name}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *NIVEL:* *${user.level}*
@@ -88,7 +88,7 @@ let user = global.db.data.users[m.sender]
 ┃ *RANGO:* ${user.role}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *XP:* *${user.exp - min}/${xp}*
-╰━━━〔 *🔱 ${vs}* 〕━━━━━⬣
+╰━━━〔 *🔝 ${vs}* 〕━━━━━⬣
 
 *Te falta ${max - user.exp} de XP para subir de nivel*
 `.trim()
@@ -99,7 +99,7 @@ let user = global.db.data.users[m.sender]
     if (before !== user.level) {
         let teks = `Bien hecho! ${conn.getName(m.sender)} Nivel: ${user.level}`
         let str = `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
+╭━━━[ *𝙉𝙄𝙑𝙀𝙇* ]━━━━⬣
 ┃ *NIVEL ANTERIOR:* *${before}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *NIVEL ACTUAL:* *${user.level}*
@@ -107,14 +107,15 @@ let user = global.db.data.users[m.sender]
 ┃ *RANGO* ${user.role}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *FECHA:* *${new Date().toLocaleString('id-ID')}*
-╰━━━〔 *🔱 ${vs}* 〕━━━━━⬣
+╰━━━〔 *🔝 ${vs}* 〕━━━━━⬣
 
-*_Cuanto más interactúes con el Shark-Bot, mayor será tu nivel!!_*
+*_Cuanto más interactúes con el SharkBot, mayor será tu nivel!!_*
 *_Actualiza tú rango con el comando ${usedPrefix}rol!!_*
 `.trim()
         try {
             const img = await levelup(teks, user.level)
-            conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
+            conn.sendMessage(m.chat, {image: {url: img}, caption: str, mentions: conn.parseMention(str)}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+            //conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
         } catch (e) {
             m.reply(str)
       }

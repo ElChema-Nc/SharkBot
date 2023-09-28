@@ -61,16 +61,16 @@ Tú : *${usersMoney.indexOf(m.sender) + 1}* de *${usersMoney.length} Usuarios*
 
 ${sortedMoney.slice(0, len).map(({ jid, money }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${money} 🦈*`).join`\n`}
 `.trim()
-await m.reply(text, null, { mentions: conn.parseMention(text) })
+ await m.reply(text, null, { mentions: conn.parseMention(text) })
 /*await conn.sendButton(m.chat, wm, text, null, [
-['𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 | 𝙂𝙖𝙢𝙚𝙨 𝙈𝙚𝙣𝙪 🎡', '#juegosmenu'], 
-['𝙍𝙖𝙣𝙜𝙤𝙨 | 𝙍𝙤𝙡 🚹', '#rol'],
-['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, { mentions: conn.parseMention(text) })*/
+['𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 🎡', '#juegosmenu'], 
+['𝙍𝙖𝙣𝙜𝙤𝙨 🚹', '#rol'],
+['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, { mentions: conn.parseMention(text) })   */
 }
 handler.help = ['top']
 handler.tags = ['xp']
 handler.command = ['leaderboard', 'lb', 'top'] 
-//handler.register = true
+handler.register = true
 handler.fail = null
 handler.exp = 0
 
@@ -90,4 +90,4 @@ function toNumber(property, _default = 0) {
 
 function enumGetKey(a) {
   return a.jid
-}
+              }
