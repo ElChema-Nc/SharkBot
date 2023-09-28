@@ -6,7 +6,7 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
-import { en, es } from "./lib/idiomas/total-idiomas.js"; 
+import { es } from "./lib/idiomas/total-idiomas.js"; 
  
 //⊱ ━━━━━.⋅ Añada los numeros a ser Propietario ⋅.━━━━ ⊰  
 
@@ -24,10 +24,9 @@ global.Key360 = ["964f-0c75-7afc"];
    
   
 //⊱ ━━━━━.⋅ IDIOMA ⋅.━━━━ ⊰ 
-//Agrega el Idioma que quieres que tenga El SharkBot
-//  es = Español         //  en = English
+//  es = Español
 
-global.lenguajeGB = es; //Idioma del SharkBot, Ejemplo: es | en...
+global.lenguajeGB = es; // Idioma del SharkBot
 
 //━━━━━━━━━━━━━━━━━━━━
 
@@ -91,8 +90,8 @@ global.moment = moment;
 global.official = [ // Agregate si eres Owner
 ["34623289459", '𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱', 1]];
 
-global.mail = ''; //agrega tú correo
-global.desc = ''; //agrega una descripción corta
+global.mail = 'ja82783643@gmail.com'; //agrega tú correo
+global.desc = 'Solo Cosas Sobre SharkBot'; //agrega una descripción corta
 global.desc2 = ''; //agrega una descripción larga (Solo se aplicará si su whasapp no tiene descripción)
 global.country = '🇳🇮'; //agrega tú país ejemplo: 🇳🇮
 

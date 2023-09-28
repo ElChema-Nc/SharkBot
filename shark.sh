@@ -239,9 +239,7 @@ menu() {
 	printf "\n"
 	printf "${v1}[${b}02${v1}]${v} Elegir idioma español\n"
 	printf "\n"
-	printf "${v1}[${b}03${v1}]${v} Elegir idioma inglés\n"
-	printf "\n"
-	printf "${v1}[${b}04${v1}]${v} Continuar\n"
+	printf "${v1}[${b}03${v1}]${v} Continuar\n"
 	printf "\n"
 }
 
@@ -259,10 +257,6 @@ menu_ayuda() {
                 
                 ;;
             03|3)
-                echo -e "${b}[${v1}++${b}]${v} Seleccionado idioma inglés\n"
-                
-                ;;
-	    04|4)
 	        iniciar
                 echo -e "${b}[${v1}++${b}]${v} Continuando...\n"
                 
