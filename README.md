@@ -280,9 +280,8 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 </details>
 
 ----
-### 💠 [`IDIOMAS DISPONIBLES PARA PARA EL SHARBOT`](https://github.com/ElChema-Nc/SharkBot/blob/master/config.js) 
+### 💠 [`SOLO EL IDIOMA ESPAÑOL ESTA DISPONIBLE`](https://github.com/ElChema-Nc/SharkBot/blob/master/config.js) 
 #### 🥴 Español  
-#### 😃 Inglés (English) 
 ----
 
 ### 😏 CREADOR
