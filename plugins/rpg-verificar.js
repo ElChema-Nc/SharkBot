@@ -558,7 +558,7 @@ user.pasatiempo = pasatiempo === 0 ? 'No encontrada' : pasatiempo
 fecha = `${week}, ${date} || `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre + 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ'
+user.name = nombre === 0 ? 'No encontrada' : nombre +ˢᴷ'
 user.age = edad === 0 ? 'No encontrada' : `${edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'}`
 user.descripcion = bio	
 }
