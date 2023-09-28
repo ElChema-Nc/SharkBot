@@ -1,5 +1,3 @@
-# Código desarrollado por @gata_dios 
-  
 #!/data/data/com.termux/files/usr/bin/bash 
 BOT_DIR="SharkBot"  
 BOT_REPO="https://github.com/ElChema-Nc/$BOT_DIR"
