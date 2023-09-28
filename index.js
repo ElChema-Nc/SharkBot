@@ -14,11 +14,11 @@ const { name, author } = require(join(__dirname, "./package.json"));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('Shark\nBot', {
+say('Chema\nShark\nBot', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Prejecto del Author:\nElChema-Nc (@josh_artl)`, {
+say(`Author:\nElChema-Nc (@josh_artl)`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']});
@@ -42,28 +42,33 @@ p.on('message', data => {
 //console.log('╭--------- - - - ✓\n┆ ✅ TIEMPO DE ACTIVIDAD ACTUALIZADA\n╰-------------------- - - -', data)
 switch (data) {
 case 'reset':
-p.process.kill()
-isRunning = false
-start.apply(this, arguments)
-break
+p.process.kill();
+isRunning = false;
+start.apply(this, arguments);
+break;
 case 'uptime':
-p.send(process.uptime())
-break
-}})
-p.on('exit', (_, code) => {
-isRunning = false
-console.error('⚠️ Error Inesperado ⚠️', code)
-if (code === 0) return
-watchFile(args[0], () => {
-unwatchFile(args[0])
-start(file)
-})
-})
-let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-if (!opts['test'])
-if (!rl.listenerCount()) rl.on('line', line => {
-p.emit('message', line.trim())
-})
-//console.log(p)
+p.send(process.uptime());
+break;
 }
-start('main.js')
+});
+p.on('exit', (_, code) => {
+isRunning = false;
+console.error('⚠️ Error Inesperado ⚠️', code)
+
+p.process.kill();
+isRunning = false;
+start.apply(this, arguments);
+
+if (process.env.pm_id) {
+process.exit(1);
+} else {
+process.exit();
+}});
+const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+if (!opts['test']) {
+if (!rl.listenerCount()) {
+rl.on('line', (line) => {
+p.emit('message', line.trim());
+});
+}}}
+start('main.js');
