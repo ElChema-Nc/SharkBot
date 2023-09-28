@@ -626,7 +626,7 @@ await conn.reply(m.chat, `🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
 ❱❱ ${sn}
 
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ?ˢᴷ' : ''}*
+❱❱   *${user.registered === true ?' ͜͡𝘴𝘬' : ''}*
 
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
