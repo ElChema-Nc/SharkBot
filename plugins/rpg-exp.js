@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dir
   
 const { levelling } = '../lib/levelling.js'
 //let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
-
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 
@@ -62,20 +62,21 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
   
 //let name = await conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
+let toUser = `${m.sender.split("@")[0]}`
+let aa = toUser + '@s.whatsapp.net'
 let pp = './media/menus/Menu1.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
 
-
 let tex = `╭━━〔 *${wm}* 〕━━⬣
 ┃ ✪ *NOMBRE* 
-┃ ${username}
+┃ *${username}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ ✪ *EXPERIENCIA | EXP* 
 ┃ ➥ *${user.exp - min}/${xp}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *NIVEL | LEVEL*
+┃ ✪ *NIVEL*
 ┃ ➥ *${level}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ ✪ *ROL*
@@ -93,19 +94,13 @@ let tex = `╭━━〔 *${wm}* 〕━━⬣
 ┃ ✪ *FECHA*
 ┃ ➥ *${week}, ${date}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ✪ *USUARIOS | USERS*
+┃ ✪ *USUARIOS*
 ┃ ➥ *${Object.keys(global.db.data.users).length}* 
-╰━━━━━━〔 *🔱 ${vs}* 〕━━━━━━⬣`
-await conn.sendButton(m.chat, tex, wm, [['𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 ⚡', '.buy'],
+╰━━━━━━〔 *🔝 ${vs}* 〕━━━━━━⬣`
+await conn.sendFile(m.chat, pp, 'shark.jpg', tex, fkontak, { mentions: [aa,] })
+/*await conn.sendButton(m.chat, tex, wm, [['𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 ⚡', '.buy'],
 ['𝙎𝙝𝙖𝙧𝙠𝘾𝙤𝙞𝙣𝙨 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 🦈', '/buy2'],
-['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', '#top']], m)  
-/*.trim()
-conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/ElChema-Nc/Shark-Bot', '𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩', null, null, [
-['𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 ⚡', '.buy'],
-['𝙎𝙝𝙖𝙧𝙠𝘾𝙤𝙞𝙣𝙨 𝙥𝙤𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚 🦈', '/buy2'],
-['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', '#top']
-], m,)*/
-
+['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', '#top']], m)  */
 }
 
 handler.help = ['infomenu'].map(v => v + 'able <option>')

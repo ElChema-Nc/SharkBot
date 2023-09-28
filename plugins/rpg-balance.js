@@ -9,9 +9,15 @@ await m.reply(`
 ┃ ${name}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃ *${global.db.data.users[who].limit} Diamantes* 💎
-╰━━━━〔 *🔱 ${vs}* 〕━━━⬣`)
+╰━━━━〔 *🔝 ${vs}* 〕━━━⬣\n\n*COMPRAR DIAMANTES CON EXP*
+${usedPrefix}buy *cantidad*
+${usedPrefix}buyall *cantidad*
 
-let d = `
+*COMPRAR DIAMANTES CON SHARKCOINS*
+${usedPrefix}buy2 *cantidad*
+${usedPrefix}buyall2 *cantidad*`)
+
+/*let d = `
 *COMPRAR DIAMANTES CON EXP*
 ${usedPrefix}buy *cantidad*
 ${usedPrefix}buyall *cantidad*
@@ -23,9 +29,9 @@ conn.sendButton(m.chat, d, wm, [
 ['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡', '#menu'],
 ['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu']
 ], m)
-/*await conn.sendHydrated(m.chat, d, wm, null, md, '𝗦𝗵𝗮𝗿𝗸-𝗕𝗼𝘁', null, null, [
-['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡', '#menu'],
-['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu']
+await conn.sendHydrated(m.chat, d, wm, null, md, '𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩', null, null, [
+['𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 ⚡', '#menu'],
+['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 💫', '.allmenu']
 ], m,)*/
 }
 handler.help = ['bal']
