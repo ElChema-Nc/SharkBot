@@ -548,7 +548,7 @@ user.premium = true
 fecha = `${week}, ${date} *||* `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre +ˢᴷ'
+user.name = nombre === 0 ? 'No encontrada' : nombre +' ͜͡𝘴𝘬'
 user.descripcion = bio
 user.age = edad === 0 ? 'No encontrada' : edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'
 user.genero = genero === 0 ? 'No encontrada 👤' : genero == 'Ocultado' ? `${genero} 🕶️` : genero == 'Mujer' ? `${genero} 🚺` : genero == 'Hombre' ? `${genero} 🚹` : 'No encontrada 👤'
@@ -558,7 +558,7 @@ user.pasatiempo = pasatiempo === 0 ? 'No encontrada' : pasatiempo
 fecha = `${week}, ${date} || `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre +ˢᴷ'
+user.name = nombre === 0 ? 'No encontrada' : nombre +' ͜͡𝘴𝘬'
 user.age = edad === 0 ? 'No encontrada' : `${edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'}`
 user.descripcion = bio	
 }
@@ -585,7 +585,7 @@ clearInterval(intervalId)
 ❱❱ ${sn}
 
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ? ˢᴷ' : ''}*
+❱❱   *${user.registered === true ?' ͜͡𝘴𝘬' : ''}*
 
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
