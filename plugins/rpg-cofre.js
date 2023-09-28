@@ -16,13 +16,12 @@ let expp = Math.floor(Math.random() * 5000)
 let texto = `
 ╭━━🎉━🎉━🎉━━⬣
 ┃✨ 𝙊𝘽𝙏𝙄𝙀𝙉𝙀𝙎 𝙐𝙉 𝘾𝙊𝙁𝙍𝙀!!
-┃✨ 𝙔𝙊𝙐 𝙂𝙀𝙏 𝘼 𝘾𝙊𝙁𝙁𝙀𝙍!!
 ┃ ┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃⚗️ *${dia} Diamantes* 💎
 ┃⚗️ *${tok} Tokens* 🪙
-┃⚗️ *${shark} SharkCoins* 🐈
+┃⚗️ *${shark} SharkCoins* 🦈
 ┃⚗️ *${expp} Exp* ⚡
-╰━━〔 𓃠 *${vs}* 〕━━⬣`
+╰━━〔 🔝 *${vs}* 〕━━⬣`
 
 const fkontak = {
 	"key": {
@@ -40,7 +39,7 @@ const fkontak = {
 }
 
 await conn.sendFile(m.chat, img, 'shark.jpg', texto, fkontak)
-//await conn.sendButton(m.chat, texto, wm, img, [['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu'] ], fkontak, m)  
+//await conn.sendButton(m.chat, texto, wm, img, [['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪  ☘️', '/menu'] ], fkontak, m)  
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 handler.help = ['daily']
