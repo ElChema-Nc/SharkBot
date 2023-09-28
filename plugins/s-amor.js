@@ -2,8 +2,8 @@ import { sticker } from '../lib/sticker.js'
 let handler = async(m, { conn }) => {
 if (!db.data.chats[m.chat].stickers && m.isGroup) throw 0
 
-let nombre = '𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩ㅤ🦈'
-let nombre2 = '𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱' 
+let nombre = 'ＳＨＡＲＫＢＯＴ'
+let nombre2 = 'ＥＬＣＨＥＭＡ' 
  
 const s = [
 'https://media1.giphy.com/media/2dQ3FMaMFccpi/giphy.gif?cid=ecf05e476azkdvh2cu7b567gbpgyc6q7qd38pklqp12npygv&rid=giphy.gif&ct=g',
