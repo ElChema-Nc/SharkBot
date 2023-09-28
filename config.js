@@ -100,7 +100,7 @@ global.author = "𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱";
 
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
 
-global.vs = "7.5.3";
+global.vs = "7.9.3";
 global.vsJB = "2.5 (Beta)";
 
 global.sk = "𝙎𝙝𝙖𝙧𝙠-𝘽𝙤𝙩";
