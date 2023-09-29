@@ -608,8 +608,6 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
 ╰┄┄┄┄〔 *🔝 ${vs}* 〕┄┄┄┄⊱
 ⠇ ${lenguajeGB['smsTex23']()} 🧩
-∘ _${usedPrefix}chica_
-∘ _${usedPrefix}chico_
 ∘ _${usedPrefix}cristianoronaldo_
 ∘ _${usedPrefix}messi_
 ∘ _${usedPrefix}meme_
