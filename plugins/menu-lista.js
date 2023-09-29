@@ -57,24 +57,24 @@ rows: [
 {title: lenguajeGB['smsLista19'](), rowId: `${usedPrefix}buscarmenu`},
 {title: lenguajeGB['smsLista20'](), rowId: `${usedPrefix}convertidormenu`},
 {title: lenguajeGB['smsLista21'](), rowId: `${usedPrefix}audioefectomenu`},
-{title: lenguajeGB['smsLista21_1'](), rowId: `${usedPrefix}herramientasmenu`, description: '\n'}
+{title: lenguajeGB['smsLista22_1'](), rowId: `${usedPrefix}herramientasmenu`, description: '\n'}
 ]},{
-title: comienzo + ' ' + lenguajeGB['smsLista22']() + ' ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista23']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista23'](), rowId: `${usedPrefix}juegosmenu`},
-{title: lenguajeGB['smsLista24'](), rowId: `${usedPrefix}audios`},
-{title: lenguajeGB['smsLista25'](), rowId: `${usedPrefix}stickermenu`},
-{title: lenguajeGB['smsLista26'](), rowId: `${usedPrefix}makermenu`},
-{title: lenguajeGB['smsLista27'](), rowId: `${usedPrefix}menulogos2`},
-{title: lenguajeGB['smsLista28'](), rowId: `${usedPrefix}randommenu`},
-{title: lenguajeGB['smsLista29'](), rowId: `${usedPrefix}hornymenu`, description: '\n'}
+{title: lenguajeGB['smsLista24'](), rowId: `${usedPrefix}juegosmenu`},
+{title: lenguajeGB['smsLista25'](), rowId: `${usedPrefix}audios`},
+{title: lenguajeGB['smsLista26'](), rowId: `${usedPrefix}stickermenu`},
+{title: lenguajeGB['smsLista27'](), rowId: `${usedPrefix}makermenu`},
+{title: lenguajeGB['smsLista28'](), rowId: `${usedPrefix}menulogos2`},
+{title: lenguajeGB['smsLista29'](), rowId: `${usedPrefix}randommenu`},
+{title: lenguajeGB['smsLista30'](), rowId: `${usedPrefix}hornymenu`, description: '\n'}
 ]},{	
-title: comienzo + ' ' + lenguajeGB['smsLista30']() + ' ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista31']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista31'](), rowId: `${usedPrefix}grupomenu`},
-{title: lenguajeGB['smsLista32'](), rowId: `${usedPrefix}listas`},
-{title: lenguajeGB['smsLista33'](), rowId: `${usedPrefix}on`},
-{title: lenguajeGB['smsLista34'](), rowId: `${usedPrefix}ownermenu`}
+{title: lenguajeGB['smsLista32'](), rowId: `${usedPrefix}grupomenu`},
+{title: lenguajeGB['smsLista33'](), rowId: `${usedPrefix}listas`},
+{title: lenguajeGB['smsLista34'](), rowId: `${usedPrefix}on`},
+{title: lenguajeGB['smsLista35'](), rowId: `${usedPrefix}ownermenu`}
 ]}]
 
 const listMessage = {
