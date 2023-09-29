@@ -1174,8 +1174,8 @@ return
 		
 let hl = _prefix 
 let adminMode = global.db.data.chats[m.chat].modoadmin
-let gata = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
-if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && gata) return   
+let shark = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
+if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && shark) return   
 if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { //número bot owner
 fail('owner', m, this)
 continue
@@ -1370,7 +1370,7 @@ case 'remove':
 if (chat.welcome) {
 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
 for (let user of participants) {
-let pp = gataMenu.getRandom()
+let pp = sharkMenu.getRandom()
 try {
 pp = await this.profilePictureUrl(user, 'image')
 } catch (e) {
@@ -1488,7 +1488,7 @@ restrict: lenguajeGB['smsRestrict'](),
 }[type]
 //if (msg) return m.reply(msg)
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja82783643@gmail.com'].getRandom(), thumbnail: gataImg.getRandom(), sourceUrl: [md, nna, yt, ig].getRandom() }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja82783643@gmail.com'].getRandom(), thumbnail: sharkImg.getRandom(), sourceUrl: [md, nna, yt, ig].getRandom() }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
