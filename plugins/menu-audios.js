@@ -226,8 +226,8 @@ const sections = [
 title: `${lenguajeGB.smsTex18()}`,
 rows: [
 {title: lenguajeGB['smsLista2'](), description: null, rowId: `${usedPrefix}creador`},
-{title: lenguajeGB['smsLista5'](), description: null, rowId: `${usedPrefix}infomenu`},
-{title: lenguajeGB['smsLista6'](), description: null, rowId: `${usedPrefix}allmenu`},  
+{title: lenguajeGB['smsLista4'](), description: null, rowId: `${usedPrefix}infomenu`},
+{title: lenguajeGB['smsLista5'](), description: null, rowId: `${usedPrefix}allmenu`},  
   
 {title: "➥🔊 Noche de paz", description: null, rowId: `Noche de paz`},
 {title: "➥🔊 Buenos dias", description: null, rowId: `Buenos dias`},
