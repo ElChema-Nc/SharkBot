@@ -101,7 +101,7 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 
 ⊜ *${lenguajeGB['smsBotonM5']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM5']().slice(1).toLowerCase()} »* ${role}
 ⊜ *${lenguajeGB['smsBotonM6']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM6']().slice(1).toLowerCase()} »* ${emoji} || ${user.exp - min}/${xp}
-⊜ *${lenguajeGB['smsPareja']()}* ${pareja ? `\n*»* ${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
+⊜ *${lenguajeGB['smsPareja']()}* ${pareja ? `\n*»* ${name} 😵‍💫 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
 ⊜ *Pasatiempo(s)* ➺ ${user.pasatiempo === 0 ? '*Sin Registro*' : user.pasatiempo + '\n'}
 
 ⊜ *Experiencia ➟* ${exp} ⚡
@@ -163,10 +163,6 @@ ${readMore}
 ┃🎡➺ _${usedPrefix}ppt *piedra : papel : tijera*_
 ┃🎡➺ _${usedPrefix}tictactoe | ttt *sala*_
 ┃🎡➺ _${usedPrefix}deltictactoe | delttt_
-┃🎡➺ _${usedPrefix}topgays_
-┃🎡➺ _${usedPrefix}topotakus_
-┃🎡➺ _${usedPrefix}toppajer@s_
-┃🎡➺ _${usedPrefix}topput@s_
 ┃🎡➺ _${usedPrefix}topintegrantes | topintegrante_
 ┃🎡➺ _${usedPrefix}toplagrasa | topgrasa_
 ┃🎡➺ _${usedPrefix}toppanafrescos | toppanafresco_
@@ -174,17 +170,7 @@ ${readMore}
 ┃🎡➺ _${usedPrefix}toplindos | toplind@s_
 ┃🎡➺ _${usedPrefix}topfamosos | topfamos@s_
 ┃🎡➺ _${usedPrefix}topparejas | top5parejas_
-┃🎡➺ _${usedPrefix}gay | gay *@tag*_
-┃🎡➺ _${usedPrefix}gay2 *nombre : @tag*_
-┃🎡➺ _${usedPrefix}lesbiana *nombre : @tag*_
-┃🎡➺ _${usedPrefix}manca *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}manco *nombre : @tag*_
-┃🎡➺ _${usedPrefix}pajero *nombre : @tag*_
-┃🎡➺ _${usedPrefix}pajera *nombre : @tag*_
-┃🎡➺ _${usedPrefix}puto *nombre : @tag*_
-┃🎡➺ _${usedPrefix}puta *nombre : @tag*_
-┃🎡➺ _${usedPrefix}rata *nombre : @tag*_
-┃🎡➺ _${usedPrefix}love *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}doxear *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}doxxeame_
 ┃🎡➺ _${usedPrefix}pregunta *texto*_
