@@ -225,7 +225,7 @@ const sections = [
 {
 title: `${lenguajeGB.smsTex18()}`,
 rows: [
-{title: lenguajeGB['smsLista2'](), description: null, rowId: `${usedPrefix}creadora`},
+{title: lenguajeGB['smsLista2'](), description: null, rowId: `${usedPrefix}creador`},
 {title: lenguajeGB['smsLista5'](), description: null, rowId: `${usedPrefix}infomenu`},
 {title: lenguajeGB['smsLista6'](), description: null, rowId: `${usedPrefix}allmenu`},  
   
