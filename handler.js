@@ -1035,9 +1035,9 @@ jadibotmd: true,
 console.error(e)
 }
 if (opts['nyimak']) return
-if (!m.fromMe && !m.Owner && !m.ROwner && opts['self']) return
-if (opts['pconly'] && m.chat.endsWith('g.us') && !m.Owner && !m.ROwner) return
-if (opts['gconly'] && !m.chat.endsWith('g.us') && !m.Owner && !m.ROwner) return
+if (!m.fromMe && opts['self']) return
+if (opts['pconly'] && m.chat.endsWith('g.us')) return
+if (opts['gconly'] && !m.chat.endsWith('g.us')) return
 if (opts['swonly'] && m.chat !== 'status@broadcast') return
 if (typeof m.text !== 'string')
 m.text = ''
@@ -1289,7 +1289,7 @@ if (m.limit)
 m.reply(+m.limit + lenguajeGB.smsCont8())
 }
 if (m.money)
-m.reply(+m.money + ' 𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎 🦈 𝙐𝙎𝘼𝘿𝙊(𝙎)')  
+m.reply(+m.money + '𝙎𝙃𝘼𝙍𝙆𝘾𝙊𝙄𝙉𝙎 🦈 𝙐𝙎𝘼𝘿𝙊(𝙎)')  
 break
 }}} catch (e) {
 console.error(e)
@@ -1344,7 +1344,8 @@ if (opts['autoread']) await this.readMessages([m.key])
 if (settingsREAD.autoread2) await this.readMessages([m.key])  
 //if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
 	    
-if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0if (!m.fromMem && m.text.match(/(shark|josh|bot)/gi)) {
+if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
+if (!m.fromMem && m.text.match(/(shark|josh|bot)/gi)) {
 let emot = pickRandom(["😳", "🤯", "😱", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "🤝", "💪", "👑"])
 this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
 function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
@@ -1399,7 +1400,7 @@ mentionedJid:[user],
 "showAdAttribution": true,
 "renderLargerThumbnail": true,
 "thumbnail": apii.data, 
-"title": [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + '🔱', '🌟 ja82783643@gmail.com'].getRandom(),
+"title": [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja82783643@gmail.com'].getRandom(),
 "containsAutoReply": true,
 "mediaType": 1, 
 sourceUrl: [md, nna, yt, ig].getRandom()}}}, { quoted: fkontak2 }) 
