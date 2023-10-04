@@ -63,7 +63,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => shark)
 }}}}, {})*/ //MENSAJE DE PAGO
 
 //let vid = 'https://blogscvc.cervantes.es/martes-neologico/wp-content/uploads/sites/2/2021/08/gif_350.gif'
-//let vid = './media/menus/Menu1.jpg'
+//let vid = './media/menus/Menuvid1.mp4'
 	
 /*let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(sharkMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}	
 let sipp = await conn.resize(pp, 150, 150)
