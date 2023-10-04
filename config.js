@@ -206,7 +206,7 @@ global.logogit = 'https://telegra.ph/file/298b523ab0edd8f7ed6a8.jpg';
 global.welshark = [ig, yt2, yt2, ig, md, ig, yt, yt2, yt2, ig];
 global.redesMenu = [nna, md, ig, yt, asistencia];
 global.sharkMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18];
-global.sharkVidMenu = ['./media/menus/Menu1.jpg', './media/menus/Menu2.jpg', './media/menus/Menu3.jpg'];
+global.sharkVidMenu = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4', './media/menus/Menuvid3.mp4'];
 global.sharkImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13];
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
