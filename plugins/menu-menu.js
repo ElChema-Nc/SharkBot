@@ -171,8 +171,6 @@ ${readMore}
 ┃🎡➺ _${usedPrefix}toplindos | toplind@s_
 ┃🎡➺ _${usedPrefix}topfamosos | topfamos@s_
 ┃🎡➺ _${usedPrefix}topparejas | top5parejas_
-┃🎡➺ _${usedPrefix}gay | gay *@tag*_
-┃🎡➺ _${usedPrefix}gay2 *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}manco *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}love *nombre : @tag*_
 ┃🎡➺ _${usedPrefix}doxear *nombre : @tag*_
