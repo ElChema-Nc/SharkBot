@@ -77,7 +77,7 @@ apt update && apt upgrade && pkg install git nodejs ffmpeg imagemagick yarn && g
 ### 🚀 USAR EL SHARKBOT 24/7 EN TERMUX 
 > Ejecutar estos comandos dentro de la carpeta SharkBot
 ```bash
-termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
+termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ``` 
 #### ⬇️ Opciones Disponibles
 > **Warning** Esto eliminará todo el historial que hayas establecido con PM2:
@@ -176,7 +176,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ]
   ```
   - [x] **¿Cómo edito el texto del Bot?**<br>
-  _Ir a la carpeta [`idiomas ✨`](https://github.com/ElChema-Nc/SharkBot/tree/master/lib/idiomas) y selecciona el archivo del idioma que quiera modificar su contenido._
+  _Ir a la carpeta [`idioma`](https://github.com/ElChema-Nc/SharkBot/tree/master/lib/idiomas) y selecciona el archivo del idioma que quiera modificar su contenido._
   
   - [x] **¿Dónde puedo cambiar el idioma del SharkBot?**<br>
   _Puede cambiar el idioma ingresando [`Aquí`](https://github.com/ElChema-Nc/SharkBot/blob/4a1eb2d4b4e2613a8b69996ea6bbb252001604cc/config.js#L30)_
@@ -189,7 +189,7 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
   _Puede usar la [`Instalación Automática 😃`](https://github.com/ElChema-Nc/SharkBot#-opci%C3%B3n-1-instalaci%C3%B3n-autom%C3%A1tica-por-termux) si es la primera vez que va instalar._<br>
   
   - [x] **¿Cómo puedo descargar Termux?**<br>
-  _Puede descargar la versión de Termux e instalar [`Aquí 😉`](https://f-droid.org/repo/com.termux_118.apk)._
+  _Puede descargar la versión de Termux e instalar [`Aquí 😵‍💫`](https://f-droid.org/repo/com.termux_118.apk)._
   
   - [x] **¿Cómo conectar a SharkBot si se cierra la aplicación de Termux?**<br>
   _Primero abrir Termux, luego usar este comando para iniciar el SharkBot si previamente ya hizo su instalación `cd SharkBot && npm start`_
@@ -280,14 +280,6 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 </details>
 
 ----
-### 💠 [`SOLO EL IDIOMA ESPAÑOL ESTA DISPONIBLE`](https://github.com/ElChema-Nc/SharkBot/blob/master/config.js) 
-#### 🥴 Español  
-----
 
 ### 😏 CREADOR
 [![ElChema-Nc](https://github.com/ElChema-Nc.png?size=100)](https://github.com/ElChema-Nc) 
-
-### 😵‍💫 DESARROLLADORES
-<a href="https://github.com/ElChema-Nc/SharkBot/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=ElChema-Nc/SharkBot" /> 
-</a>
