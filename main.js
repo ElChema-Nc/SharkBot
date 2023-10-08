@@ -1,35 +1,35 @@
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-import './config.js';
-import {createRequire} from 'module';
-import path, {join} from 'path';
-import {fileURLToPath, pathToFileURL} from 'url';
-import {platform} from 'process';
-import * as ws from 'ws';
-import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from 'fs';
-import yargs from 'yargs';
-import {spawn} from 'child_process';
-import lodash from 'lodash';
-import chalk from 'chalk';
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
+import './config.js'
+import {createRequire} from 'module'
+import path, {join} from 'path'
+import {fileURLToPath, pathToFileURL} from 'url'
+import {platform} from 'process'
+import * as ws from 'ws'
+import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from 'fs'
+import yargs from 'yargs'
+import {spawn} from 'child_process'
+import lodash from 'lodash'
+import chalk from 'chalk'
 import fs from 'fs'
 import { watchFile, unwatchFile } from 'fs'  
-import syntaxerror from 'syntax-error';
-import {tmpdir} from 'os';
-import {format} from 'util';
-import P from 'pino';
-import pino from 'pino';
-import {Boom} from '@hapi/boom';
-import {makeWASocket, protoType, serialize} from './lib/simple.js';
-import {Low, JSONFile} from 'lowdb';
-import {mongoDB, mongoDBV2} from './lib/mongoDB.js';
-import store from './lib/store.js';
+import syntaxerror from 'syntax-error'
+import {tmpdir} from 'os'
+import {format} from 'util'
+import P from 'pino'
+import pino from 'pino'
+import {Boom} from '@hapi/boom'
+import {makeWASocket, protoType, serialize} from './lib/simple.js'
+import {Low, JSONFile} from 'lowdb'
+import {mongoDB, mongoDBV2} from './lib/mongoDB.js'
+import store from './lib/store.js'
 const {proto} = (await import('@whiskeysockets/baileys')).default;
-const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import('@whiskeysockets/baileys');
-const {CONNECTING} = ws;
-const {chain} = lodash;
-const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
+const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import('@whiskeysockets/baileys')
+const {CONNECTING} = ws
+const {chain} = lodash
+const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
-protoType();
-serialize();
+protoType()
+serialize()
 
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
   return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
@@ -39,11 +39,8 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
   return createRequire(dir);
 };
 
-global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '');
-
-global.timestamp = {start: new Date};
-global.videoList = [];
-global.videoListXXX = [];
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.timestamp = { start: new Date }
 
 const __dirname = global.__dirname(import.meta.url);
 
@@ -104,41 +101,19 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `SharkBotSession`;
-const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
-const msgRetryCounterMap = (MessageRetryMap) => { };
-const {version} = await fetchLatestBaileysVersion();
+global.authFile = `SharkBotSession`
+const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 
 const connectionOptions = {
 printQRInTerminal: true,
-patchMessageBeforeSending: (message) => {
-const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
-if (requiresPatch) {
-message = {viewOnceMessage: {message: {messageContextInfo: {deviceListMetadataVersion: 2, deviceListMetadata: {}}, ...message}}};
+auth: state,
+logger: P({ level: 'silent'}),
+browser: ['SharkBot','Edge','2.0.0']
 }
-return message;
-},
-getMessage: async (key) => {
-if (store) {
-const msg = await store.loadMessage(key.remoteJid, key.id);
-return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined;
-}
-return proto.Message.fromObject({});
-},
-msgRetryCounterMap,
-logger: pino({level: 'silent'}),
-auth: {
-creds: state.creds,
-keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
-},
-browser: ['SharkBot','Edge','1.0.0'],
-version,
-defaultQueryTimeoutMs: undefined,
-};
 
-global.conn = makeWASocket(connectionOptions);
-conn.isInit = false;
-conn.well = false;
+global.conn = makeWASocket(connectionOptions)
+conn.isInit = false
+conn.well = false
 
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
@@ -147,51 +122,43 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 async function connectionUpdate(update) {
-const {connection, lastDisconnect, isNewLogin} = update;
-global.stopped = connection;
-if (isNewLogin) conn.isInit = true;
-const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
+const {connection, lastDisconnect, isNewLogin} = update
+global.stopped = connection
+if (isNewLogin) conn.isInit = true
+const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
 if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-await global.reloadHandler(true).catch(console.error);
-//console.log(await global.reloadHandler(true).catch(console.error));
-global.timestamp.connect = new Date;
+console.log(await global.reloadHandler(true).catch(console.error))
+global.timestamp.connect = new Date
 }
-if (global.conns instanceof Array) console.log()
-else global.conns = []
-if (global.db.data == null) loadDatabase();
+if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.bold.yellow(lenguajeGB['smsCodigoQR']()))}
-  if (connection == 'open') {
+if (connection == 'open') {
 console.log(chalk.bold.greenBright(lenguajeGB['smsConexion']()))}
-let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
 if (reason === DisconnectReason.badSession) {
 console.log(chalk.bold.cyanBright(lenguajeGB['smsConexionOFF']()))
-//process.exit();
 } else if (reason === DisconnectReason.connectionClosed) {
 console.log(chalk.bold.magentaBright(lenguajeGB['smsConexioncerrar']()))
-await global.reloadHandler(true).catch(console.error);
+process.send('reset')
 } else if (reason === DisconnectReason.connectionLost) {
 console.log(chalk.bold.blueBright(lenguajeGB['smsConexionperdida']()))
-await global.reloadHandler(true).catch(console.error);
+process.send('reset')
 } else if (reason === DisconnectReason.connectionReplaced) {
 console.log(chalk.bold.yellowBright(lenguajeGB['smsConexionreem']()))
-//process.exit();
 } else if (reason === DisconnectReason.loggedOut) {
 console.log(chalk.bold.redBright(lenguajeGB['smsConexionOFF']()))
-//process.exit();
 } else if (reason === DisconnectReason.restartRequired) {
 console.log(chalk.bold.cyanBright(lenguajeGB['smsConexionreinicio']()))
-await global.reloadHandler(true).catch(console.error);
 } else if (reason === DisconnectReason.timedOut) {
 console.log(chalk.bold.yellowBright(lenguajeGB['smsConexiontiem']()))
-await global.reloadHandler(true).catch(console.error);
+process.send('reset')
 } else {
 console.log(chalk.bold.redBright(lenguajeGB['smsConexiondescon'](reason, connection)))
-await global.reloadHandler(true).catch(console.error);
-}}}
-
-process.on('uncaughtException', console.error);
+}}
+}
+process.on('uncaughtException', console.error)
 
 let isInit = true;
 let handler = await import('./handler.js');
@@ -239,14 +206,6 @@ conn.onCall = handler.callUpdate.bind(global.conn);
 conn.connectionUpdate = connectionUpdate.bind(global.conn);
 conn.credsUpdate = saveCreds.bind(global.conn, true);
 
-const currentDateTime = new Date();
-const messageDateTime = new Date(conn.ev);
-if (currentDateTime >= messageDateTime) {
-const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]);
-} else {
-const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]);
-}
-
 conn.ev.on('messages.upsert', conn.handler);
 conn.ev.on('group-participants.update', conn.participantsUpdate);
 conn.ev.on('groups.update', conn.groupsUpdate);
@@ -254,9 +213,9 @@ conn.ev.on('message.delete', conn.onDelete);
 conn.ev.on('call', conn.onCall);
 conn.ev.on('connection.update', conn.connectionUpdate);
 conn.ev.on('creds.update', conn.credsUpdate);
-isInit = false;
-return true;
-};
+isInit = false
+return true
+}
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'));
 const pluginFilter = (filename) => /\.js$/.test(filename);
@@ -271,18 +230,18 @@ global.plugins[filename] = module.default || module;
 conn.logger.error(e);
 delete global.plugins[filename];
 }}}
-filesInit().then((_) => Object.keys(global.plugins)).catch(console.error);
+filesInit().then((_) => Object.keys(global.plugins)).catch(console.error)
 
 global.reload = async (_ev, filename) => {
 if (pluginFilter(filename)) {
-const dir = global.__filename(join(pluginFolder, filename), true);
+const dir = global.__filename(join(pluginFolder, filename), true)
 if (filename in global.plugins) {
-if (existsSync(dir)) conn.logger.info(` SE ACTULIZADO - '${filename}' CON ÉXITO`);
+if (existsSync(dir)) conn.logger.info(` SE ACTULIZADO - '${filename}' CON ÉXITO`)
 else {
-conn.logger.warn(`SE ELIMINO UN ARCHIVO : '${filename}'`);
+conn.logger.warn(`SE ELIMINO UN ARCHIVO : '${filename}'`)
 return delete global.plugins[filename];
 }
-} else conn.logger.info(`SE DETECTO UN NUEVO PLUGINS : '${filename}'`);
+} else conn.logger.info(`SE DETECTO UN NUEVO PLUGINS : '${filename}'`)
 const err = syntaxerror(readFileSync(dir), filename, {
 sourceType: 'module',
 allowAwaitOutsideFunction: true,
@@ -385,7 +344,7 @@ console.log(chalk.bold.green(`${lenguajeGB.smspurgeOldFiles1()} ${file} ${lengua
 }) }) }) }
 
 setInterval(async () => {
-await clearTmp()        
+await clearTmp()
 console.log(chalk.bold.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 4) // 4 min 
 
 setInterval(async () => {

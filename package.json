@@ -1,7 +1,7 @@
-{ 
+{
 "name": "SharkBot",
-"version": "7.9.3", 
-"description": "El Mejor Bot De WhatsApp 2023/2024",
+"version": "7.9.4", 
+"description": "El Mejor Bot Para Whatsapp 2023/2024",
 "main": "index.js",
 "type": "module",
     
@@ -27,7 +27,7 @@
 "url": "https://github.com/ElChema-Nc/SharkBot/issues" },
 "license": "GPL-3.0-or-later",
 "dependencies": {
-"@whiskeysockets/baileys": "^6.4.1",
+"@whiskeysockets/baileys": "^6.5.0",
 "@adiwajshing/keyed-db": "^0.2.4",
 "@bochilteam/scraper": "^4.2.4",
 "@brandond/findthelyrics": "^2.0.5",
