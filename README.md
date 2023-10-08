@@ -1,4 +1,4 @@
-> <b>🚀  VERSION 7.9.3</b>
+> <b>🚀  VERSION 7.9.4</b>
  
 <div align="center">
 <a href="https://youtube.com/@thechema06?si=OWCbVDp_LvQ0thJ-">
