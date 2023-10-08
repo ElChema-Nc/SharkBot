@@ -109,8 +109,8 @@ global.yt2 = "https://youtube.com/@thechema06?si=OWCbVDp_LvQ0thJ-";
 global.ig = "https://www.instagram.com/josh_artl";
 global.md = "https://github.com/ElChema-Nc/SharkBot";
 
-global.nna = 'https://chat.whatsapp.com/JO5LstGfk6RBccr0gjzNwI' //UPDATE SHARKBOT
-global.asistencia = 'Wa.me/34623289459' //Dudas? escríbeme...
+global.nna = 'https://chat.whatsapp.com/JO5LstGfk6RBccr0gjzNwI'; //UPDATE SHARKBOT
+global.asistencia = 'Wa.me/34623289459'; //Dudas? escríbeme...
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -144,8 +144,8 @@ global.exito = eg;
 
 //⊱ ━━━━━.⋅ Información | Information ⋅.━━━━ ⊰
 
-global.wm = "𝙎𝙝𝙖𝙧𝙠𝙇𝙞𝙩𝙚ㅤ🦈 : 𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱";
-global.igfg = "𝙎𝙝𝙖𝙧𝙠𝙇𝙞𝙩𝙚";
+global.wm = "𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩ㅤ🦈 : 𝙀𝙡ㅤ𝘾𝙝𝙚𝙢𝙖ㅤ🔱";
+global.igfg = "𝙎𝙝𝙖𝙧𝙠𝘽𝙤𝙩";
 global.wait = "*⌛ _Cargando..._ ▬▭▭▭▭▭▭*";
 global.waitt = "*⌛ _Cargando..._ ▬▬▭▭▭*";
 global.waittt = "*⌛ _Cargando..._ ▬▬▬▬▭▭*";
@@ -219,7 +219,7 @@ global.flaaa = [
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
-'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='];
 
 global.cmenut = "❖––––––『";
 global.cmenub = "┊✦ ";
