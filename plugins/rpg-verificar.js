@@ -18,7 +18,6 @@ hour: 'numeric',
 minute: 'numeric',
 second: 'numeric'
 }) 
-
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? m.sender : m.sender
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
@@ -28,7 +27,6 @@ let verificar = new RegExp(usedPrefix)
 let biografia = await conn.fetchStatus(m.sender).catch(_ => 'undefined')
 bio = biografia.status?.toString() || 'No encontrada'
 let intervalId
-
 function mensajeRegistro() {
 if (edad === 0) {
 clearInterval(intervalId)	
@@ -42,24 +40,21 @@ return
 if (typeof genero === 'string') {
 global.db.data.users[m.sender]['registroC'] = true
 registrando = false
-conn.reply(m.chat, `*SU TIEMPO DE REGISTRO HA TERMINADO!!*\n\nSi no usa el botón de abajo en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido\n\nEscriba .finalizar`, fkontak, m)
-//conn.sendButton(m.chat, "*SU TIEMPO DE REGISTRO HA TERMINADO!!*", 'Si no usa el botón de abajo en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)	
+conn.reply(m.chat, `*SU TIEMPO DE REGISTRO HA TERMINADO!!*\n\n_Si no continúa en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido_\n\n*Para continuar escriba:* ${usedPrefix}finalizar`, fkontak, m)
 }else{
 clearInterval(intervalId)
 global.db.data.users[m.sender]['registroR'] = true		
 registrando = false
-conn.reply(m.chat, `*SU TIEMPO DE REGISTRO HA TERMINADO!!*\n\nSi no usa el botón de abajo en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido\n\nEscriba .finalizar`, fkontak, m)}
-//conn.sendButton(m.chat, "*SU TIEMPO DE REGISTRO HA TERMINADO!!*", 'Si no usa el botón de abajo en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)}
+conn.reply(m.chat, `*SU TIEMPO DE REGISTRO HA TERMINADO!!*\n\n_Si no continúa en este momento su registro no se guardará, si guarda más tarde su registro se habrá perdido_\n\n*Para continuar escriba:* ${usedPrefix}finalizar`, fkontak, m)}
 }
 		
-if (user.registered === true) throw `${iig}𝙔𝘼 𝙀𝙎𝙏𝘼𝙎 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊!!\n𝙎𝙄 𝙌𝙐𝙄𝙀𝙍𝙀 𝘼𝙉𝙐𝙇𝘼𝙍 𝙎𝙐 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 𝙐𝙎𝙀 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊\n*${usedPrefix}unreg numero de serie*\n\n𝙎𝙄 𝙉𝙊 𝙍𝙀𝘾𝙐𝙀𝙍𝘿𝘼 𝙎𝙐 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙎𝙀𝙍𝙄𝙀 𝙐𝙎𝙀 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊\n*${usedPrefix}myns*` 	
+if (user.registered === true) return m.reply(`${lenguajeGB['smsAvisoIIG']()}*YA ESTÁ REGISTRADO!!*\n*SI QUIERE ANULAR SU REGISTRO, USE ESTE COMANDO*\n*${usedPrefix}unreg numero de serie*\n\n*SI NO RECUERDA SU NÚMERO DE SERIE, USE ESTE COMANDO*\n*${usedPrefix}myns*`)	
 
 if (command == 'verificar' || command == 'verify' || command == 'register' || command == 'reg' || command == 'registrar') {
-if (registrando === true) throw '*ALGUIEN SE ESTÁ REGISTRANDO... ESPERE POR FAVOR 2 MINUTOS*'
-conn.reply(m.chat, `*👀 CÓMO DESEA REGISTRARSE?*\n\n📑 *REGISTRO RAPIDO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n\n🗂️ *REGISTRO COMPLETO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n• Premium Temporal Gratis\n• Más opciones para este registro\n\n• Escriba para el registro rapido\n${usedPrefix}reg1 nombre edad\n\n• Escriba para el registro completo\n${usedPrefix}nombre`, fkontak, m)
-//await conn.sendButton(m.chat, iig + '👀 *CÓMO DESEA REGISTRARSE?*', '📑 *REGISTRO RAPIDO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n\n🗂️ *REGISTRO COMPLETO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n• Premium Temporal Gratis\n• Más opciones para este registro\n\n' + wm, null, [[`📑 REGISTRO RÁPIDO`, usedPrefix + 'Reg1'], [`🗂️ REGISTRO COMPLETO`, usedPrefix + 'nombre']], m) 
+if (registrando === true) return m.reply('*ALGUIEN SE ESTÁ REGISTRANDO... ESPERE POR FAVOR 2 MINUTOS*')
+conn.reply(m.chat, `*👀 CÓMO DESEA REGISTRARSE?*\n\n📑 *REGISTRO RÁPIDO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n\n*Escriba para el registro rápido:*\n${usedPrefix}reg1 nombre edad\n\n🗂️ *REGISTRO COMPLETO*\n• Insignia de verificación\n• Desbloquear comandos que requieran registro\n• Premium Temporal Gratis\n• Más opciones para este registro\n\n*Escriba para el registro completo:*\n${usedPrefix}nombre\n\n\`\`\`⭐ Considere que tendrá un tiempo para completar en caso de registrarse\`\`\``, fkontak, m)
 }
-	
+
 if (command == 'reg1') {
 registrando = true
 if (registrando === true) {
@@ -67,29 +62,27 @@ intervalId = setInterval(mensajeRegistro, 2 * 60 * 1000) //2 min
 setTimeout(() => {
 clearInterval(intervalId)}, 126000) //2.1 min
 }
-	
+
 registro = text.replace(/\s+/g, usedPrefix) 
 _registro = text.split(" ",2)
-if (!text) return conn.reply(m.chat, iig + `*👉 *PARÁMETROS DEL REGISTRO:*\n${usedPrefix + command} nombre edad\`\`\`\n\n*EJEMPLO:* \`\`\`${usedPrefix + command} ${sk} 20\`\`\`\n\n✨ CONSEJO:\n• Su nombre no debe de contener números\n• La edad no debe de contener Letras\n\n*Sabías que puede personalizar su registro?*\n➘ _escriba .nombre_`, fkontak, m)
-//conn.sendButton(m.chat,  `👉 *PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\`\n\n*EJEMPLO:* \`\`\`${usedPrefix + command} ${sk} 20\`\`\``, '✨ ```CONSEJO:```\n• Su nombre no debe de contener números\n• La edad no debe de contener Letras\n\n*Sabías que puede personalizar su registro?*\n➘ _Usando el Botón de abajo_', null, [[`🗂️ USAR REGISTRO COMPLETO`, usedPrefix + 'nombre']], m)
-if (_registro['length'] >= 3 || isNaN(_registro[1])) return 
+if (!text) return conn.reply(m.chat, `${lenguajeGB['smsAvisoIIG']()}👉 *PARÁMETROS DEL REGISTRO:*\n${usedPrefix + command} nombre edad\n\n\`\`\`EJEMPLO:\`\`\`\n${usedPrefix + command} ${sk} 20\n\n*✨ CONSEJO:*\n• _Su nombre no debe de contener números_\n• _La edad no debe de contener letras_\n\n⭐ *Si desea personalizar más su registro, escriba:*\n${usedPrefix}nombre`, fkontak, m)
+//if (_registro['length'] >= 3 || isNaN(_registro[1])) return 
 //conn.sendButton(m.chat, fg + '🙃 *ESTÁ INTENTANDO SEPRAR SU NOMBRE O UNIR TODO?* ', '🧐 *COINCIDE COMO EN ESTOS EJEMPLOS:*\n' + `\`\`\`${usedPrefix + command} Super${sk}20\`\`\`` + '\n' + `\`\`\`${usedPrefix + command} Super 15 ${sk} \`\`\`` + '\n' + `\`\`\`${usedPrefix + command} Super ${sk} 24 De ${author}\`\`\`\n\n` + '*Si cumple que tenga (Nombre/Frase y Edad) Autocompletaremos su Registro, de lo contraio vuelva a registrarse*\n➘ _Use el Botón de abajo_', null, [[`🌟 AUTOCOMPLETAR MI REGISTRO`, usedPrefix + 'reg1' + ' ' + text.replace(/[♧◇♡♤■□●○•°☆▪︎¤¿?¡¬¦±×÷°µ§©®™¶€¢£¥₽₹₩₱₸₪₫₮₦₴₡₭₲₼₿.,\/#!$%\^&\*;:{}@=\-_`~()\s\0-9]/gi, "") + ' ' + text.replace(/[♧◇♡♤■□●○•°☆▪︎¤¿?¡¬¦±×÷°µ§©®™¶€¢£¥₽₹₩₱₸₪₫₮₦₴₡₭₲₼₿.,\/#!$%\^&\*;:{}@=\-_`~()\s\a-z]/gi, "")], ['📑 VOLVER A REGISTRAR', command + usedPrefix]], m)
-if (!_registro[0]) throw fg + `*FALTA SU NOMBRE, PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``
-if (_registro[0].length >= 30) throw fg + '*SU NOMBRE ES MUY LARGO, USE OTRO NOMBRE POR FAVOR*' 
-if (_registro[0].length <= 2) throw fg + '*SU NOMBRE ES MUY CORTO, USE OTRO NOMBRE POR FAVOR*'
+if (!_registro[0]) return m.reply(`${lenguajeGB['smsAvisoFG']()}*FALTA SU NOMBRE, PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``)
+if (_registro[0].length >= 30) return m.reply(`${lenguajeGB['smsAvisoFG']()}*SU NOMBRE ES MUY LARGO, USE OTRO NOMBRE POR FAVOR*`)
+if (_registro[0].length <= 2) return m.reply(`${lenguajeGB['smsAvisoFG']()}*SU NOMBRE ES MUY CORTO, USE OTRO NOMBRE POR FAVOR*`)
 _registro[0] = text.replace(/\s+/g, '').replace(/[0-9]+/gi, "")
 nombre = _registro[0]
-	
-if (!_registro[1]) throw fg + `*FALTA SU EDAD, PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``
-if (_registro[1] > 50) throw fg + `*SU EDAD ES MUY MAYOR, USE OTRA EDAD POR FAVOR*\n\n*PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``
-if (_registro[1] < 10) throw fg + `*SU EDAD ES MUY MENOR, USE OTRA EDAD POR FAVOR*\n\n*PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``
+
+if (!_registro[1]) return m.reply(`${lenguajeGB['smsAvisoFG']()}*FALTA SU EDAD, PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``)
+if (_registro[1] > 50) return m.reply(`${lenguajeGB['smsAvisoFG']()}*SU EDAD ES MUY MAYOR, USE OTRA EDAD POR FAVOR*\n\n*PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``)
+if (_registro[1] < 10) return m.reply(`${lenguajeGB['smsAvisoFG']()}*SU EDAD ES MUY MENOR, USE OTRA EDAD POR FAVOR*\n\n*PARÁMETROS DEL REGISTRO:*\n\`\`\`${usedPrefix + command} nombre edad\`\`\``)
 edad = parseInt(_registro[1]) //_registro[1]	
 global.db.data.users[m.sender]['registroR'] = true
 
-await conn.reply(m.chat, `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad + ' años'}\n\nEscriba .finalizar`, fkontak, m)
-//await conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}` + '\n' + '*❖ EDAD:* ' + `${edad === 0 ? 'No encontrada' : edad + ' años'}`, wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)	
+await conn.reply(m.chat, `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad + ' años'}\n\n_Para completar su registro, escriba ${usedPrefix}finalizar_`, fkontak, m)	
 }
-		
+
 if (command == 'nombre' || command == 'name') {
 registrando = true
 if (registrando === true) {
@@ -97,204 +90,103 @@ intervalId = setInterval(mensajeRegistro, 3 * 60 * 1000) //3 min
 setTimeout(() => {
 clearInterval(intervalId)}, 186000) //3.1 min
 }
-if (typeof nombre === 'string') fg + '*NO PUEDE CAMBIAR DE NOMBRE*\n\n_Una vez seleccionado no puede ser modificado_'
-if (verificar.test(text) == false || text.length <= 1) return await conn.reply(m.chat, `${iig}👉 *PERSONALICE SU NOMBRE PARA REGISTRAR, EJEMPLO:*\n${usedPrefix + command} ${sk}`, fkontak, m)
-//conn.sendButton(m.chat, iig + '👉 *PERSONALICE SU NOMBRE PARA REGISTRAR, EJEMPLO:*\n' + '```' + usedPrefix + command + ' ' + sk + '```', '*También puede vincular su nombre de WhatsApp*\n➘ _Usando el Botón de abajo_', null, [[`📲 REGISTRAR CON WHATSAPP`, `${usedPrefix + 'nombre2'}`]], m)
-if (text.length >= 25) return conn.sendMessage(m.chat, {text: fg + `*USE UN NOMBRE MÁS CORTO, EJEMPLO:*\n` + usedPrefix + command + sk + `*Acaso quiere usar su nombre registrado en su WhatsApp ?*\n➘ _En ese caso use el siguiente comando_\n📲 REGISTRAR CON WHATSAPP\n${usedPrefix + command}nombre2`}, {quoted: fkontak})
-//conn.sendButton(m.chat, fg + '*USE UN NOMBRE MÁS CORTO, EJEMPLO:*\n' + '```' + usedPrefix + command + ' ' + sk + '```', '*Acaso quiere usar su nombre registrado en su WhatsApp ?*\n➘ _En ese caso use el Botón de abajo_', null, [[`📲 REGISTRAR CON WHATSAPP`, usedPrefix + 'nombre2']], m)
-if (text.length <= 2) return conn.sendMessage(m.chat, {text: fg + `*NOMBRE FALTANTE O MUY CORTO, EJEMPLO:*\n` + usedPrefix + command + sk + `*Acaso quiere usar su nombre registrado en su WhatsApp ?*\n➘ _En ese caso use el siguiente comando_\n📲 REGISTRAR CON WHATSAPP\n${usedPrefix + command}nombre2`}, {quoted: fkontak})
-//conn.sendButton(m.chat, fg + '*NOMBRE FALTANTE O MUY CORTO, EJEMPLO:*\n' + '```' + usedPrefix + command + ' ' + sk + '```', '*Acaso quiere usar su nombre registrado en su WhatsApp ?*\n➘ _En ese caso use el Botón de abajo_', null, [[`📲 REGISTRAR CON WHATSAPP`, usedPrefix + 'nombre2']], m) 
+if (typeof nombre === 'string') return m.reply(`*NO PUEDE CAMBIAR DE NOMBRE*\n\n_Una vez completado no puede ser modificado_`)
+if (verificar.test(text) == false || text.length <= 1) return conn.reply(m.chat, `${iig}👉 *PERSONALICE SU NOMBRE PARA REGISTRAR, EJEMPLO:*\n${usedPrefix}nombre ${sk}`, fkontak, m)
+if (text.length >= 25) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoFG']()}*USE UN NOMBRE MÁS CORTO, EJEMPLO:*\n${usedPrefix}nombre ${sk}\n\n_Si quiere usar su nombre registrado en su WhatsApp, escriba ${usedPrefix}nombre2_`}, {quoted: fkontak})
+if (text.length <= 2) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoFG']()}*NOMBRE FALTANTE O MUY CORTO, EJEMPLO:*\n${usedPrefix}nombre ${sk}\n\n_Si quiere usar su nombre registrado en su WhatsApp, escriba ${usedPrefix}nombre2_`}, {quoted: fkontak})
 nombre = text.replace(/\s+/g, '').replace(/[0-9]+/gi, "").trim()
 user.name = nombre
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n\n🔢 AHORA REGISTRAR MI EDAD\n${usedPrefix}edad`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}`, wm, null, [[`🔢 REGISTRAR MI EDAD`, usedPrefix + 'edad']], m)
+if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoEG']()}*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n\n🔢 *AHORA PUEDE REGISTRAR SU EDAD EJEMPLO:*\n${usedPrefix}edad 20`}, {quoted: fkontak})
 }
 	
 if (command == 'nombre2' || command == 'name2') {
-if (typeof nombre === 'string') fg + '*NO PUEDE CAMBIAR DE NOMBRE*\n\n_Una vez seleccionado no puede ser modificado_'
-if (nombreWA.slice(1).length < 2) return conn.sendMessage(m.chat, {text: fg + `*SU NOMBRE DE WHATSAPP ES MUY CORTO PARA REGISTRAR USANDO:*\n` + usedPrefix + command + sk + `*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre*\n➘ _Sí quiere personalizar use el siguiente comando\n📇 PERSONALIZAR REGISTRO\n${usedPrefix + command}nombre`}, {quoted: fkontak})
-//conn.sendButton(m.chat, fg + '*SU NOMBRE DE WHATSAPP ES MUY CORTO PARA REGISTRAR USANDO* ' + '```' + usedPrefix + command + '```', '*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre*\n➘ _Sí quiere personalizar use el Botón de abajo_', null, [[`📇 PERSONALIZAR REGISTRO`, usedPrefix + 'nombre']], m) 
-if (nombreWA.slice(1).length > 25) return conn.sendMessage(m.chat, {text: fg + `*SU NOMBRE DE WHATSAPP ES MUY LARGO PARA REGISTRAR USANDO:*\n` + usedPrefix + command + sk + `*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre*\n➘ _Sí quiere personalizar use el siguiente comando\n📇 PERSONALIZAR REGISTRO\n${usedPrefix + command}nombre`}, {quoted: fkontak})
-//conn.sendButton(m.chat, fg + '*SU NOMBRE DE WHATSAPP ES MUY LARGO PARA REGISTRAR USANDO* ' + '```' + usedPrefix + command + '```', '*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre*\n➘ _Sí quiere personalizar use el Botón de abajo_', null, [[`📇 PERSONALIZAR REGISTRO`, usedPrefix + 'nombre']], m)
+if (typeof nombre === 'string') fg + '*NO PUEDE CAMBIAR DE NOMBRE*\n\n_Una vez completado no puede ser modificado_'
+if (nombreWA.slice(1).length < 2) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoFG']()}*SU NOMBRE DE WHATSAPP ES MUY CORTO PARA REGISTRAR*\n\n*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre usando ${usedPrefix}nombre ${sk}*`}, {quoted: fkontak})
+if (nombreWA.slice(1).length > 25) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoFG']()}*SU NOMBRE DE WHATSAPP ES MUY LARGO PARA REGISTRAR*\n\n*Modifique su nombre de WhatsApp e intente de nuevo o puede personalizar su nombre usando ${usedPrefix}nombre ${sk}*`}, {quoted: fkontak})
 nombre = nombreWA.replace(/\s+/g, '').replace(/[0-9]+/gi, "").slice(1).trim()
 user.name = nombre
-if (verificar.test(text) == false) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n\n🔢 AHORA REGISTRAR MI EDAD\n${usedPrefix}edad`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}`, wm, null, [[`🔢 REGISTRAR MI EDAD`, usedPrefix + 'edad']], m)
+if (verificar.test(text) == false) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoEG']()}*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n\n🔢 *AHORA PUEDE REGISTRAR SU EDAD EJEMPLO:*\n${usedPrefix}edad 20`}, {quoted: fkontak})
 }
-	
-if (command == 'edad' || command == 'age') {
-const sections = [
-{ title: "🌟 SELECCIONA TU EDAD!!",
-rows: [ {title: "♻️ Edad Random", rowId: usedPrefix + command + ' ' + usedPrefix +  text + pickRandom(['30','29','28','27','26','25','24','23','22','21','20','19','18','17','16','15','14','13','12','11','10','31'])}]
-}, {
-title: "🍃 JOVEN",
-rows: [
-{title: "1️⃣0️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '10'},
-{title: "1️⃣1️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '11'},
-{title: "1️⃣2️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '12'},
-{title: "1️⃣3️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '13'},
-{title: "1️⃣4️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '14'},
-{title: "1️⃣5️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '15'},
-{title: "1️⃣6️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '16'},
-{title: "1️⃣7️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '17'}]
-}, {
-title: "🌳 ADULTO",
-rows: [
-{title: "1️⃣8️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '18'},
-{title: "1️⃣9️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '19'},
-{title: "2️⃣0️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '20'},
-{title: "2️⃣1️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '21'},
-{title: "2️⃣2️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '22'},
-{title: "2️⃣3️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '23'},
-{title: "2️⃣4️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '24'},
-{title: "2️⃣5️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '25'},
-{title: "2️⃣6️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '26'},
-{title: "2️⃣7️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '27'},
-{title: "2️⃣8️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '28'},
-{title: "2️⃣9️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '29'},
-{title: "3️⃣0️⃣ Años", rowId: usedPrefix + command + ' ' + usedPrefix + text + '30'}]
-}, {
-title: "🤔 NO ESTÁ TÚ EDAD?",
-rows: [
-{title: "🔢 Personalizar mí edad", rowId: usedPrefix + 'edad2'}]},]
-
-const listMessage = {
-text: `👉 *SELECCIONE SU EDAD POR FAVOR*\n*❖ NOMBRE:* ${nombre}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`,
-footer: wm,
-title: "*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n",
-buttonText: "🫵 SELECCIONAR EDAD 🫵 ",
-sections
-}
-
-if (!text) return conn.sendMessage(m.chat, {text: eg + `👉 *REGISTRE SU EDAD POR FAVOR*\n*EJEMPLO:* ${usedPrefix}edad  18\n${usedPrefix}edad2 15\n\n*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n*❖ NOMBRE:* ${nombre}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`}, {quoted: fkontak})
-//conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-if (isNaN(text)) throw fg + '*INGRESE SOLO NÚMEROS*'
-if (text.slice(1).trim() > 50) throw fg + '*DEMASIADO MAYOR PARA SER REGISTRADO*'
-if (text.slice(1).trim() < 10) throw fg + '*DEMASIADO MENOR PARA SER REGISTRADO*' //.replace(/[^0-9.]+/gi,' ')
-edad = text.replace(/[.,\/#!$%\^&\*;:{}@=\-_`~()\s\a-z]/gi, "").trim()
-user.age = edad
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n\n🍃 AHORA REGISTRAR MI GÉNERO\n${usedPrefix}genero`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}` + '\n' + '*❖ EDAD:* ' + `${edad === 0 ? 'No encontrada' : edad + ' años'}`, wm, null, [[`🍃 REGISTRAR MI GÉNERO `, usedPrefix + `genero`]], m)
-}
-	
-if (command == 'edad2' || command == 'age2') {
-if (typeof edad === 'string') fg + '*NO PUEDE CAMBIAR DE EDAD*\n\n_Una vez seleccionado no puede ser modificado_'
-if (verificar.test(text.slice(1)) == false && !text) return conn.sendMessage(m.chat, {text: iig + `*👉PERSONALICE SU EDAD PARA REGISTRAR, EJEMPLO:*\n` + usedPrefix + command + 35 + `*Sabía que puede seleccionar su edad?*\n➘ _En ese caso use el siguiente comando_\n🔢 REGISTRAR MI EDAD\n${usedPrefix + command}edad`}, {quoted: fkontak})
-//conn.sendButton(m.chat, iig + '👉 *PERSONALICE SU EDAD PARA REGISTRAR, EJEMPLO:*\n' + usedPrefix + command + ' ' + '35', '*Sabía que puede seleccionar su edad?*\n➘ _En ese caso use el Botón de abajo_', null, [[`🔢 REGISTRAR MI EDAD`, usedPrefix + 'edad']], m)
-if (isNaN(text)) throw fg + '*INGRESE SOLO NÚMEROS*'
-if (text > 50) throw fg + '*DEMASIADO MAYOR PARA SER REGISTRADO*'
-if (text < 10) throw fg + '*DEMASIADO MENOR PARA SER REGISTRADO*'
+		
+if (command == 'edad' || command == 'age' || command == 'edad2' || command == 'age2') {
+if (typeof edad === 'string') return m.reply(`${lenguajeGB['smsAvisoFG']()}*NO PUEDE CAMBIAR DE EDAD*\n\n_Una vez completado no puede ser modificado_`)
+if (verificar.test(text.slice(1)) == false && !text) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoIIG']()}*👉 PERSONALICE SU EDAD PARA REGISTRAR, EJEMPLO:*\n${usedPrefix}edad 20`}, {quoted: fkontak})
+if (isNaN(text)) return m.reply(`${lenguajeGB['smsAvisoFG']()}*INGRESE SOLO NÚMEROS*`)
+if (text > 50) return m.reply(`${lenguajeGB['smsAvisoFG']()}*DEMASIADO MAYOR PARA SER REGISTRADO*`)
+if (text < 10) return m.reply(`${lenguajeGB['smsAvisoFG']()}*DEMASIADO MENOR PARA SER REGISTRADO*`)
 edad = text.replace(/[.,\/#!$%\^&\*;:{}@=\-_`~()\s\a-z]/gi, "")
 user.age = edad
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n\n🧬 AHORA REGISTRAR MI GÉNERO\n${usedPrefix}genero`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}` + '\n' + '*❖ EDAD:* ' + `${edad === 0 ? 'No encontrada' : edad + ' años'}`, wm, null, [[`🧬 REGISTRAR MI GÉNERO `, usedPrefix + `genero`]], m)
+if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: `${lenguajeGB['smsAvisoEG']()}*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n\n🧬 *AHORA PUEDE REGISTRAR SU GÉNERO EJEMPLO:*\n${usedPrefix}genero`}, {quoted: fkontak})
 }
 	
 if (command == 'genero' || command == 'género' || command == 'gender') {
-const sections = [
-{ title: "🌟 SELECCIONA TU GÉNERO!!",
-title: comienzo + " 🚹 MASCULINO " + fin,
-rows: [ 
-{title: "🚹 Hombre", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Hombre' }]
-}, {
-title: comienzo + " 🚺 FEMENINO " + fin,
-rows: [
-{title: "🚺 Mujer", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Mujer' }]
-}, {
-title: comienzo + " 👤 OCULTAR GÉNERO " + fin,
-rows: [
-{title: "🕶️ Ocultar", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Ocultado' }]},]
-
-const listMessage = {
-text: `👉 *SELECCIONE SU GÉNERO POR FAVOR*\n*❖ NOMBRE:* ${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`,
-footer: wm,
-title: "*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n",
-buttonText: "🧬 SELECCIONAR GÉNERO 🧬 ",
-sections
-}
-
-if (!text) return conn.sendMessage(m.chat, {text: eg + `👉 *SELECCIONE SU GÉNERO POR FAVOR*\n❖ EJEMPLO: /genero mujer\n\n*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n*❖ NOMBRE:* ${nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`}, {quoted: fkontak})
-//conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-genero = text.slice(1).trim()	
+let genText = `🌟 *SELECCIONA TU GÉNERO!!*
+1️⃣ ️▸ _🚹 MASCULINO (Hombre)_
+2️⃣ ▸ _🚺 FEMENINO (Mujer)_
+3️⃣ ▸ _👤 OCULTAR GÉNERO (Omitir)_
+🌟 *PUEDE USAR EL EMOJI NUMÉRICO O TEXTO NUMÉRICO PARA ELEGIR SU GÉNERO EJEMPLO:*
+✓ ${usedPrefix}genero 2️⃣
+✓ ${usedPrefix}genero 2`
+if (!text) return conn.sendMessage(m.chat, { text: genText }, { quoted: fkontak })	
+function asignarGenero(text) {
+switch (text) {
+case "1️⃣":
+case "1":
+case "🚹":
+genero = "Hombre"
+break
+case "2️⃣":
+case "2":
+case "🚺":
+genero = "Mujer"
+break
+case "3️⃣":
+case "3":
+case "👤":
+genero = "Ocultado"
+break
+default:
+return m.reply(`*RECUERDE USAR EL EMOJI NUMÉRICO, EMOJI DE GÉNERO O TEXTO NUMÉRICO PARA SELECCIONAR SU GÉNERO*`)
+}}
+asignarGenero(text)
 user.genero = genero
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n*❖ GENERO:*\n${genero === 0 ? 'No encontrada' : genero}\n\n🌱 AHORA REGISTRAR MI IDENTIDAD\n${usedPrefix}identidad`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}` + '\n' + '*❖ EDAD:* ' + `${edad === 0 ? 'No encontrada' : edad + ' años'}` + '\n' + '*❖ GENERO:* ' + `${genero === 0 ? 'No encontrada' : genero}`, wm, null, [[`🌱 REGISTRAR MI IDENTIDAD`, usedPrefix + 'identidad']], m)	 
+if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n*❖ GENERO:*\n${genero === 0 ? 'No encontrada' : genero}\n\n*🌱 AHORA PUEDE REGISTRAR SU IDENTIDAD*\n${usedPrefix}identidad`}, {quoted: fkontak}) 
 }
 	
 if (command == 'identidad' || command == 'identity') {
-const sections = [
-{ title: "🌱 SELECCIONE SU IDENTIDAD DE GÉNERO!!",
-rows: [
-{title: "• Agénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Agénero' },	
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Agénero'},		
-{title: "• Andrógino", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Andrógino' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Andrógino'},	
-{title: "• Andrógina", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Andrógina' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Andrógina'},	
-{title: "• Asexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Asexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Asexual'},		
-{title: "• Bigénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Bigénero' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Bigénero'},	
-{title: "• Bisexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Bisexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Bisexual'},	
-{title: "• Cisgenero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Cisgenero' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Cisgenero'},	
-{title: "• CrossDresser", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'CrossDresser' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'CrossDresser'},	
-{title: "• Demigénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Demigénero' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Demigénero'},	
-{title: "• Gay", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Gay' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Gay'},	
-{title: "• Género fluido", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Género fluido' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Género fluido'},	
-{title: "• Género neutro", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Género neutro' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Género neutro'},	
-{title: "• Genderqueer", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Genderqueer' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Genderqueer'},	
-{title: "• Heterosexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Heterosexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Heterosexual'},	
-{title: "• Heteroflexible", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Heteroflexible' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Heteroflexible'},	
-{title: "• Homoflexible", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Homoflexible' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Homoflexible'},	
-{title: "• Homosexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Homosexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Homosexual'},	
-{title: "• Intersexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Intersexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Intersexual'},	
-{title: "• Lesbiana", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Lesbiana' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Lesbiana'},	
-{title: "• Pansexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Pansexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Pansexual'},	
-{title: "• Pangénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Pangénero' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Pangénero'},	
-{title: "• Questioning", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Questioning' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Questioning'},	
-{title: "• Queer", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Queer' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Queer'},	
-{title: "• Sapiosexual", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Sapiosexual' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Sapiosexual'},	
-{title: "• Transgénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Transgénero' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Transgénero'},	
-{title: "• Trigénero", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Trigénero' },	
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Trigénero'},	
-{title: "• Variante/Género expansivo", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Género expansivo' },
-{title: "⬆️ Quiero Saber mas ⬆️", rowId: usedPrefix + 'google' + ' ' + 'Género expansivo'}]
-}, {
-title: comienzo + " 👤 OCULTAR IDENTIDAD " + fin,
-rows: [
-{title: "🕶️ Ocultar", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Ocultado' }]},]
-
-const listMessage = {
-text: `👉 *SELECCIONE SU IDENTIDAD DE GÉNERO POR FAVOR*\n*❖ NOMBRE:* ${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n*❖ GÉNERO:* ${genero === 0 ? 'No encontrada' : genero}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`,
-footer: wm,
-title: "*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n",
-buttonText: "🌱 IDENTIDAD DE GÉNERO 🌱",
-sections
-}
-
-if (!text) return conn.sendMessage(m.chat, {text: eg + `*👉SELECCIONE SU IDENTIDAD DE GÉNERO POR FAVOR*\n❖ EJEMPLO: /identidad Heterosexual\n\n*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n*❖ NOMBRE:* ${nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n*❖ GÉNERO:* ${genero === 0 ? 'No encontrada' : genero}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`}, {quoted: fkontak})
-//conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-identidad = text.slice(1).trim()
+var generos = [
+"Agénero", "Andrógino", "Andrógina", "Asexual", "Bigénero", "Bisexual",
+"Cisgénero", "CrossDresser", "Demigénero", "Gay", "Género fluido", "Género neutro",
+"Genderqueer", "Heterosexual", "Heteroflexible", "Homoflexible", "Homosexual",
+"Intersexual", "Lesbiana", "Pansexual", "Pangénero", "Questioning", "Queer",
+"Sapiosexual", "Transgénero", "Trigénero", "Variante/Género expansivo"
+]
+var emojiANumero = { "0️⃣": "0", "1️⃣": "1", "2️⃣": "2", "3️⃣": "3", "4️⃣": "4", "5️⃣": "5", "6️⃣": "6", "7️⃣": "7", "8️⃣": "8", "9️⃣": "9" }
+function asignarIdentidad(text) {
+text = text.replace(/[\d️⃣]/g, function(match) {
+return emojiANumero[match] || match
+})
+var numero = parseInt(text.replace(/[^\d]/g, ''))
+if (!isNaN(numero) && numero >= 1 && numero <= generos.length) {
+return generos[numero - 1]
+} else {
+return m.reply("*RECUERDE USAR EL EMOJI NUMÉRICO O TEXTO NUMÉRICO PARA ELEGIR SU IDENTIDAD*")
+}}
+let yyr = ''
+yyr += `*╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮*
+*┊ 🌱 SELECCIONE SU IDENTIDAD DE GÉNERO!!*
+*┊┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯*\n`
+generos.forEach(function (identidad, index) {
+yyr += `*┊* \`\`\`[${index + 1}]\`\`\` » _${identidad}_\n`
+})
+yyr += `*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*`
+if (!text) {
+const { key } = await conn.sendMessage(m.chat, { text: yyr }, {quoted: m})	
+await delay(1000)
+await conn.sendMessage(m.chat, { text: yyr + `\n\n*AQUÍ UN EJEMPLO DE COMO SELECCIONAR:*\n${usedPrefix}identidad 4️⃣\n${usedPrefix}identidad 4`, edit: key })
+} 
+var identidadAsignada = asignarIdentidad(text)
+identidad = identidadAsignada
 user.identidad = identidad
 pasatiempo = 0
 pas1 = 0
@@ -302,8 +194,7 @@ pas2 = 0
 pas3 = 0
 pas4 = 0
 pas5 = 0  
-if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n*❖ GENERO:*\n${genero === 0 ? 'No encontrada' : genero}\n*❖ IDENTIDAD DE GÉNERO:*\n${identidad === 0 ? 'No encontrada' : identidad}\n\n❇️ AHORA REGISTRAR MIS PASATIEMPOS\n${usedPrefix}pasatiempo`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:* ' + `${nombre === 0 ? 'No encontrada' : nombre}` + '\n' + '*❖ EDAD:* ' + `${edad === 0 ? 'No encontrada' : edad + ' años'}` + '\n' + '*❖ GÉNERO:* ' + `${genero === 0 ? 'No encontrada' : genero}` + '\n' + '*❖ IDENTIDAD DE GÉNERO:* ' + `${identidad === 0 ? 'No encontrada' : identidad}`, wm, null, [[`❇️ REGISTRAR MIS PASATIEMPOS`, usedPrefix + 'pasatiempo']], m)
+if (verificar.test(text) == true) return conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA COMPLETADO LO SIGUIENTE*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*❖ NOMBRE:*\n${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:*\n${edad === 0 ? 'No encontrada' : edad + ' años'}\n*❖ GENERO:*\n${genero === 0 ? 'No encontrada' : genero}\n*❖ IDENTIDAD DE GÉNERO:*\n${identidad === 0 ? 'No encontrada' : identidad}\n\n❇️ AHORA REGISTRAR MIS PASATIEMPOS\n${usedPrefix}pasatiempo`}, {quoted: fkontak})
 }
 	
 const sections = [
@@ -459,7 +350,6 @@ rows: [
 {title: "🏐 Voleibol", rowId: usedPrefix + command + ' ' + text + '🏐 Voleibol' },
 {title: "👟 Yoga", rowId: usedPrefix + command + ' ' + text + '👟 Yoga' },
 {title: "🎼 Ópera", rowId: usedPrefix + command + ' ' + text + '🎼 Ópera' }]},]
-
 const listMessage = {
 text: `👉 *SELECCIONE SUS PASATIEMPOS POR FAVOR*\n*❖ NOMBRE:* ${nombre === 0 ? 'No encontrada' : nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n*❖ GÉNERO:* ${genero === 0 ? 'No encontrada' : genero}\n*❖ IDENTIDAD DE GÉNERO:* ${identidad === 0 ? 'No encontrada' : identidad}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`,
 footer: wm,
@@ -467,64 +357,60 @@ title: "*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n",
 buttonText: "❇️ MI PASATIEMPO ❇️",
 sections
 }
-
 if (command == 'pasatiempo' || command == 'hobby') {
-//if (typeof pas1 === 'string') return conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`🐈 FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m) 
+//if (typeof pas1 === 'string') return conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m) 
 if (!text) return conn.sendMessage(m.chat, {text: eg + `*👉SELECCIONE SUS PASATIEMPOS POR FAVOR :*\n❖ EJEMPLO: ${usedPrefix}pasatiempo 💻 Aprender a programar\n${usedPrefix}pasatiempo 👋 Estar en Whatsapp\n${usedPrefix}pasatiempo escucha musica\n❖ PUEDE PONER HASTA 5 PASATIEMPOS\n*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n*❖ NOMBRE:* ${nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n*❖ GÉNERO:* ${genero === 0 ? 'No encontrada' : genero}\n*❖ IDENTIDAD DE GÉNERO:* ${identidad === 0 ? 'No encontrada' : identidad}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`}, {quoted: fkontak})
 //conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
 pas1 = text.trim()
 pasatiempo = pas1
 user.pasatiempo = pasatiempo
 global.db.data.users[m.sender]['registroC'] = true
-conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pasatiempo === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas2\n🐈 FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
-//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pasatiempo === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`❇️ AGREGAR OTRO PASATIEMPO`, usedPrefix + 'pas2'], [`🐈 FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
+conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pasatiempo === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas2\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+//conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pasatiempo === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`❇️ AGREGAR OTRO PASATIEMPO`, usedPrefix + 'pas2'], [`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 }	
 	
 if (command == 'pas2') {
-if (typeof pas2 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+if (typeof pas2 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 if (!text) return conn.sendMessage(m.chat, {text: eg + `👉 *SELECCIONE SUS PASATIEMPOS POR FAVOR :*\n❖ EJEMPLO: ${usedPrefix}pasatiempo 💻 Aprender a programar\n${usedPrefix}pasatiempo 👋 Estar en Whatsapp\n${usedPrefix}pasatiempo escucha musica\n❖ PUEDE PONER HASTA 5 PASATIEMPOS\n\n*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*\n*❖ NOMBRE:* ${nombre}\n*❖ EDAD:* ${edad === 0 ? 'No encontrada' : edad}\n*❖ GÉNERO:* ${genero === 0 ? 'No encontrada' : genero}\n*❖ IDENTIDAD DE GÉNERO:* ${identidad === 0 ? 'No encontrada' : identidad}\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹ 》*`}, {quoted: fkontak})
 //conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-
 if (pas1 == text) throw fg + '*ESTE PASATIEMPO YA HA SIDO AGREGADO, SELECCIONE OTRO POR FAVOR*' 
 global.db.data.users[m.sender]['registroC'] = true
 pas2 = text.trim()	
 pasatiempo = pas1 + ', ' + pas2
 user.pasatiempo = pasatiempo
-conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas2 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas3\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas2 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas3\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO OTRO PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pas2 === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`❇️ AGREGAR OTRO PASATIEMPO`, usedPrefix + 'pas3'], [`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 }
 	
 if (command == 'pas3') {
-if (typeof pas3 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+if (typeof pas3 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 if (!text) return //conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-
 if (pas2 == text || pas1 == text) throw fg + '*ESTE PASATIEMPO YA HA SIDO AGREGADO, SELECCIONE OTRO POR FAVOR*'
 global.db.data.users[m.sender]['registroC'] = true
 pas3 = text.trim()
 pasatiempo = pas1 + ', ' + pas2 + ', ' + pas3
 user.pasatiempo = pasatiempo
-conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas3 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas4\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas3 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas4\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO OTRO PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pas3 === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`❇️ AGREGAR OTRO PASATIEMPO`, usedPrefix + 'pas4'], [`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 }
 	
 if (command == 'pas4') {
-if (typeof pas4 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+if (typeof pas4 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 if (!text) return //conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-
 if (pas3 == text || pas2 == text || pas1 == text) throw fg + '*ESTE PASATIEMPO YA HA SIDO AGREGADO, SELECCIONE OTRO POR FAVOR*'
 global.db.data.users[m.sender]['registroC'] = true
 pas4 = text.trim()	
 pasatiempo = pas1 + ', ' + pas2 + ', ' + pas3 + ', ' + pas4
 user.pasatiempo = pasatiempo
-conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas4 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas5\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pas4 === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas5\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO OTRO PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pas4 === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`❇️ AGREGAR OTRO PASATIEMPO`, usedPrefix + 'pas5'], [`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 }
 	
 if (command == 'pas5') {
-if (typeof pas5 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+if (typeof pas5 === 'string') return conn.sendMessage(m.chat, {text: fg + `*NO PUEDE CAMBIAR DE PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\nUna vez seleccionado no puede ser modificado\n\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, fg + '*NO PUEDE CAMBIAR DE PASATIEMPO*', 'Una vez seleccionado no puede ser modificado\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 if (!text) return conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
 if (pas4 == text || pas3 == text || pas2 == text || pas1 == text) throw fg + '*ESTE PASATIEMPO YA HA SIDO AGREGADO, SELECCIONE OTRO POR FAVOR*'
@@ -532,7 +418,7 @@ global.db.data.users[m.sender]['registroC'] = true
 pas5 = text.trim()
 pasatiempo = pas1 + ', ' + pas2 + ', ' + pas3 + ', ' + pas4 + ', ' + pas5
 user.pasatiempo = pasatiempo
-conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pasatiempo === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas2\nFINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
+conn.sendMessage(m.chat, {text: eg + `*GENIAL!! SE HA AGREGADO UN PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n*${pasatiempo === 0 ? 'No encontrada' : pasatiempo}*\nPuede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n❇️ AGREGAR OTRO PASATIEMPO\n${usedPrefix}pas2\n⏱️ FINALIZAR REGISTRO\n${usedPrefix}finalizar`}, {quoted: fkontak})
 //conn.sendButton(m.chat, eg + '*GENIAL!! SE HA AGREGADO OTRO PASATIEMPO*\n*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*\n\n' + `${pas5 === 0 ? 'No encontrada' : pasatiempo}`, 'Puede agregar hasta 5 pasatiempos!!! o puede avanzar con el registro teniendo mínimo un pasatiempo\n\n' + wm, null, [[`FINALIZAR REGISTRO`, usedPrefix + 'finalizar']], m)
 }
 	
@@ -548,7 +434,7 @@ user.premium = true
 fecha = `${week}, ${date} *||* `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre +' ͜͡𝘴𝘬'
+user.name = nombre === 0 ? 'No encontrada' : nombre + 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ'
 user.descripcion = bio
 user.age = edad === 0 ? 'No encontrada' : edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'
 user.genero = genero === 0 ? 'No encontrada 👤' : genero == 'Ocultado' ? `${genero} 🕶️` : genero == 'Mujer' ? `${genero} 🚺` : genero == 'Hombre' ? `${genero} 🚹` : 'No encontrada 👤'
@@ -558,7 +444,7 @@ user.pasatiempo = pasatiempo === 0 ? 'No encontrada' : pasatiempo
 fecha = `${week}, ${date} || `
 hora = `${time}`
 user.tiempo = fecha + hora
-user.name = nombre === 0 ? 'No encontrada' : nombre +' ͜͡𝘴𝘬'
+user.name = nombre === 0 ? 'No encontrada' : nombre + 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ'
 user.age = edad === 0 ? 'No encontrada' : `${edad >= 18 ? edad += ' Años *||* ' + '(Persona Adulta)' : edad += ' Años *||* ' + '(Persona Joven)'}`
 user.descripcion = bio	
 }
@@ -571,81 +457,56 @@ clearInterval(intervalId)
 /*let caption = `
 🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
 *- - - - - - - - - - - - - - - - - - - - - - - - - - - -*
-
-😵‍💫 *REGISTRADO POR*
+👑 *REGISTRADO POR*
 ❱❱ ${wm}
-
 📑 *TIPO DE REGISTRO* 
 ❱❱ ${user.registroC === true ? 'Registro Completo' : 'Registro Rápido'}
-
 ⌛ *FECHA/HORA*
 ❱❱ ${user.tiempo} 
-
 🛅 *CÓDIGO DE REGISTRO*
 ❱❱ ${sn}
-
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ?' ͜͡𝘴𝘬' : ''}*
-
+❱❱   *${user.registered === true ? ' ͜͡𝘴𝘬' : ''}*
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
-
 👀 *DESCRIPCIÓN*
 ❱❱ ${user.descripcion}
-
 🔢 *EDAD* 
 ❱❱ ${user.age}
-
 ${user.registroC === true ? `☘️ *GENERO*
 ❱❱ ${user.genero}
-
 🌱 *IDENTIDAD DE GÉNERO*
 ❱❱ ${user.identidad}
-
 ❇️ *PASATIEMPO(S)*
 ❱❱ ${user.pasatiempo}
-
 ${user.premLimit === 1 ? '' : `🎟️ *PREMIUM*
 ❱❱ ${user.premLimit === 1 ? '' : `${user.premiumTime > 0 ? '✅' : '❌'} +3 HORAS || ${user.premiumTime - now} ms`}`}   ` : ''} 
 `.trim()*/
-
 await m.reply('🍄 ```VERIFICANDO DATOS...```')
 await conn.reply(m.chat, `🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
 *- - - - - - - - - - - - - - - - - - - - - - - - - - - -*
-
-😵‍💫 *REGISTRADO POR*
+👑 *REGISTRADO POR*
 ❱❱ ${wm}
-
 📑 *TIPO DE REGISTRO* 
 ❱❱ ${user.registroC === true ? 'Registro Completo' : 'Registro Rápido'}
-
 ⌛ *FECHA/HORA*
 ❱❱ ${user.tiempo} 
-
 🛅 *CÓDIGO DE REGISTRO*
 ❱❱ ${sn}
-
 ✅ *INSIGNIA DE VERIFICACIÓN*
-❱❱   *${user.registered === true ?' ͜͡𝘴𝘬' : ''}*
-
+❱❱   *${user.registered === true ? ' ͜͡𝘴𝘬' : ''}*
 ✨ *NOMBRE* 
 ❱❱ ${user.name}
-
 👀 *DESCRIPCIÓN*
 ❱❱ ${user.descripcion}
-
 🔢 *EDAD* 
 ❱❱ ${user.age}
-
 ${user.registroC === true ? `☘️ *GENERO*
 ❱❱ ${user.genero}
-
 🌱 *IDENTIDAD DE GÉNERO*
 ❱❱ ${user.identidad}
-
 ❇️ *PASATIEMPO(S)*
 ❱❱ ${user.pasatiempo}
-
 ${user.premLimit === 1 ? '' : `🎟️ *PREMIUM*
 ❱❱ ${user.premLimit === 1 ? '' : `${user.premiumTime > 0 ? '✅' : '❌'} +3 HORAS || ${user.premiumTime - now} ms`}`}   ` : ''}`, fkontak,  m)
 //await conn.sendButton(m.chat, caption, user.registroC === true ? 'Si elimina su registro se eliminará los datos e insignia y dejara de tener acceso a los comandos con registro\n\nTendrá Premium solo la premira vez que se registre si llega a volver a registrarse no tendrá premium a excepción si compra usando #pase premium\n\nPuede volver a eliminar su registro y registrarse desde 0 sin problema.\n\nSu código de serie le permitirá borrar su registro ejemplo:\n' + `${usedPrefix}unreg ${sn}` : 'Si elimina su registro se eliminará los datos e insignia y dejara de tener acceso a los comandos con registro\n\nPuede volver a eliminar su registro y registrarse desde 0 sin problema.\n\nSu código de serie le permitirá borrar su registro ejemplo:\n' + `${usedPrefix}unreg ${sn}`, [['𝘼𝙝𝙤𝙧𝙖 𝙚𝙨𝙩𝙤𝙮 𝙑𝙚𝙧𝙞𝙛𝙞𝙘𝙖𝙙𝙤!! ✅', '/profile']], m)
@@ -654,3 +515,7 @@ await m.reply(`${sn}`)
 handler.command = ['verify', 'verificar', 'register', 'registrar', 'reg', 'reg1', 'nombre', 'name', 'nombre2', 'name2', 'edad', 'age', 'edad2', 'age2', 'genero', 'género', 'gender', 'identidad', 'pasatiempo', 'hobby', 'identity', 'finalizar', 'pas2', 'pas3', 'pas4', 'pas5']  ///^(verify|verificar|reg(ister)?)$/i
 handler.private = true 
 export default handler
+function pickRandom(list) { 
+return list[Math.floor(Math.random() * list.length)]} 
+  
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
