@@ -1,7 +1,7 @@
 {
 "name": "SharkBot",
-"version": "7.9.4", 
-"description": "El Mejor Bot Para Whatsapp 2023/2024",
+"version": "8.1.1",
+"description": "El Mejor Bot de WhatsApp 2023/2024",
 "main": "index.js",
 "type": "module",
     
@@ -11,18 +11,20 @@
 "plugins": "plugins" },
     
 "scripts": {
-"start": "node --no-warnings index.js",
+"start": "node index.js",
+"qr": "node index.js qr",
+"code": "node index.js code",
 "test": "node test.js",
 "test2": "nodemon index.js" },
     
 "homepage": "https://github.com/ElChema-Nc/SharkBot",
 "author": {
-"name": "ElChema-Nc" }, 
+"name": "ElChema-Nc" },
     
 "repository": {
 "type": "git",
- "url": "git+https://github.com/ElChema-Nc/SharkBot.git" },
- 
+"url": "git+https://github.com/ElChema-Nc/SharkBot.git" },
+
 "bugs": {
 "url": "https://github.com/ElChema-Nc/SharkBot/issues" },
 "license": "GPL-3.0-or-later",
