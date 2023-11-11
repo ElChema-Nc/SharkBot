@@ -1347,7 +1347,7 @@ if (settingsREAD.autoread2) await this.readMessages([m.key])
 //if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
 	    
 if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
-if (!m.fromMem && m.text.match(/(ata|des|able|izo|ido|.-.|._.|:)|:(|:v|v:|o.o|;v|v;|v':|:'v)/gi)) {
+if (!m.fromMem && m.text.match(/(shark|josh|bot)/gi)) {
 let emot = pickRandom(["😳", "🤯", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "🤝", "💪", "👑"])
 this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
 function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
@@ -1405,7 +1405,7 @@ mentionedJid:[user],
 "title": [wm, '𝗦𝘂𝗽𝗲𝗿 ' + sk + ' 🔱', '🌟 ja82783643@gmail.com'].getRandom(),
 "containsAutoReply": true,
 "mediaType": 1, 
-sourceUrl: [md, nna, nn2, yt, ig, paypal, fb].getRandom()}}}, { quoted: fkontak2 })
+sourceUrl: [md, nna, nn, yt, ig].getRandom()}}}, { quoted: fkontak2 })
 //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }, { quoted: fkontak2 })
 }}}
 			    
