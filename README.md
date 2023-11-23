@@ -4,7 +4,7 @@
 <a href="https://youtube.com/@thechema06?si=OWCbVDp_LvQ0thJ-">
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
 </a>
-<a href="https://instagram.com/josh_artl">
+<a href="https://instagram.com/alvarez_jos3">
 <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 </div>
